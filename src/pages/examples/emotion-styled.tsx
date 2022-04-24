@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import React, { FC } from 'react'
-import styled from '@emotion/styled'
+import type { NextPage } from 'next';
+import { FC } from 'react';
+import styled from '@emotion/styled';
 
 interface ComponentProps {
   className?: string
