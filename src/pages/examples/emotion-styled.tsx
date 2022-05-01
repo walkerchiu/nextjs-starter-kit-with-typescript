@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import styled from '@emotion/styled';
 
 interface ComponentProps {
@@ -37,7 +37,7 @@ const StyledComponent1 = styled(Component)<StyledComponentProps>(
 
 const EmotionStyledComponent: NextPage = () => {
   return (
-    <>
+    <React.Fragment>
       <StyledComponent0
         bgColor="red"
         label="Component 0"
@@ -46,7 +46,7 @@ const EmotionStyledComponent: NextPage = () => {
         bgColor="red"
         label="Component 1"
       />
-    </>
+    </React.Fragment>
   )
 }
 

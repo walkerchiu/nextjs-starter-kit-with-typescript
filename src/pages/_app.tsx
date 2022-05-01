@@ -3,6 +3,7 @@ import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { appWithTranslation } from "next-i18next";
+import React from 'react';
 import SEO from '../../next-seo.config';
 import { DefaultSeo } from 'next-seo';
 import NProgress from 'nprogress';
@@ -44,7 +45,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return getLayout(
-    <>
+    <React.Fragment>
       <DefaultSeo
         {...SEO}
         dangerouslySetAllPagesToNoFollow={
@@ -57,7 +58,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         }
       />
       <Component {...pageProps} />
-    </>
+    </React.Fragment>
   );
 }
 
