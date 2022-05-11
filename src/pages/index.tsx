@@ -101,6 +101,18 @@ const Home: NextPage = () => {
               </li>
             </ol>
           </article>
+          <article>
+            <h2>XState</h2>
+            <ol style={{ listStyleType: "number" }}>
+              <li>
+                <Link
+                  href="/examples/xstate"
+                >
+                  <a>XState</a>
+                </Link>
+              </li>
+            </ol>
+          </article>
         </section>
       </main>
     </div>
