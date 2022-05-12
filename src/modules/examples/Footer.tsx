@@ -12,7 +12,7 @@ const Footer: FC<ComponentProps> = ({
     <section
       role="navigation"
       aria-label="Main"
-      className="w-full border-t-2 fixed inset-x-0 bottom-0 px-5 xl:p-10"
+      className="border-t-2 inset-x-0 p-5 xl:p-10"
     >
       <div
         className="mb-4 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0"
