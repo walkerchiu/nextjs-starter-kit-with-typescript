@@ -74,7 +74,9 @@ const SEOArticle = () => (
     <Footer>
       <ol
         className="pl-6"
-        style={{ listStyleType: "number" }}
+        style={{
+          listStyleType: "number"
+        }}
       >
         <li>
           GitHub:<br />
@@ -82,6 +84,7 @@ const SEOArticle = () => (
             href="https://github.com/garmeeh/next-seo"
             target="_blank"
             rel="noreferrer noopener"
+            className="text-blue-600 hover:underline dark:text-blue-500"
           >
             https://github.com/garmeeh/next-seo
           </a>
