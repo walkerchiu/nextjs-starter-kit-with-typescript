@@ -3,11 +3,13 @@ import Link from "next/link";
 
 interface ComponentProps {
   className?: string,
-  children?: any,
+  title: string,
+  description: string,
 }
 
 const Header: FC<ComponentProps> = ({
-  children,
+  title,
+  description,
 }) => {
   return (
     <section
@@ -21,12 +23,12 @@ const Header: FC<ComponentProps> = ({
         <p
           className="focus:outline-none text-2xl font-bold"
         >
-          Example
+          Example: { title }
         </p>
         <p
           className="focus:outline-none font-normal text-gray-600 mt-1"
         >
-          Description
+          { description }
         </p>
       </div>
       <div
