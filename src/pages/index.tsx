@@ -102,6 +102,18 @@ const Home: NextPage = () => {
             </ol>
           </article>
           <article>
+            <h2>Tailwind CSS</h2>
+            <ol style={{ listStyleType: "number" }}>
+              <li>
+                <Link
+                  href="/examples/tailwindcss"
+                >
+                  <a>Tailwind CSS</a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>XState</h2>
             <ol style={{ listStyleType: "number" }}>
               <li>
