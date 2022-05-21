@@ -1,18 +1,16 @@
 import type { NextPage } from 'next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fas, faBell, faQuestion } from '@fortawesome/free-solid-svg-icons';
-import { fab, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { far, faCircle, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 import Header from '../../modules/examples/Header';
 import Footer from '../../modules/examples/Footer';
 
-const FontAwesomeIndividuallyPage: NextPage = () => {
+const FontAwesomeDynamicallyPage: NextPage = () => {
   return (
     <div
       className="flex flex-col h-screen"
     >
       <Header
-        title="Font Awesome (Individually)"
+        title="Font Awesome (Dynamically)"
         description="Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
       />
       <main
@@ -30,7 +28,7 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
               Benefits
             </p>
             <p>
-              Allows icons to be subsetted, optimizing your final bundle. Only the icons you import are included in the bundle.
+              Automatically includes just the icons you&apos;re using in your components, optimizing your final bundle. Only the icons you use are included in the bundle.
             </p>
           </section>
           <section
@@ -42,59 +40,23 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
               Drawbacks
             </p>
             <p>
-              Explicitly importing icons into each of many components in your project can become tedious.
+              You need to add and configure babel macros.
             </p>
           </section>
         </div>
         <p>
           <FontAwesomeIcon
-            icon={fas.faLeaf}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={fas.faGlobe}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faBell}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faQuestion}
+            icon={solid('user-secret')}
           />
         </p>
         <p>
           <FontAwesomeIcon
-            icon={far.faComment}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={far.faSquare}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faCircle}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faHeart}
+            icon={regular('message')}
           />
         </p>
         <p>
           <FontAwesomeIcon
-            icon={fab.faJs}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={fab.faPhp}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faGoogle}
+            icon={brands('twitter')}
           />
         </p>
       </main>
@@ -128,14 +90,14 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
             </a>
           </li>
           <li>
-            Font Awesome (Use React with...):<br />
+            Font Awesome (Import Icons):<br />
             <a
-              href="https://fontawesome.com/docs/web/use-with/react/use-with"
+              href="https://fontawesome.com/docs/apis/javascript/import-icons"
               target="_blank"
               rel="noreferrer noopener"
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
-              https://fontawesome.com/docs/web/use-with/react/use-with
+              https://fontawesome.com/docs/apis/javascript/import-icons
             </a>
           </li>
         </ol>
@@ -144,4 +106,4 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
   )
 }
 
-export default FontAwesomeIndividuallyPage
+export default FontAwesomeDynamicallyPage
