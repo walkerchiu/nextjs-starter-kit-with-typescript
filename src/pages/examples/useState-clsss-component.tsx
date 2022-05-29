@@ -16,13 +16,6 @@ class CountStateExample extends React.Component<{}, CountState> {
     };
   }
 
-  componentDidMount() {
-    console.log(`componentDidMount: You clicked ${this.state.count} times`);
-  }
-  componentDidUpdate() {
-    console.log(`componentDidUpdate: You clicked ${this.state.count} times`);
-  }
-
   render() {
     return (
       <div>
@@ -35,11 +28,11 @@ class CountStateExample extends React.Component<{}, CountState> {
   }
 }
 
-const useEffectEquivalentClassPage: NextPage = () => {
+const useStateClassComponentPage: NextPage = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header
-        title="React Hook - useEffect (Equivalent Class)"
+        title="React Hook - useState (Class Component)"
         description="If you used classes in React before, this code should look familiar."
       />
       <main
@@ -80,15 +73,15 @@ const useEffectEquivalentClassPage: NextPage = () => {
             </a>
           </li>
           <li>
-            Using the Effect Hook:
+            Using the State Hook:
             <br />
             <a
-              href="https://reactjs.org/docs/hooks-effect.html"
+              href="https://reactjs.org/docs/hooks-state.html"
               target="_blank"
               rel="noreferrer noopener"
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
-              https://reactjs.org/docs/hooks-effect.html
+              https://reactjs.org/docs/hooks-state.html
             </a>
           </li>
         </ol>
@@ -97,4 +90,4 @@ const useEffectEquivalentClassPage: NextPage = () => {
   );
 };
 
-export default useEffectEquivalentClassPage;
+export default useStateClassComponentPage;

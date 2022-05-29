@@ -210,12 +210,12 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href="/examples/useState-equivalent-clsss"
+                  href="/examples/useState-clsss-component"
                 >
                   <a
                     className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                   >
-                    useState (Equivalent Class)
+                    useState (Class Component)
                   </a>
                 </Link>
               </li>
@@ -243,12 +243,12 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href="/examples/useEffect-equivalent-clsss"
+                  href="/examples/useEffect-clsss-component"
                 >
                   <a
                     className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                   >
-                    useEffect (Equivalent Class)
+                    useEffect (Class Component)
                   </a>
                 </Link>
               </li>
