@@ -32,6 +32,21 @@ class ExampleComponent extends React.Component<MyProps, MyState> {
     console.log(`componentDidMount`);
   }
 
+  componentDidUpdate(prevProps: MyProps) {
+    // Unsubscribe from the previous friend.id
+    // ChatAPI.unsubscribeFromFriendStatus(
+    //   prevProps.friend?.id,
+    //   this.handleStatusChange
+    // );
+
+    // Subscribe to the next friend.id
+    // ChatAPI.subscribeToFriendStatus(
+    //   this.props.friend?.id,
+    //   this.handleStatusChange
+    // );
+    console.log(`componentDidUpdate`);
+  }
+
   componentWillUnmount() {
     // ChatAPI.unsubscribeFromFriendStatus(
     //   this.props.friend?.id,
