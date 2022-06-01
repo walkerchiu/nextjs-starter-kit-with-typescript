@@ -19,8 +19,14 @@ class CountStateExample extends React.Component<{}, CountState> {
   componentDidMount() {
     console.log(`componentDidMount: You clicked ${this.state.count} times`);
   }
-  componentDidUpdate() {
-    console.log(`componentDidUpdate: You clicked ${this.state.count} times`);
+
+  componentDidUpdate(prevProps: CountState, prevState: CountState) {
+    // In some cases, cleaning up or applying the effect after every render might create a performance problem.
+    // If you use this optimization, make sure the array includes all values from the component scope (such as props and state) that change over time and that are used by the effect.
+    // Otherwise, your code will reference stale values from previous renders.
+    if (prevState.count !== this.state.count) {
+      console.log(`componentDidUpdate: You clicked ${this.state.count} times`);
+    }
   }
 
   render() {
