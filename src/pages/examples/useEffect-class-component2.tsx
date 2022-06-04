@@ -1,8 +1,10 @@
-import React from 'react';
+import { Component } from 'react';
+
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
+
 
 type Friend = {
   id: number;
@@ -17,7 +19,7 @@ interface MyState {
   isOnline: boolean | null;
 }
 
-class ExampleComponent extends React.Component<MyProps, MyState> {
+class ExampleComponent extends Component<MyProps, MyState> {
   constructor(props: MyState) {
     super(props);
     this.state = { friend: null, isOnline: null };

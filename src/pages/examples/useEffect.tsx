@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
+
 
 const useEffectPage: NextPage = () => {
   // Declare a new state variable, which we'll call "count"

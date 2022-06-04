@@ -1,14 +1,16 @@
-import React from 'react';
+import { Component } from 'react';
+
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
 
+
 interface CountState {
   count: number;
 }
 
-class CountStateExample extends React.Component<{}, CountState> {
+class CountStateExample extends Component<unknown, CountState> {
   constructor(props: CountState) {
     super(props);
     this.state = {
