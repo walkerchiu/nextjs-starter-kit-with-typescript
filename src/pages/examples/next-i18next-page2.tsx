@@ -3,9 +3,8 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
-
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
 
 interface IndexProps {
   name: string;
@@ -17,70 +16,65 @@ export default function LanguageSwitcherPage2() {
   const { t } = useTranslation("common");
 
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="next-i18next"
         description="The easiest way to translate your NextJs apps."
       />
-      <main
-        className="mb-auto px-10"
-      >
+      <main className="mb-auto px-10">
         <section
           style={{
-            textAlign: "right", paddingRight: "20px"
+            textAlign: "right",
+            paddingRight: "20px",
           }}
         >
           <Link
             href={router.pathname}
             locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
           >
-            <a>Switch to <strong>{t("lang.title")}</strong></a>
+            <a>
+              Switch to <strong>{t("lang.title")}</strong>
+            </a>
           </Link>
         </section>
         <hr
           style={{
-            margin: "20px 0"
+            margin: "20px 0",
           }}
         />
         <section>
           <header
             style={{
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             Page 2
           </header>
-          {t<string, IndexProps[]>("document.items", { returnObjects: true }).map(
-            ({ name, description }, index: number) => (
-              <article key={index}>
-                <header>{ name }</header>
-                <p>{ description }</p>
-              </article>
-            )
-          )}
+          {t<string, IndexProps[]>("document.items", {
+            returnObjects: true,
+          }).map(({ name, description }, index: number) => (
+            <article key={index}>
+              <header>{name}</header>
+              <p>{description}</p>
+            </article>
+          ))}
         </section>
         <hr
           style={{
-            margin: "20px 0"
+            margin: "20px 0",
           }}
         />
         <section
           style={{
-            textAlign: "center"
+            textAlign: "center",
           }}
         >
-          Pagination:{' '}
-          <Link
-            href="/examples/next-i18next-page1"
-          >
+          Pagination:{" "}
+          <Link href="/examples/next-i18next-page1">
             <a>1</a>
           </Link>
-          {', '}
-          <Link
-            href="/examples/next-i18next-page2"
-          >
+          {", "}
+          <Link href="/examples/next-i18next-page2">
             <a>2</a>
           </Link>
         </section>
@@ -89,11 +83,12 @@ export default function LanguageSwitcherPage2() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            next-i18next:<br />
+            next-i18next:
+            <br />
             <a
               href="https://github.com/isaachinman/next-i18next"
               target="_blank"
@@ -109,8 +104,8 @@ export default function LanguageSwitcherPage2() {
   );
 }
 
-export const getStaticProps = async ({ locale }: {locale: string}) => ({
+export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"]))
-  }
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
 });

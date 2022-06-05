@@ -1,13 +1,12 @@
-import type { NextPage } from 'next';
-import tw from "tailwind-styled-components"
+import type { NextPage } from "next";
+import tw from "tailwind-styled-components";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
-import ThemeSwitch from '../../modules/examples/providers/ThemeSwitch';
-
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
+import ThemeSwitch from "../../modules/examples/providers/ThemeSwitch";
 
 interface ButtonProps {
-  $primary: boolean
+  $primary: boolean;
 }
 
 const StyledComponent0 = tw.div`
@@ -16,10 +15,10 @@ const StyledComponent0 = tw.div`
   justify-center
   w-full
   p-10
-`
+`;
 const StyledComponent1 = tw(StyledComponent0)`
   bg-green-200
-`
+`;
 
 const Button = tw.button<ButtonProps>`
   h-10
@@ -29,14 +28,11 @@ const Button = tw.button<ButtonProps>`
   duration-150
   rounded-lg
   focus:shadow-outline
-  ${(p: { $primary: boolean; }) => (
+  ${(p: { $primary: boolean }) =>
     p.$primary
-    ?
-      "text-blue-100 bg-blue-400 hover:bg-blue-600 active:bg-blue-800"
-    :
-      "text-pink-100 bg-pink-400 hover:bg-pink-600 active:bg-pink-800"
-  )}
-`
+      ? "text-blue-100 bg-blue-400 hover:bg-blue-600 active:bg-blue-800"
+      : "text-pink-100 bg-pink-400 hover:bg-pink-600 active:bg-pink-800"}
+`;
 
 const LinkButton = tw.button`
   inline-flex
@@ -51,44 +47,25 @@ const LinkButton = tw.button`
   bg-purple-400
   hover:bg-purple-600
   active:bg-purple-800
-`
+`;
 
 const TailwindStyledComponentPage: NextPage = () => {
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="Tailwind-Styled-Component"
         description="styled is a way to create React components that have styles attached to them."
       />
-      <main
-        className="mb-auto px-10"
-      >
-        <div
-          className="w-full flex justify-end mb-5"
-        >
+      <main className="mb-auto px-10">
+        <div className="w-full flex justify-end mb-5">
           <ThemeSwitch />
         </div>
 
-        <StyledComponent0>
-          StyledComponent
-        </StyledComponent0>
+        <StyledComponent0>StyledComponent</StyledComponent0>
         <StyledComponent1>
-          <Button
-            $primary={true}
-          >
-            Button 1
-          </Button>
-          <Button
-            $primary={false}
-          >
-            Button 2
-          </Button>
-          <LinkButton
-            $as="a"
-            href="#"
-          >
+          <Button $primary={true}>Button 1</Button>
+          <Button $primary={false}>Button 2</Button>
+          <LinkButton $as="a" href="#">
             Link Button
           </LinkButton>
         </StyledComponent1>
@@ -97,11 +74,12 @@ const TailwindStyledComponentPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            Tailwind CSS:<br />
+            Tailwind CSS:
+            <br />
             <a
               href="https://tailwindcss.com/docs/utility-first"
               target="_blank"
@@ -123,7 +101,8 @@ const TailwindStyledComponentPage: NextPage = () => {
             </a>
           </li>
           <li>
-            Tailwind-Styled-Component:<br />
+            Tailwind-Styled-Component:
+            <br />
             <a
               href="https://github.com/MathiasGilson/tailwind-styled-component"
               target="_blank"
@@ -136,7 +115,7 @@ const TailwindStyledComponentPage: NextPage = () => {
         </ol>
       </Footer>
     </div>
-  )
-}
+  );
+};
 
-export default TailwindStyledComponentPage
+export default TailwindStyledComponentPage;

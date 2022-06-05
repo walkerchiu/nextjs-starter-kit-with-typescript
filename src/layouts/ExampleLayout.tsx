@@ -1,20 +1,11 @@
-import { FC } from 'react';
-
+import { FC } from "react";
 
 interface ComponentProps {
-  children: any,
+  children: any;
 }
 
-const ExampleLayout: FC<ComponentProps> = ({
-  children,
-}) => {
-  return (
-    <main
-      className='w-full'
-    >
-      { children }
-    </main>
-  )
-}
+const ExampleLayout: FC<ComponentProps> = ({ children }) => {
+  return <main className="w-full">{children}</main>;
+};
 
-export default ExampleLayout
+export default ExampleLayout;

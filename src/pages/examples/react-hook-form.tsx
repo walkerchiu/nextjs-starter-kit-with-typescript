@@ -1,11 +1,10 @@
-import { yupResolver } from '@hookform/resolvers/yup';
-import type { NextPage } from 'next';
-import { useForm } from 'react-hook-form';
+import { yupResolver } from "@hookform/resolvers/yup";
+import type { NextPage } from "next";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
-
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
 
 type UserSubmitForm = {
   username: string;
@@ -19,39 +18,49 @@ type UserSubmitForm = {
 
 const ReactHookFormPage: NextPage = () => {
   const validationSchema = yup.object().shape({
-    username: yup.string().trim()
-      .required('Username is required')
-      .min(6, 'Username must be at least 6 characters')
-      .max(20, 'Username must not exceed 20 characters'),
-    email: yup.string().trim()
-      .required('Email is required')
-      .email('Email is invalid'),
-    password: yup.string().trim()
-      .required('Password is required')
-      .min(6, 'Password must be at least 6 characters')
-      .max(40, 'Password must not exceed 40 characters'),
-    passwordConfirm: yup.string().trim()
-      .required('Confirm Password is required')
-      .oneOf([yup.ref('password'), null], 'Confirm Password does not match'),
-    groupType: yup.number()
-      .typeError('Group Type must be a number')
-      .integer('Group Type must be an integer')
-      .positive('Group Type must be a positive number')
-      .required('Group Type is required')
-      .oneOf([1, 2, 3], 'Group Type is invalid'),
-    note: yup.string().trim()
-      .required('Note is required')
-      .max(255, 'Note must not exceed 255 characters'),
-    acceptTerms: yup.bool()
-      .oneOf([true], 'Accept Terms is required')
+    username: yup
+      .string()
+      .trim()
+      .required("Username is required")
+      .min(6, "Username must be at least 6 characters")
+      .max(20, "Username must not exceed 20 characters"),
+    email: yup
+      .string()
+      .trim()
+      .required("Email is required")
+      .email("Email is invalid"),
+    password: yup
+      .string()
+      .trim()
+      .required("Password is required")
+      .min(6, "Password must be at least 6 characters")
+      .max(40, "Password must not exceed 40 characters"),
+    passwordConfirm: yup
+      .string()
+      .trim()
+      .required("Confirm Password is required")
+      .oneOf([yup.ref("password"), null], "Confirm Password does not match"),
+    groupType: yup
+      .number()
+      .typeError("Group Type must be a number")
+      .integer("Group Type must be an integer")
+      .positive("Group Type must be a positive number")
+      .required("Group Type is required")
+      .oneOf([1, 2, 3], "Group Type is invalid"),
+    note: yup
+      .string()
+      .trim()
+      .required("Note is required")
+      .max(255, "Note must not exceed 255 characters"),
+    acceptTerms: yup.bool().oneOf([true], "Accept Terms is required"),
   });
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors }
+    formState: { errors },
   } = useForm<UserSubmitForm>({
-    resolver: yupResolver(validationSchema)
+    resolver: yupResolver(validationSchema),
   });
 
   const onSubmit = (data: UserSubmitForm) => {
@@ -59,165 +68,122 @@ const ReactHookFormPage: NextPage = () => {
   };
 
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="React Hook Form"
         description="Performant, flexible and extensible forms with easy-to-use validation."
       />
-      <main
-        className="mb-auto px-10"
-      >
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <p
-            className="text-2xl mb-5 font-bold dark:text-white"
-          >
-            Register
-          </p>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-              htmlFor="username"
-            >
+      <main className="mb-auto px-10">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <p className="text-2xl mb-5 font-bold dark:text-white">Register</p>
+          <div className="mb-6">
+            <label className="block mb-2 font-medium" htmlFor="username">
               Username
             </label>
             <input
               type="text"
               id="username"
-              {...register('username')}
+              {...register("username")}
               className={`border rounded-lg block w-full p-2.5 ${
-                errors.username ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                errors.username
+                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                  : ""
               }`}
             />
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.username?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-              htmlFor="email"
-            >
+          <div className="mb-6">
+            <label className="block mb-2 font-medium" htmlFor="email">
               Email
             </label>
             <input
               type="text"
               id="email"
-              {...register('email')}
+              {...register("email")}
               className={`border rounded-lg block w-full p-2.5 ${
-                errors.email ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                errors.email
+                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                  : ""
               }`}
             />
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.email?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-              htmlFor="password"
-            >
+          <div className="mb-6">
+            <label className="block mb-2 font-medium" htmlFor="password">
               Password
             </label>
             <input
               type="password"
               id="password"
-              {...register('password')}
+              {...register("password")}
               className={`border rounded-lg block w-full p-2.5 ${
-                errors.password ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                errors.password
+                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                  : ""
               }`}
             />
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.password?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-              htmlFor="passwordConfirm"
-            >
+          <div className="mb-6">
+            <label className="block mb-2 font-medium" htmlFor="passwordConfirm">
               Confirm Password
             </label>
             <input
               type="password"
               id="passwordConfirm"
-              {...register('passwordConfirm')}
+              {...register("passwordConfirm")}
               className={`border rounded-lg block w-full p-2.5 ${
-                errors.passwordConfirm ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                errors.passwordConfirm
+                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                  : ""
               }`}
             />
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.passwordConfirm?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-            >
-              Group Type
-            </label>
+          <div className="mb-6">
+            <label className="block mb-2 font-medium">Group Type</label>
             <input
-                type="radio"
-                id="groupType-1"
-                {...register("groupType")}
-                value="1"
+              type="radio"
+              id="groupType-1"
+              {...register("groupType")}
+              value="1"
             />
             <label
               className={`ml-2 mr-4 text-gray-900 dark:text-gray-300 ${
-                errors.groupType ? 'bg-red-50' : ''
+                errors.groupType ? "bg-red-50" : ""
               }`}
               htmlFor="groupType-1"
             >
               Group 1
             </label>
             <input
-                type="radio"
-                id="groupType-2"
-                {...register("groupType")}
-                value="2"
+              type="radio"
+              id="groupType-2"
+              {...register("groupType")}
+              value="2"
             />
             <label
               className={`ml-2 text-gray-900 dark:text-gray-300 ${
-                errors.groupType ? 'bg-red-50' : ''
+                errors.groupType ? "bg-red-50" : ""
               }`}
               htmlFor="groupType-2"
             >
               Group 2
             </label>
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.groupType?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
-            <label
-              className="block mb-2 font-medium"
-              htmlFor="note"
-            >
+          <div className="mb-6">
+            <label className="block mb-2 font-medium" htmlFor="note">
               Note
             </label>
             <textarea
@@ -239,28 +205,27 @@ const ReactHookFormPage: NextPage = () => {
                 m-0
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
                 ${
-                  errors.note ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                  errors.note
+                    ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                    : ""
                 }
               `}
               rows={3}
               placeholder="Note"
-            >
-            </textarea>
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            ></textarea>
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.note?.message}
             </div>
           </div>
-          <div
-            className="my-8"
-          >
+          <div className="my-8">
             <input
               type="checkbox"
               id="acceptTerms"
-              {...register('acceptTerms')}
+              {...register("acceptTerms")}
               className={`w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ${
-                errors.acceptTerms ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500' : ''
+                errors.acceptTerms
+                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
+                  : ""
               }`}
             />
             <label
@@ -275,17 +240,14 @@ const ReactHookFormPage: NextPage = () => {
                 className="ml-1 text-blue-600 hover:underline dark:text-blue-500"
               >
                 terms and conditions
-              </a>.
+              </a>
+              .
             </label>
-            <div
-              className="mt-2 text-red-600 dark:text-red-500"
-            >
+            <div className="mt-2 text-red-600 dark:text-red-500">
               {errors.acceptTerms?.message}
             </div>
           </div>
-          <div
-            className="mb-6"
-          >
+          <div className="mb-6">
             <button
               type="submit"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
@@ -306,11 +268,12 @@ const ReactHookFormPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            react-hook-form:<br />
+            react-hook-form:
+            <br />
             <a
               href="https://react-hook-form.com/get-started"
               target="_blank"
@@ -321,7 +284,8 @@ const ReactHookFormPage: NextPage = () => {
             </a>
           </li>
           <li>
-            react-hook-form (GitHub):<br />
+            react-hook-form (GitHub):
+            <br />
             <a
               href="https://github.com/react-hook-form/react-hook-form"
               target="_blank"
@@ -335,6 +299,6 @@ const ReactHookFormPage: NextPage = () => {
       </Footer>
     </div>
   );
-}
+};
 
-export default ReactHookFormPage
+export default ReactHookFormPage;

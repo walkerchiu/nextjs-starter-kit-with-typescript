@@ -1,10 +1,9 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
-
 
 type Friend = {
   id: number;
@@ -65,9 +64,9 @@ class ExampleComponent extends Component<MyProps, MyState> {
 
   render() {
     if (this.state.isOnline === null) {
-      return 'Loading...';
+      return "Loading...";
     }
-    return this.state.isOnline ? 'Online' : 'Offline';
+    return this.state.isOnline ? "Online" : "Offline";
   }
 }
 
@@ -82,7 +81,7 @@ const useEffectClassComponent2Page: NextPage = () => {
         id="main"
         className="flex w-full flex-1 flex-col items-center justify-center pt-5 pb-10 px-20 text-center"
       >
-        <ExampleComponent friend={{id: 1}} />
+        <ExampleComponent friend={{ id: 1 }} />
       </main>
       <Footer>
         <ol

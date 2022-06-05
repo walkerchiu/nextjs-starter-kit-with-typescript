@@ -1,5 +1,4 @@
-import { createMachine } from 'xstate';
-
+import { createMachine } from "xstate";
 
 type ToggleEvent = { type: "TOGGLE" };
 
@@ -12,14 +11,14 @@ export const toggleMachine = createMachine<
   ToggleEvent,
   ToggleState
 >({
-  id: 'toggleStatus',
-  initial: 'inactive',
+  id: "toggleStatus",
+  initial: "inactive",
   states: {
     inactive: {
-      on: { TOGGLE: 'active' },
+      on: { TOGGLE: "active" },
     },
     active: {
-      on: { TOGGLE: 'inactive' },
+      on: { TOGGLE: "inactive" },
     },
   },
 });

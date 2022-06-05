@@ -1,114 +1,65 @@
-import { fab, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
-import { far, faCircle, faHeart } from '@fortawesome/free-regular-svg-icons'
-import { fas, faBell, faQuestion } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { NextPage } from 'next';
+import { fab, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { far, faCircle, faHeart } from "@fortawesome/free-regular-svg-icons";
+import { fas, faBell, faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { NextPage } from "next";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
-
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
 
 const FontAwesomeIndividuallyPage: NextPage = () => {
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="Font Awesome (Individually)"
         description="Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
       />
-      <main
-        className="flex w-full flex-1 flex-col items-center justify-center mt-5 mb-10 px-20 text-center"
-      >
-        <div
-          className="m-4 p-2"
-        >
-          <section
-            className="text-left"
-          >
-            <p
-              className="font-bold"
-            >
-              Benefits
-            </p>
+      <main className="flex w-full flex-1 flex-col items-center justify-center mt-5 mb-10 px-20 text-center">
+        <div className="m-4 p-2">
+          <section className="text-left">
+            <p className="font-bold">Benefits</p>
             <p>
-              Allows icons to be subsetted, optimizing your final bundle. Only the icons you import are included in the bundle.
+              Allows icons to be subsetted, optimizing your final bundle. Only
+              the icons you import are included in the bundle.
             </p>
           </section>
-          <section
-            className="text-left"
-          >
-            <p
-              className="font-bold"
-            >
-              Drawbacks
-            </p>
+          <section className="text-left">
+            <p className="font-bold">Drawbacks</p>
             <p>
-              Explicitly importing icons into each of many components in your project can become tedious.
+              Explicitly importing icons into each of many components in your
+              project can become tedious.
             </p>
           </section>
         </div>
         <p>
-          <FontAwesomeIcon
-            icon={fas.faLeaf}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={fas.faGlobe}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faBell}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faQuestion}
-          />
+          <FontAwesomeIcon icon={fas.faLeaf} className="mr-2" />
+          <FontAwesomeIcon icon={fas.faGlobe} className="mr-2" />
+          <FontAwesomeIcon icon={faBell} className="mr-2" />
+          <FontAwesomeIcon icon={faQuestion} />
         </p>
         <p>
-          <FontAwesomeIcon
-            icon={far.faComment}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={far.faSquare}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faCircle}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faHeart}
-          />
+          <FontAwesomeIcon icon={far.faComment} className="mr-2" />
+          <FontAwesomeIcon icon={far.faSquare} className="mr-2" />
+          <FontAwesomeIcon icon={faCircle} className="mr-2" />
+          <FontAwesomeIcon icon={faHeart} />
         </p>
         <p>
-          <FontAwesomeIcon
-            icon={fab.faJs}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={fab.faPhp}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="mr-2"
-          />
-          <FontAwesomeIcon
-            icon={faGoogle}
-          />
+          <FontAwesomeIcon icon={fab.faJs} className="mr-2" />
+          <FontAwesomeIcon icon={fab.faPhp} className="mr-2" />
+          <FontAwesomeIcon icon={faGithub} className="mr-2" />
+          <FontAwesomeIcon icon={faGoogle} />
         </p>
       </main>
       <Footer>
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            Font Awesome:<br />
+            Font Awesome:
+            <br />
             <a
               href="https://fontawesome.com"
               target="_blank"
@@ -119,7 +70,8 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
             </a>
           </li>
           <li>
-            Font Awesome (Add Icons with React):<br />
+            Font Awesome (Add Icons with React):
+            <br />
             <a
               href="https://fontawesome.com/docs/web/use-with/react/add-icons"
               target="_blank"
@@ -130,7 +82,8 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
             </a>
           </li>
           <li>
-            Font Awesome (Use React with...):<br />
+            Font Awesome (Use React with...):
+            <br />
             <a
               href="https://fontawesome.com/docs/web/use-with/react/use-with"
               target="_blank"
@@ -143,7 +96,7 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
         </ol>
       </Footer>
     </div>
-  )
-}
+  );
+};
 
-export default FontAwesomeIndividuallyPage
+export default FontAwesomeIndividuallyPage;

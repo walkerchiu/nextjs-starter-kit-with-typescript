@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
-
 
 const CountStateExample = () => {
   // Declare a new state variable, which we'll call "count"
@@ -19,12 +18,10 @@ const CountStateExample = () => {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
-}
+};
 
 const useEffectFunctionComponentPage: NextPage = () => {
   return (

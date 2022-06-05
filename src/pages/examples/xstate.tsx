@@ -1,11 +1,18 @@
-import { useMachine } from '@xstate/react';
-import type { NextPage } from 'next';
+import { useMachine } from "@xstate/react";
+import type { NextPage } from "next";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
-import { Counter, Toggle, TrafficLight } from '../../modules/examples/xstate/components';
-import { counterMachine, toggleMachine, nextTrafficLightMachine } from '../../modules/examples/xstate/machines';
-
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
+import {
+  Counter,
+  Toggle,
+  TrafficLight,
+} from "../../modules/examples/xstate/components";
+import {
+  counterMachine,
+  toggleMachine,
+  nextTrafficLightMachine,
+} from "../../modules/examples/xstate/machines";
 
 const XStatePage: NextPage = () => {
   const [toggleCurrent, toggleSend] = useMachine(toggleMachine);
@@ -15,40 +22,36 @@ const XStatePage: NextPage = () => {
   const [nextCurrent, nextSend] = useMachine(nextTrafficLightMachine);
 
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="XState"
         description="JavaScript state machines and statecharts."
       />
-      <main
-        className="mb-auto px-10"
-      >
+      <main className="mb-auto px-10">
         <Counter
           counter={{
             count: counterCurrent.context.count,
-            increment: () => counterSend('INC'),
-            decrement: () => counterSend('DEC'),
-            reset: () => counterSend('RESET'),
+            increment: () => counterSend("INC"),
+            decrement: () => counterSend("DEC"),
+            reset: () => counterSend("RESET"),
           }}
         />
         <hr
           style={{
-            margin: "20px 0"
+            margin: "20px 0",
           }}
         />
         <Toggle
-          onToggle={() => toggleSend('TOGGLE')}
-          active={toggleCurrent.matches('active')}
+          onToggle={() => toggleSend("TOGGLE")}
+          active={toggleCurrent.matches("active")}
         />
         <hr
           style={{
-            margin: "20px 0"
+            margin: "20px 0",
           }}
         />
         <TrafficLight
-          onNext={() => nextSend('NEXT')}
+          onNext={() => nextSend("NEXT")}
           status={nextCurrent.value}
         />
       </main>
@@ -56,11 +59,12 @@ const XStatePage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            Introduction to state machines and statecharts:<br />
+            Introduction to state machines and statecharts:
+            <br />
             <a
               href="https://xstate.js.org/docs/guides/introduction-to-state-machines-and-statecharts"
               target="_blank"
@@ -71,7 +75,8 @@ const XStatePage: NextPage = () => {
             </a>
           </li>
           <li>
-            Using TypeScript with XState:<br />
+            Using TypeScript with XState:
+            <br />
             <a
               href="https://xstate.js.org/docs/guides/typescript.html"
               target="_blank"
@@ -82,7 +87,8 @@ const XStatePage: NextPage = () => {
             </a>
           </li>
           <li>
-            XState (GitHub):<br />
+            XState (GitHub):
+            <br />
             <a
               href="https://github.com/statelyai/xstate"
               target="_blank"
@@ -95,7 +101,7 @@ const XStatePage: NextPage = () => {
         </ol>
       </Footer>
     </div>
-  )
+  );
 };
 
 export default XStatePage;

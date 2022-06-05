@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 import type { NextPage } from "next";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
-
 
 const CountStateExample = () => {
   // Declare a new state variable, which we'll call "count"
@@ -13,12 +12,10 @@ const CountStateExample = () => {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
-}
+};
 
 const useStateFunctionComponentPage: NextPage = () => {
   return (
@@ -31,15 +28,17 @@ const useStateFunctionComponentPage: NextPage = () => {
         id="main"
         className="flex w-full flex-1 flex-col items-center justify-center pt-5 pb-10 px-20 text-center"
       >
-        <div
-          className="mb-10 text-left leading-7"
-        >
-          <p
-            className="mb-5"
-          >
-            You might have previously known these as &quot;stateless components&quot;. We&apos;re now introducing the ability to use React state from these, so we prefer the name &quot;function components&quot;.
+        <div className="mb-10 text-left leading-7">
+          <p className="mb-5">
+            You might have previously known these as &quot;stateless
+            components&quot;. We&apos;re now introducing the ability to use
+            React state from these, so we prefer the name &quot;function
+            components&quot;.
           </p>
-          <p>Hooks don&apos;t work inside classes. But you can use them instead of writing classes.</p>
+          <p>
+            Hooks don&apos;t work inside classes. But you can use them instead
+            of writing classes.
+          </p>
         </div>
         <CountStateExample />
       </main>

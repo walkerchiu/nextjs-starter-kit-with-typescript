@@ -1,6 +1,5 @@
 import { createMachine } from "xstate";
 
-
 type TrafficLightEvent = { type: "NEXT" };
 
 type TraffiLightState =

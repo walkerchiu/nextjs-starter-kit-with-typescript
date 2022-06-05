@@ -1,11 +1,6 @@
-const presets = [
-  "next/babel"
-];
+const presets = ["next/babel"];
 
-const plugins = [
-  "@emotion",
-  "macros"
-];
+const plugins = ["@emotion", "macros"];
 
 if (process.env["ENV"] === "prod") {
 }

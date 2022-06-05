@@ -1,14 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx, css } from '@emotion/react';
-import type { NextPage } from 'next';
+import { jsx, css } from "@emotion/react";
+import type { NextPage } from "next";
 
-import Footer from '../../modules/examples/Footer';
-import Header from '../../modules/examples/Header';
+import Footer from "../../modules/examples/Footer";
+import Header from "../../modules/examples/Header";
 
-
-const color = 'white';
+const color = "white";
 
 const style1 = css`
   background-color: hotpink;
@@ -18,41 +17,28 @@ const style1 = css`
     font-weight: bold;
     color: ${color};
   }
-`
+`;
 
 const style2 = css({
-  backgroundColor: 'hotpink',
-  padding: '32px',
-  cursor: 'pointer',
-  '&:hover': {
-    fontWeight: 'bold',
+  backgroundColor: "hotpink",
+  padding: "32px",
+  cursor: "pointer",
+  "&:hover": {
+    fontWeight: "bold",
     color: color,
-  }
-})
-
+  },
+});
 
 const EmotionReact: NextPage = () => {
   return (
-    <div
-      className="flex flex-col h-screen"
-    >
+    <div className="flex flex-col h-screen">
       <Header
         title="Emotion using CSS Prop"
         description="The primary way to style elements with emotion is the css prop. It provides a concise and flexible API to style your components."
       />
-      <main
-        className="mb-auto px-10"
-      >
-        <div
-          css={ style1 }
-        >
-          Hover to change color.
-        </div>
-        <div
-          css={ style2 }
-        >
-          Hover to change color.
-        </div>
+      <main className="mb-auto px-10">
+        <div css={style1}>Hover to change color.</div>
+        <div css={style2}>Hover to change color.</div>
         <div
           css={css`
             padding: 32px;
@@ -68,15 +54,15 @@ const EmotionReact: NextPage = () => {
         </div>
         <div
           css={{
-            backgroundColor: 'hotpink',
-            padding: '32px',
-            cursor: 'pointer',
-            '&:hover': {
-              fontWeight: 'bold',
+            backgroundColor: "hotpink",
+            padding: "32px",
+            cursor: "pointer",
+            "&:hover": {
+              fontWeight: "bold",
               color: color,
-            }
-          }
-        }>
+            },
+          }}
+        >
           Hover to change color.
         </div>
       </main>
@@ -84,11 +70,12 @@ const EmotionReact: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number"
+            listStyleType: "number",
           }}
         >
           <li>
-            Emotion:<br />
+            Emotion:
+            <br />
             <a
               href="https://emotion.sh/docs/css-prop"
               target="_blank"
@@ -102,6 +89,6 @@ const EmotionReact: NextPage = () => {
       </Footer>
     </div>
   );
-}
+};
 
-export default EmotionReact
+export default EmotionReact;
