@@ -14,6 +14,7 @@ interface MyProps {
 }
 
 interface MyState {
+  count: number;
   friend: Friend | null;
   isOnline: boolean | null;
 }
@@ -21,7 +22,7 @@ interface MyState {
 class ExampleComponent extends Component<MyProps, MyState> {
   constructor(props: MyState) {
     super(props);
-    this.state = { friend: null, isOnline: null };
+    this.state = { count: 0, friend: null, isOnline: null };
     this.handleStatusChange = this.handleStatusChange.bind(this);
   }
 
@@ -30,6 +31,7 @@ class ExampleComponent extends Component<MyProps, MyState> {
     //   this.props.friend?.id,
     //   this.handleStatusChange
     // );
+    document.title = `You clicked ${this.state.count} times`;
     console.log(`componentDidMount`);
   }
 
@@ -45,6 +47,7 @@ class ExampleComponent extends Component<MyProps, MyState> {
     //   this.props.friend?.id,
     //   this.handleStatusChange
     // );
+    document.title = `You clicked ${this.state.count} times`;
     console.log(`componentDidUpdate`);
   }
 

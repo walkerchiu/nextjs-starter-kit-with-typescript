@@ -19,7 +19,12 @@ interface MyState {
 }
 
 const ExampleComponent = (props: MyProps) => {
+  const [count, setCount] = useState(0);
   const [isOnline, setIsOnline] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
 
   useEffect(() => {
     function handleStatusChange(status: MyState) {
