@@ -22,9 +22,13 @@ const ExampleComponent = (props: MyProps) => {
   const [count, setCount] = useState(0);
   const [isOnline, setIsOnline] = useState<boolean | null>(null);
 
+  // If you use this optimization, make sure the array includes all values from the component scope (such as props and state) that change over time and that are used by the effect.
+  // Otherwise, your code will reference stale values from previous renders.
+
+  // If there are multiple items in the array, React will re-run the effect even if just one of them is different.
   useEffect(() => {
     document.title = `You clicked ${count} times`;
-  });
+  }, [count]); // Only re-run the effect if count changes
 
   useEffect(() => {
     function handleStatusChange(status: MyState) {
@@ -39,7 +43,7 @@ const ExampleComponent = (props: MyProps) => {
       // ChatAPI.unsubscribeFromFriendStatus(props.friend?.id, handleStatusChange);
       console.log("unsubscribeFromFriendStatus");
     };
-  });
+  }, [props.friend?.id]); // Only re-subscribe if props.friend.id changes
 
   return (
     <div>
