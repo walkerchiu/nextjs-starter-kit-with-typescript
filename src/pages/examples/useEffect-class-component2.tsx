@@ -66,10 +66,11 @@ class ExampleComponent extends Component<MyProps, MyState> {
   }
 
   render() {
-    if (this.state.isOnline === null) {
-      return "Loading...";
-    }
-    return this.state.isOnline ? "Online" : "Offline";
+    // if (this.state.isOnline === null) {
+    //   return "Loading...";
+    // }
+    // return this.state.isOnline ? "Online" : "Offline";
+    return "Please check the source code and console output.";
   }
 }
 

@@ -54,7 +54,8 @@ const ExampleComponent = (props: MyProps) => {
 
   return (
     <div>
-      {isOnline == null ? "Loading..." : isOnline ? "Online" : "Offline"}
+      {/* {isOnline == null ? "Loading..." : isOnline ? "Online" : "Offline"} */}
+      Please check the source code and console output.
     </div>
   );
 };
