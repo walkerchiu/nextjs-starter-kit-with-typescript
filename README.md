@@ -4,8 +4,8 @@
 
 ### Prerequisites
 
--   npm >= 8.11.0
--   node >= 17.9.0
+- npm >= 8.11.0
+- node >= 17.9.0
 
 ## Building Up the Project for Development
 
