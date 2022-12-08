@@ -14,7 +14,7 @@ const Header: FC<ComponentProps> = ({ title, description }) => {
       aria-label="Main"
       className="w-full my-5 px-5 xl:px-10 py-5 flex flex-col xl:flex-row items-start xl:items-center justify-between shadow rounded"
     >
-      <div className="mb-4 lg:w-1/2">
+      <div className="mb-4 lg:w-3/4">
         <p className="focus:outline-none text-2xl font-bold">
           Example: {title}
         </p>
