@@ -71,6 +71,22 @@ const Home: NextPage = () => {
         <section className={styles.board}>
           <header>Example</header>
           <article>
+            <h2>dnd-kit</h2>
+            <ol
+              style={{
+                listStyleType: "number",
+              }}
+            >
+              <li>
+                <Link href="/examples/dnd-kit-draggable-and-droppable">
+                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                    Draggable and Droppable
+                  </a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>Emotion</h2>
             <ol
               style={{
