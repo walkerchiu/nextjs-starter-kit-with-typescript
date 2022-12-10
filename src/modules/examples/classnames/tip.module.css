@@ -1,0 +1,19 @@
+.tip {
+  margin-bottom: 3px;
+  padding: 3px;
+}
+.success {
+  font-size: xx-large;
+  color: white;
+  background-color: limeGreen;
+}
+.warning {
+  font-size: xx-large;
+  color: black;
+  background-color: orange;
+}
+.error {
+  font-size: xx-large;
+  color: white;
+  background-color: red;
+}

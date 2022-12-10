@@ -71,6 +71,22 @@ const Home: NextPage = () => {
         <section className={styles.board}>
           <header>Example</header>
           <article>
+            <h2>classnames</h2>
+            <ol
+              style={{
+                listStyleType: "number",
+              }}
+            >
+              <li>
+                <Link href="/examples/classnames">
+                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                    classnames
+                  </a>
+                </Link>
+              </li>
+            </ol>
+          </article>
+          <article>
             <h2>dnd-kit</h2>
             <ol
               style={{
