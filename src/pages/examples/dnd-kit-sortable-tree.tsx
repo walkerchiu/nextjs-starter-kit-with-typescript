@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import type { CSSProperties } from "react";
 
-import { DndContext, DragEndEvent } from "@dnd-kit/core";
+import { DndContext, DragStartEvent, DragEndEvent } from "@dnd-kit/core";
 import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
@@ -11,9 +11,10 @@ import Header from "../../modules/examples/Header";
 
 interface SortableItemProps {
   id: string;
+  is_active: boolean | false;
 }
 
-const SortableItem: FC<SortableItemProps> = ({ id }) => {
+const SortableItem: FC<SortableItemProps> = ({ id, is_active }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
     id,
   });
@@ -26,6 +27,8 @@ const SortableItem: FC<SortableItemProps> = ({ id }) => {
     marginTop: "10px",
     padding: "10px",
     cursor: "grab",
+    position: "relative",
+    zIndex: is_active ? 2 : 1,
   };
 
   return (
@@ -36,7 +39,12 @@ const SortableItem: FC<SortableItemProps> = ({ id }) => {
 };
 
 const DndKitSortableTreePage: NextPage = () => {
+  const [dragActiveId, setDragActiveId] = useState<string | null>(null);
   const [items, setItems] = useState(["A", "B", "C"]);
+
+  function handleDragStart(event: DragStartEvent) {
+    setDragActiveId(event.active.id as string);
+  }
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active } = event;
@@ -48,6 +56,8 @@ const DndKitSortableTreePage: NextPage = () => {
         items.indexOf(over?.id as string)
       );
     });
+
+    setDragActiveId(null);
   }
 
   return (
@@ -57,10 +67,10 @@ const DndKitSortableTreePage: NextPage = () => {
         description="The sortable preset provides the building blocks to build  sortable interfaces."
       />
       <main className="mb-auto px-10">
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
           <SortableContext items={items}>
             {items.map((id) => (
-              <SortableItem key={id} id={id} />
+              <SortableItem key={id} id={id} is_active={id == dragActiveId} />
             ))}
           </SortableContext>
         </DndContext>
