@@ -10,6 +10,11 @@ import {
   DragOverEvent,
   DragEndEvent,
   DragCancelEvent,
+  KeyboardSensor,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
 } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
@@ -71,6 +76,12 @@ const DndKitDragAndDropPage: NextPage = () => {
   const containers = ["A", "B", "C"];
   const [parent, setParent] = useState<UniqueIdentifier | null>(null);
 
+  const sensors = useSensors(
+    useSensor(MouseSensor),
+    useSensor(TouchSensor),
+    useSensor(KeyboardSensor)
+  );
+
   function handleDragStart(event: DragStartEvent) {
     console.log('Start Dragging: "' + event.active.id + '".');
   }
@@ -125,6 +136,7 @@ const DndKitDragAndDropPage: NextPage = () => {
           onDragOver={handleDragOver}
           onDragEnd={handleDragEnd}
           onDragCancel={handleDragCancel}
+          sensors={sensors}
         >
           <div style={{ padding: "10px", minHeight: "60px" }}>
             {parent === null ? <Draggable /> : null}

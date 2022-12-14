@@ -1,7 +1,16 @@
 import { FC, useState } from "react";
 import type { CSSProperties } from "react";
 
-import { DndContext, DragStartEvent, DragEndEvent } from "@dnd-kit/core";
+import {
+  DndContext,
+  DragStartEvent,
+  DragEndEvent,
+  KeyboardSensor,
+  MouseSensor,
+  TouchSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
 import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
@@ -42,6 +51,12 @@ const DndKitSortableTreePage: NextPage = () => {
   const [dragActiveId, setDragActiveId] = useState<string | null>(null);
   const [items, setItems] = useState(["A", "B", "C"]);
 
+  const mouseSensor = useSensor(MouseSensor);
+  const touchSensor = useSensor(TouchSensor);
+  const keyboardSensor = useSensor(KeyboardSensor);
+
+  const sensors = useSensors(mouseSensor, touchSensor, keyboardSensor);
+
   function handleDragStart(event: DragStartEvent) {
     setDragActiveId(event.active.id as string);
   }
@@ -67,7 +82,11 @@ const DndKitSortableTreePage: NextPage = () => {
         description="The sortable preset provides the building blocks to build  sortable interfaces."
       />
       <main className="mb-auto px-10">
-        <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
+        <DndContext
+          onDragStart={handleDragStart}
+          onDragEnd={handleDragEnd}
+          sensors={sensors}
+        >
           <SortableContext items={items}>
             {items.map((id) => (
               <SortableItem key={id} id={id} is_active={id == dragActiveId} />
