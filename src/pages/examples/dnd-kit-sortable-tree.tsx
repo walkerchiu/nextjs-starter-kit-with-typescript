@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
 import {
@@ -14,6 +14,7 @@ import {
 import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
+import { useTheme } from "next-themes";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
@@ -27,18 +28,29 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_active }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
     id,
   });
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme == "dark";
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    backgroundColor: "white",
-    border: "1px solid black",
+    backgroundColor: isDarkMode ? "black" : "white",
+    border: isDarkMode ? "1px solid white" : "1px solid black",
     marginTop: "10px",
     padding: "10px",
     cursor: "grab",
     position: "relative",
     zIndex: is_active ? 2 : 1,
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div ref={setNodeRef} {...listeners} style={styles}>

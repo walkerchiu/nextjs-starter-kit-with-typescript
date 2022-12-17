@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 
 import {
@@ -15,6 +15,7 @@ import {
 import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
+import { useTheme } from "next-themes";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
@@ -32,13 +33,16 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_overlay }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
     id,
   });
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme == "dark";
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    color: "black",
-    backgroundColor: "white",
-    border: "1px solid black",
+    color: isDarkMode ? "white" : "black",
+    backgroundColor: isDarkMode ? "black" : "white",
+    border: isDarkMode ? "1px solid white" : "1px solid black",
     marginTop: "10px",
     padding: "10px",
     cursor: "grab",
@@ -46,11 +50,19 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_overlay }) => {
 
   const styles_overlay: CSSProperties = {
     color: "gray",
-    backgroundColor: "white",
+    backgroundColor: isDarkMode ? "black" : "white",
     border: "1px solid gray",
     marginTop: "10px",
     padding: "10px",
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div
@@ -67,18 +79,29 @@ const ActiveItem: FC<ActiveItemProps> = ({ id }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
     id,
   });
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme == "dark";
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    color: "red",
+    color: isDarkMode ? "yellow" : "red",
     fontWeight: "bold",
-    backgroundColor: "white",
-    border: "2px solid red",
+    backgroundColor: isDarkMode ? "black" : "white",
+    border: isDarkMode ? "2px solid yellow" : "2px solid red",
     marginTop: "10px",
     padding: "10px",
     cursor: "grabbing",
   };
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div ref={setNodeRef} {...listeners} style={styles}>

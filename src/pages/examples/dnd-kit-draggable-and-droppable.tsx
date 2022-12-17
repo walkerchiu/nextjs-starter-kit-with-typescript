@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
   DndContext,
@@ -18,6 +18,7 @@ import {
 } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
 import type { NextPage } from "next";
+import { useTheme } from "next-themes";
 
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
@@ -53,6 +54,17 @@ interface DroppableProps {
 
 function Droppable({ id, children }: DroppableProps) {
   const { isOver, setNodeRef } = useDroppable({ id });
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme == "dark";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div
@@ -63,7 +75,13 @@ function Droppable({ id, children }: DroppableProps) {
         justifyContent: "center",
         width: 150,
         height: 150,
-        border: isOver ? "2px solid gray" : "1px solid black",
+        border: isDarkMode
+          ? isOver
+            ? "2px solid gray"
+            : "1px solid white"
+          : isOver
+          ? "2px solid gray"
+          : "1px solid black",
         margin: 20,
       }}
     >
