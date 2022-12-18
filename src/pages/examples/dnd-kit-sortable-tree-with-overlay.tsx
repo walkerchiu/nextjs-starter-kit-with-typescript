@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 
 import {
@@ -20,18 +20,24 @@ import { useTheme } from "next-themes";
 import Footer from "../../modules/examples/Footer";
 import Header from "../../modules/examples/Header";
 
-interface SortableItemProps {
+type Item = {
   id: string;
+  name: string;
+  description: string;
+};
+
+interface SortableItemProps {
+  item: Item;
   is_overlay: boolean | false;
 }
 
 interface ActiveItemProps {
-  id: string;
+  item: Item | undefined;
 }
 
-const SortableItem: FC<SortableItemProps> = ({ id, is_overlay }) => {
+const SortableItem: FC<SortableItemProps> = ({ item, is_overlay }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
-    id,
+    id: item.id as string,
   });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
@@ -69,15 +75,16 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_overlay }) => {
       ref={setNodeRef}
       {...listeners}
       style={is_overlay ? styles_overlay : styles}
+      title={item.description}
     >
-      {id}
+      {item.id}. {item.name}
     </div>
   );
 };
 
-const ActiveItem: FC<ActiveItemProps> = ({ id }) => {
+const ActiveItem: FC<ActiveItemProps> = ({ item }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
-    id,
+    id: item ? item.id : "",
   });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
@@ -104,15 +111,37 @@ const ActiveItem: FC<ActiveItemProps> = ({ id }) => {
   }
 
   return (
-    <div ref={setNodeRef} {...listeners} style={styles}>
-      {id}
+    <div
+      ref={setNodeRef}
+      {...listeners}
+      style={styles}
+      title={item?.description}
+    >
+      {item?.id}. {item?.name}
     </div>
   );
 };
 
 const DndKitSortableTreePage: NextPage = () => {
   const [dragActiveId, setDragActiveId] = useState<string>("");
-  const [items, setItems] = useState(["A", "B", "C"]);
+  const [items, setItems] = useState([
+    {
+      id: "1",
+      name: "Apple",
+      description: "An Apple",
+    },
+    {
+      id: "2",
+      name: "Banana",
+      description: "A banana",
+    },
+    {
+      id: "3",
+      name: "Cake",
+      description: "A cake",
+    },
+  ]);
+  const itemIds = useMemo(() => items.map((item) => item.id), [items]);
 
   const mouseSensor = useSensor(MouseSensor);
   const touchSensor = useSensor(TouchSensor);
@@ -126,13 +155,11 @@ const DndKitSortableTreePage: NextPage = () => {
 
   function handleDragEnd(event: DragEndEvent) {
     const { over, active } = event;
+    const activeIndex = itemIds.findIndex((id) => id === active.id);
+    const overIndex = itemIds.findIndex((id) => id === over?.id);
 
     setItems((items) => {
-      return arrayMove(
-        items,
-        items.indexOf(active.id as string),
-        items.indexOf(over?.id as string)
-      );
+      return arrayMove([...items], activeIndex, overIndex);
     });
 
     setDragActiveId("");
@@ -151,8 +178,12 @@ const DndKitSortableTreePage: NextPage = () => {
           sensors={sensors}
         >
           <SortableContext items={items}>
-            {items.map((id) => (
-              <SortableItem key={id} id={id} is_overlay={id == dragActiveId} />
+            {items.map((item) => (
+              <SortableItem
+                key={item.id}
+                item={item}
+                is_overlay={item.id == dragActiveId}
+              />
             ))}
             <DragOverlay
               dropAnimation={{
@@ -160,7 +191,10 @@ const DndKitSortableTreePage: NextPage = () => {
                 easing: "cubic-bezier(0.18, 0.67, 0.6, 1.22)",
               }}
             >
-              <ActiveItem key={dragActiveId} id={dragActiveId} />
+              <ActiveItem
+                key={dragActiveId}
+                item={items.find((item) => item.id == dragActiveId)}
+              />
             </DragOverlay>
           </SortableContext>
         </DndContext>
