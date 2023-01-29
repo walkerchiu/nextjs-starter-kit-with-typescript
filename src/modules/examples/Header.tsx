@@ -18,7 +18,7 @@ const Header: FC<ComponentProps> = ({ title, description }) => {
         <p className="focus:outline-none text-2xl font-bold">
           Example: {title}
         </p>
-        <p className="focus:outline-none font-normal text-sm text-gray-600 dark:text-white mt-1">
+        <p className="focus:outline-none font-normal text-gray-600 dark:text-white mt-1">
           {description}
         </p>
       </div>

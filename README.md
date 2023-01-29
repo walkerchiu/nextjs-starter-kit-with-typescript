@@ -1,4 +1,4 @@
-# Next Starter with TypeScript and TailwindCSS
+# Next.js Starter Kit with TypeScript
 
 ## Get Started For IDE
 

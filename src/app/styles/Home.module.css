@@ -12,7 +12,7 @@
   margin: 0;
   text-align: center;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title a {
@@ -26,13 +26,6 @@
   text-decoration: underline;
 }
 
-.description {
-  margin: 4rem 0;
-  text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
 .board {
   width: 85%;
   margin: 1rem 2rem;
@@ -44,17 +37,13 @@
   border-radius: 10px;
 }
 
-.board > header {
-  font-size: 2rem;
-}
-
 .board > article {
   margin: 1rem 0;
 }
 
 .board > article > header {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .board > article > ol {
@@ -64,10 +53,9 @@
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1400px;
 }
 
 .card {
@@ -102,7 +90,7 @@
 
 @media (max-width: 600px) {
   .title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .board > article > ol {
@@ -112,6 +100,7 @@
   .grid {
     width: 100%;
     flex-direction: column;
+    align-items: center;
   }
 
   .card {
