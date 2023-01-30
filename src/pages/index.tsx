@@ -27,258 +27,84 @@ const Home: NextPage = () => {
 
         <section className={styles.board}>
           <article>
-            <header>classnames</header>
+            <header>Indexes</header>
             <ol
               style={{
                 listStyleType: "number",
               }}
             >
               <li>
-                <Link href="/examples/classnames">
+                <Link href="/classnames">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     classnames
                   </a>
                 </Link>
               </li>
-            </ol>
-          </article>
-          <article>
-            <header>dnd-kit</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
               <li>
-                <Link href="/examples/dnd-kit-draggable-and-droppable">
+                <Link href="/dnd-kit">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Draggable and Droppable
+                    dnd-kit
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/dnd-kit-sortable-tree">
+                <Link href="/emotion">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Sortable Tree
+                    Emotion
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/dnd-kit-sortable-tree-with-overlay">
+                <Link href="/floating-ui">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Sortable Tree with Overlay
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>Emotion</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/emotion-css-prop">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Emotion using CSS Prop
+                    Floating UI
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/emotion-styled">
+                <Link href="/fontawesome">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Emotion using styled component
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>Floating UI</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/floating-ui-tooltip">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Floating UI (Tooltip)
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>Font Awesome</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/fontawesome-individually">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Font Awesome (Individually)
+                    Font Awesome
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/fontawesome-dynamically">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Font Awesome (Dynamically)
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>next-i18next</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/next-i18next-page1">
+                <Link href="/next-i18next">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     next-i18next
                   </a>
                 </Link>
               </li>
-            </ol>
-          </article>
-          <article>
-            <header>next-seo</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
               <li>
-                <Link href="/examples/next-seo">
+                <Link href="/next-seo">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     next-seo
                   </a>
                 </Link>
               </li>
-            </ol>
-          </article>
-          <article>
-            <header>React Hook</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
               <li>
-                <Link href="/examples/useState">
+                <Link href="/react-hook">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useState
+                    React Hook
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/useState-clsss-component">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useState (Class Component)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useState-function-component">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useState (Function Component)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useEffect">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useEffect
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useEffect-clsss-component">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useEffect (Class Component)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useEffect-function-component">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useEffect (Function Component)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useEffect-class-component2">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useEffect (Class Component 2)
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/examples/useEffect-function-component2">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    useEffect (Function Component 2)
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>React Hook Form</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/react-hook-form">
+                <Link href="/react-hook-form">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     React Hook Form
                   </a>
                 </Link>
               </li>
-            </ol>
-          </article>
-          <article>
-            <header>Tailwind CSS</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
               <li>
-                <Link href="/examples/tailwindcss">
+                <Link href="/tailwindcss">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     Tailwind CSS
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/examples/tailwind-styled-components">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Tailwind-Styled-Component
-                  </a>
-                </Link>
-              </li>
-            </ol>
-          </article>
-          <article>
-            <header>XState</header>
-            <ol
-              style={{
-                listStyleType: "number",
-              }}
-            >
-              <li>
-                <Link href="/examples/xstate">
+                <Link href="/xstate">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     XState
                   </a>
