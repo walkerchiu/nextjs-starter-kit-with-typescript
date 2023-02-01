@@ -1,46 +1,39 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import GoogleReCaptchaForm from "../../modules/google-recaptcha/react-google-recaptcha-v3/GoogleReCaptchaForm";
 
-const IndexPage: NextPage = () => {
+const ReactGoogleRecaptchaV3Page: NextPage = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header
-        title="Google reCAPTCHA"
+        title="react-google-recaptcha-v3 (with React Hook Form)"
         description="reCAPTCHA is a free service that protects your site from spam and abuse. It uses advanced risk analysis techniques to tell humans and bots apart."
       />
-      <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
-        <article>
-          <ol
-            style={{
-              listStyleType: "number",
-            }}
-          >
-            <li>
-              <Link href="/google-recaptcha/react-google-recaptcha-v3">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  react-google-recaptcha-v3
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/google-recaptcha/react-google-recaptcha-v3-with-react-hook-form">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  react-google-recaptcha-v3 (with React Hook Form)
-                </a>
-              </Link>
-            </li>
-          </ol>
-        </article>
+      <main
+        id="main"
+        className="flex w-full flex-1 flex-col items-center justify-center pt-5 text-center"
+      >
+        <GoogleReCaptchaProvider
+          reCaptchaKey="YourReCaptchaKey"
+          scriptProps={{
+            async: false,
+            defer: false,
+            appendTo: "head",
+            nonce: undefined,
+          }}
+        >
+          <GoogleReCaptchaForm />
+        </GoogleReCaptchaProvider>
       </main>
       <Footer>
         <ol
-          className="pl-6"
           style={{
             listStyleType: "number",
           }}
+          className="pl-6"
         >
           <li>
             Choosing the type of reCAPTCHA:
@@ -66,10 +59,22 @@ const IndexPage: NextPage = () => {
               https://cloud.google.com/recaptcha-enterprise/docs/compare-versions
             </a>
           </li>
+          <li>
+            react-hook-form:
+            <br />
+            <a
+              href="https://react-hook-form.com/get-started"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://react-hook-form.com/get-started
+            </a>
+          </li>
         </ol>
       </Footer>
     </div>
   );
 };
 
-export default IndexPage;
+export default ReactGoogleRecaptchaV3Page;
