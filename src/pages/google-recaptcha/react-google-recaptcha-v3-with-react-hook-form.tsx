@@ -26,6 +26,31 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
           }}
         >
           <GoogleReCaptchaForm />
+          <div className="m-5 text-gray-400 text-left">
+            {/*
+              You are allowed to hide the badge as long as you include the reCAPTCHA branding visibly in the user flow. Please include the following text
+              Reference: https://developers.google.com/recaptcha/docs/faq?ref=morioh.com&utm_source=morioh.com#id-like-to-hide-the-recaptcha-badge.-what-is-allowed
+            */}
+            This site is protected by reCAPTCHA and the Google{" "}
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              Privacy Policy
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://policies.google.com/terms"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              Terms of Service
+            </a>{" "}
+            apply.
+          </div>
         </GoogleReCaptchaProvider>
       </main>
       <Footer>
