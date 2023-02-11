@@ -8,7 +8,10 @@ interface ComponentProps {
 }
 
 const Header: FC<ComponentProps> = ({ title, description }) => {
-  const handleClick = () => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    event.preventDefault();
     window.history.back();
   };
 
