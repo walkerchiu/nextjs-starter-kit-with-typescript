@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
+import { useRouter, NextRouter } from "next/router";
 
 interface ComponentProps {
   className?: string;
@@ -8,11 +9,13 @@ interface ComponentProps {
 }
 
 const Header: FC<ComponentProps> = ({ title, description }) => {
+  const router: NextRouter = useRouter();
+
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     event.preventDefault();
-    window.history.back();
+    router.back();
   };
 
   return (
