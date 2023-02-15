@@ -75,6 +75,13 @@ const IndexPage: NextPage = () => {
               </Link>
             </li>
             <li>
+              <Link href="/react-hook/useRef-stopwatch">
+                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                  useRef (StopWatch)
+                </a>
+              </Link>
+            </li>
+            <li>
               <Link href="/react-hook/useState">
                 <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                   useState
