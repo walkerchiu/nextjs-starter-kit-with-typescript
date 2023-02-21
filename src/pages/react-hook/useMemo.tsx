@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import type { NextPage } from "next";
 
@@ -22,7 +22,11 @@ function ExampleComponent() {
   const result = useMemo(() => expensiveOperation(count), [count]);
 
   return (
-    <div>
+    <React.Fragment>
+      <p className="mb-5">
+        Please observe the number of occurrences of &quot;Executing
+        expensiveOperation&quot; in the console.
+      </p>
       <p>Count: {count}</p>
       <p>Result: {result}</p>
       <button
@@ -31,7 +35,66 @@ function ExampleComponent() {
       >
         Increment Count
       </button>
-    </div>
+    </React.Fragment>
+  );
+}
+
+function ExampleComponent2() {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const result = expensiveOperation(count);
+
+  return (
+    <React.Fragment>
+      <p className="mb-5">Components are re-rendered when state changes.</p>
+      <p>Count: {count}</p>
+      <p>Count2: {count2}</p>
+      <p>Result: {result}</p>
+      <button
+        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Increment Count
+      </button>
+      <button
+        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        onClick={() => setCount2(count2 + 1)}
+      >
+        Increment Count2
+      </button>
+    </React.Fragment>
+  );
+}
+
+function ExampleComponent3() {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const result = useMemo(() => expensiveOperation(count), [count]);
+
+  return (
+    <React.Fragment>
+      <p className="mb-5">
+        Because <code>useMemo</code> is used to remember,
+        &quot;expensiveOperation&quot; will not be executed repeatedly.
+      </p>
+      <p>Count: {count}</p>
+      <p>Count2: {count2}</p>
+      <p>Result: {result}</p>
+      <button
+        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        onClick={() => setCount(count + 1)}
+      >
+        Increment Count
+      </button>
+      <button
+        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        onClick={() => setCount2(count2 + 1)}
+      >
+        Increment Count2
+      </button>
+    </React.Fragment>
   );
 }
 
@@ -46,7 +109,15 @@ const useMemoPage: NextPage = () => {
         id="main"
         className="flex w-full flex-1 flex-col items-center justify-center p-5 text-center"
       >
-        <ExampleComponent />
+        <div className="w-full mb-5 pb-5 border-b-2">
+          <ExampleComponent />
+        </div>
+        <div className="w-full mb-5 pb-5 border-b-2">
+          <ExampleComponent2 />
+        </div>
+        <div className="w-full mb-5 pb-5 border-b-2">
+          <ExampleComponent3 />
+        </div>
       </main>
       <Footer>
         <ol
