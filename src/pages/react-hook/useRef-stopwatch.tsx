@@ -38,7 +38,7 @@ const useRefPage: NextPage = () => {
     <div className="flex flex-col h-screen">
       <Header
         title="React Hook - useRef (StopWatch)"
-        description="Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class."
+        description="useRef is a React Hook that lets you reference a value that’s not needed for rendering."
       />
       <main
         id="main"

@@ -65,7 +65,7 @@ const useEffectFunctionComponentPage: NextPage = () => {
     <div className="flex flex-col h-screen">
       <Header
         title="React Hook - useEffect (Function Component 2)"
-        description="Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class."
+        description="useEffect is a React Hook that lets you synchronize a component with an external system."
       />
       <main
         id="main"
