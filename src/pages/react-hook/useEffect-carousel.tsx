@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import type { NextPage } from "next";
+import Image from "next/image";
 
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
@@ -68,10 +69,12 @@ const useEffectPage: NextPage = () => {
           </p>
         </div>
         <div className="mb-5">
-          <img
+          <Image
             src={images[currentIndex]}
             alt="carousel"
             onClick={handleImageClick}
+            width={500}
+            height={300}
           />
         </div>
         <div>
