@@ -40,7 +40,7 @@ const FloatingUITooltipPage: NextPage = () => {
 
   useEffect(() => {
     const main = document.getElementById("main");
-    const floating = document.getElementById("floating")!;
+    const floating = document.getElementById("floating");
 
     main?.addEventListener("mousemove", ({ clientX, clientY }) => {
       const virtualEl = {
@@ -58,17 +58,19 @@ const FloatingUITooltipPage: NextPage = () => {
         },
       };
 
-      computePosition(virtualEl, floating, {
-        placement: "right-start",
-        middleware: [offset(5), flip(), shift()],
-      }).then(({ x, y }) => {
-        setActive(true);
+      if (floating) {
+        computePosition(virtualEl, floating, {
+          placement: "right-start",
+          middleware: [offset(5), flip(), shift()],
+        }).then(({ x, y }) => {
+          setActive(true);
 
-        Object.assign(floating.style, {
-          top: `${y - 50}px`,
-          left: `${x}px`,
+          Object.assign(floating.style, {
+            top: `${y - 50}px`,
+            left: `${x}px`,
+          });
         });
-      });
+      }
     });
 
     main?.addEventListener("mouseleave", (e) => {
