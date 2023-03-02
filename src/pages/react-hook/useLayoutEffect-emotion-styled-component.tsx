@@ -1,10 +1,11 @@
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
 
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import useIsomorphicLayoutEffect from "./usehooks-ts";
 
 interface StyledDivProps {
   color: string;
@@ -21,7 +22,7 @@ const useLayoutEffectPage: NextPage = () => {
   const [fontSize, setFontSize] = useState("24px");
   const [show, setShow] = useState(false);
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     setShow(true);
     const style = document.createElement("style");
     style.setAttribute("type", "text/css");
@@ -126,6 +127,18 @@ const useLayoutEffectPage: NextPage = () => {
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://beta.reactjs.org/reference/react/useLayoutEffect
+            </a>
+          </li>
+          <li>
+            useIsomorphicLayoutEffect:
+            <br />
+            <a
+              href="https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect
             </a>
           </li>
         </ol>

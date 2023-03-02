@@ -1,10 +1,11 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import type { NextPage } from "next";
 import Image from "next/image";
 
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import useIsomorphicLayoutEffect from "./usehooks-ts";
 
 const useLayoutEffectPage: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +18,7 @@ const useLayoutEffectPage: NextPage = () => {
     "https://via.placeholder.com/500x300/0000ff/ffffff",
   ];
 
-  useLayoutEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!isPaused) {
       timerRef.current = setTimeout(() => {
         setCurrentIndex((currentIndex + 1) % images.length);
@@ -113,6 +114,18 @@ const useLayoutEffectPage: NextPage = () => {
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://beta.reactjs.org/reference/react/useLayoutEffect
+            </a>
+          </li>
+          <li>
+            useIsomorphicLayoutEffect:
+            <br />
+            <a
+              href="https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://usehooks-ts.com/react-hook/use-isomorphic-layout-effect
             </a>
           </li>
         </ol>
