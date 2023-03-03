@@ -6,8 +6,8 @@ import Header from "../../layouts/Header";
 import { Counter, Toggle, TrafficLight } from "../../modules/xstate/components";
 import {
   counterMachine,
-  toggleMachine,
   nextTrafficLightMachine,
+  toggleMachine,
 } from "../../modules/xstate/machines";
 
 const XStatePage: NextPage = () => {

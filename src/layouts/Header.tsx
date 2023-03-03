@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+
 import Link from "next/link";
-import { useRouter, NextRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
 
 interface ComponentProps {
   className?: string;

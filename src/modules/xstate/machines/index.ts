@@ -1,5 +1,5 @@
 import { counterMachine } from "./counterMachine";
-import { toggleMachine } from "./toggleMachine";
 import { nextTrafficLightMachine } from "./nextTrafficLightMachine";
+import { toggleMachine } from "./toggleMachine";
 
-export { counterMachine, toggleMachine, nextTrafficLightMachine };
+export { counterMachine, nextTrafficLightMachine, toggleMachine };
