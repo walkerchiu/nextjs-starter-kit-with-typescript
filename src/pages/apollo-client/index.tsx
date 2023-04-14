@@ -13,33 +13,43 @@ const IndexPage: NextPage = () => {
       />
       <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
         <article>
-          <ol
+          <ul
             style={{
-              listStyleType: "number",
+              listStyleType: "disc",
             }}
           >
             <li>
-              <Link href="/apollo-client/apollo-client-getStaticProps-query">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  apollo-client (getStaticProps: Query)
-                </a>
-              </Link>
+              Query
+              <ol
+                style={{
+                  listStyleType: "number",
+                  marginLeft: "20px",
+                }}
+              >
+                <li>
+                  <Link href="/apollo-client/getServerSideProps-query">
+                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                      getServerSideProps
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/apollo-client/getStaticProps-query">
+                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                      getStaticProps
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/apollo-client/useEffect-query">
+                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                      useEffect
+                    </a>
+                  </Link>
+                </li>
+              </ol>
             </li>
-            <li>
-              <Link href="/apollo-client/apollo-client-getServerSideProps-query">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  apollo-client (getServerSideProps: Query)
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/apollo-client/apollo-client-useEffect-query">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  apollo-client (useEffect: Query)
-                </a>
-              </Link>
-            </li>
-          </ol>
+          </ul>
         </article>
       </main>
       <Footer>
