@@ -1,9 +1,10 @@
-const { i18n } = require("./next-i18next.config");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  i18n,
+  i18n: {
+    locales: ["en-US", "zh-TW"],
+    defaultLocale: "en-US",
+  },
   images: {
     domains: ["via.placeholder.com"],
   },
