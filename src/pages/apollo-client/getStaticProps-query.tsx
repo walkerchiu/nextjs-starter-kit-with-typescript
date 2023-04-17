@@ -1,10 +1,9 @@
+import { gql } from "@apollo/client";
 import type { NextPage } from "next";
 
-import { gql } from "@apollo/client";
-
-import client from "../../modules/apollo-client/apollo-client";
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import client from "../../modules/apollo-client/apollo-client";
 
 export const COUNTRY_INFO_FIELDS = gql`
   fragment CountryInfoFields on Country {
