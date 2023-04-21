@@ -110,6 +110,18 @@ export default function LanguageSwitcherPage1() {
               https://github.com/isaachinman/next-i18next
             </a>
           </li>
+          <li>
+            Accessing the locale information:
+            <br />
+            <a
+              href="https://nextjs.org/docs/pages/building-your-application/routing/internationalization#accessing-the-locale-information"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://nextjs.org/docs/pages/building-your-application/routing/internationalization#accessing-the-locale-information
+            </a>
+          </li>
         </ol>
       </Footer>
     </div>
