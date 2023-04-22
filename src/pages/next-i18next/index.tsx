@@ -27,6 +27,21 @@ const IndexPage: NextPage = () => {
             </li>
           </ol>
         </article>
+        <article className="mt-5">
+          <ul
+            style={{
+              listStyleType: "disc",
+            }}
+          >
+            <li>
+              <Link href="/next-i18next/locale-in-navigator">
+                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                  Locale in Navigator
+                </a>
+              </Link>
+            </li>
+          </ul>
+        </article>
       </main>
       <Footer>
         <ol
@@ -69,6 +84,18 @@ const IndexPage: NextPage = () => {
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://nextjs.org/docs/pages/building-your-application/routing/internationalization#accessing-the-locale-information
+            </a>
+          </li>
+          <li>
+            Navigator: languages property:
+            <br />
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages
             </a>
           </li>
         </ol>
