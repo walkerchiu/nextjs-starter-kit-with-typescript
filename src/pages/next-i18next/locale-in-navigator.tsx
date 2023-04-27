@@ -105,7 +105,7 @@ export default function LocaleInNavigator() {
               <strong>language:</strong> {language}
             </p>
             <p>
-              <strong>languages:</strong> {languages.toString()}
+              <strong>languages:</strong> {languages.join(", ")}
             </p>
           </div>
         </section>
