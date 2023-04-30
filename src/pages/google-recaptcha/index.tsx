@@ -66,6 +66,18 @@ const IndexPage: NextPage = () => {
               https://cloud.google.com/recaptcha-enterprise/docs/compare-versions
             </a>
           </li>
+          <li>
+            Domain/Package Name Validation:
+            <br />
+            <a
+              href="https://developers.google.com/recaptcha/docs/domain_validation"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://developers.google.com/recaptcha/docs/domain_validation
+            </a>
+          </li>
         </ol>
       </Footer>
     </div>
