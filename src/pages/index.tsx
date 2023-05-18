@@ -83,6 +83,13 @@ const Home: NextPage = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/next-csrf">
+                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
+                    next-csrf
+                  </a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/next-i18next">
                   <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
                     next-i18next
