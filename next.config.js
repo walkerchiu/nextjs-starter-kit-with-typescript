@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if your project has ESLint errors.
+    // Disabling on production builds if you're running checks on PRs via GitHub Actions or others.
+    // Default: false
+    ignoreDuringBuilds: false,
+  },
   reactStrictMode: true,
   i18n: {
     locales: ["en-US", "zh-TW"],
