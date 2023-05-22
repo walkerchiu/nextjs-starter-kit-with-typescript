@@ -4,11 +4,11 @@ import React, { useEffect } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { NextPage } from "next";
+import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
-import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
 import NProgress from "nprogress";
 
 import "../app/styles/globals.css";

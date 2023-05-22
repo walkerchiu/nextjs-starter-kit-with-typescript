@@ -3,9 +3,9 @@ import { useRef, useState } from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 
+import useIsomorphicLayoutEffect from "./usehooks-ts";
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
-import useIsomorphicLayoutEffect from "./usehooks-ts";
 
 const useLayoutEffectPage: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

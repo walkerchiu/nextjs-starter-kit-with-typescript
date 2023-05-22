@@ -3,9 +3,9 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import type { NextPage } from "next";
 
+import useIsomorphicLayoutEffect from "./usehooks-ts";
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
-import useIsomorphicLayoutEffect from "./usehooks-ts";
 
 interface StyledDivProps {
   color: string;
