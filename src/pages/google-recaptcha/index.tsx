@@ -19,17 +19,19 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/google-recaptcha/react-google-recaptcha-v3">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  react-google-recaptcha-v3
-                </a>
+              <Link
+                href="/google-recaptcha/react-google-recaptcha-v3"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-google-recaptcha-v3
               </Link>
             </li>
             <li>
-              <Link href="/google-recaptcha/react-google-recaptcha-v3-with-react-hook-form">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  react-google-recaptcha-v3 (with React Hook Form)
-                </a>
+              <Link
+                href="/google-recaptcha/react-google-recaptcha-v3-with-react-hook-form"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-google-recaptcha-v3 (with React Hook Form)
               </Link>
             </li>
           </ol>

@@ -19,10 +19,11 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/floating-ui/floating-ui-tooltip">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Floating UI (Tooltip)
-                </a>
+              <Link
+                href="/floating-ui/floating-ui-tooltip"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Floating UI (Tooltip)
               </Link>
             </li>
           </ol>

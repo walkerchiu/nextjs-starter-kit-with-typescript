@@ -19,17 +19,19 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/fontawesome/fontawesome-individually">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Font Awesome (Individually)
-                </a>
+              <Link
+                href="/fontawesome/fontawesome-individually"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Font Awesome (Individually)
               </Link>
             </li>
             <li>
-              <Link href="/fontawesome/fontawesome-dynamically">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Font Awesome (Dynamically)
-                </a>
+              <Link
+                href="/fontawesome/fontawesome-dynamically"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Font Awesome (Dynamically)
               </Link>
             </li>
           </ol>

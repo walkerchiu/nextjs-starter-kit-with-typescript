@@ -19,10 +19,11 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/next-i18next/next-i18next-page1">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  next-i18next
-                </a>
+              <Link
+                href="/next-i18next/next-i18next-page1"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                next-i18next
               </Link>
             </li>
           </ol>
@@ -34,10 +35,11 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/next-i18next/locale-in-navigator">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Locale in Navigator
-                </a>
+              <Link
+                href="/next-i18next/locale-in-navigator"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Locale in Navigator
               </Link>
             </li>
           </ul>

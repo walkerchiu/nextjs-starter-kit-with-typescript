@@ -32,9 +32,7 @@ export default function LanguageSwitcherPage1() {
             href={router.pathname}
             locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
           >
-            <a>
-              Switch to <strong>{t("lang.title")}</strong>
-            </a>
+            Switch to <strong>{t("lang.title")}</strong>
           </Link>
         </section>
         <hr
@@ -69,14 +67,9 @@ export default function LanguageSwitcherPage1() {
             textAlign: "center",
           }}
         >
-          Pagination:{" "}
-          <Link href="/next-i18next/next-i18next-page1">
-            <a>1</a>
-          </Link>
+          Pagination: <Link href="/next-i18next/next-i18next-page1">1</Link>
           {", "}
-          <Link href="/next-i18next/next-i18next-page2">
-            <a>2</a>
-          </Link>
+          <Link href="/next-i18next/next-i18next-page2">2</Link>
         </section>
       </main>
       <Footer>

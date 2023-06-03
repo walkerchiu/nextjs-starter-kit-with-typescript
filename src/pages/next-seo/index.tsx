@@ -19,10 +19,11 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/next-seo/next-seo">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  next-seo
-                </a>
+              <Link
+                href="/next-seo/next-seo"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                next-seo
               </Link>
             </li>
           </ol>

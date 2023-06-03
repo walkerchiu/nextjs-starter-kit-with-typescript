@@ -16,17 +16,19 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/next-csrf/next-csrf">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  next-csrf
-                </a>
+              <Link
+                href="/next-csrf/next-csrf"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                next-csrf
               </Link>
             </li>
             <li>
-              <Link href="/next-csrf/next-csrf-form">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  next-csrf (Form)
-                </a>
+              <Link
+                href="/next-csrf/next-csrf-form"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                next-csrf (Form)
               </Link>
             </li>
           </ol>

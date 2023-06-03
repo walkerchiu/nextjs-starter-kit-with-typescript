@@ -34,101 +34,115 @@ const Home: NextPage = () => {
               }}
             >
               <li>
-                <Link href="/apollo-client">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    apollo-client
-                  </a>
+                <Link
+                  href="/apollo-client"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  apollo-client
                 </Link>
               </li>
               <li>
-                <Link href="/classnames">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    classnames
-                  </a>
+                <Link
+                  href="/classnames"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  classnames
                 </Link>
               </li>
               <li>
-                <Link href="/dnd-kit">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    dnd-kit
-                  </a>
+                <Link
+                  href="/dnd-kit"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  dnd-kit
                 </Link>
               </li>
               <li>
-                <Link href="/emotion">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Emotion
-                  </a>
+                <Link
+                  href="/emotion"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Emotion
                 </Link>
               </li>
               <li>
-                <Link href="/floating-ui">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Floating UI
-                  </a>
+                <Link
+                  href="/floating-ui"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Floating UI
                 </Link>
               </li>
               <li>
-                <Link href="/fontawesome">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Font Awesome
-                  </a>
+                <Link
+                  href="/fontawesome"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Font Awesome
                 </Link>
               </li>
               <li>
-                <Link href="/google-recaptcha">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Google reCAPTCHA
-                  </a>
+                <Link
+                  href="/google-recaptcha"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Google reCAPTCHA
                 </Link>
               </li>
               <li>
-                <Link href="/next-csrf">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    next-csrf
-                  </a>
+                <Link
+                  href="/next-csrf"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  next-csrf
                 </Link>
               </li>
               <li>
-                <Link href="/next-i18next">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    next-i18next
-                  </a>
+                <Link
+                  href="/next-i18next"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  next-i18next
                 </Link>
               </li>
               <li>
-                <Link href="/next-seo">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    next-seo
-                  </a>
+                <Link
+                  href="/next-seo"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  next-seo
                 </Link>
               </li>
               <li>
-                <Link href="/react-hook">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    React Hook
-                  </a>
+                <Link
+                  href="/react-hook"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  React Hook
                 </Link>
               </li>
               <li>
-                <Link href="/react-hook-form">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    React Hook Form
-                  </a>
+                <Link
+                  href="/react-hook-form"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  React Hook Form
                 </Link>
               </li>
               <li>
-                <Link href="/tailwindcss">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    Tailwind CSS
-                  </a>
+                <Link
+                  href="/tailwindcss"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Tailwind CSS
                 </Link>
               </li>
               <li>
-                <Link href="/xstate">
-                  <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                    XState
-                  </a>
+                <Link
+                  href="/xstate"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  XState
                 </Link>
               </li>
             </ol>

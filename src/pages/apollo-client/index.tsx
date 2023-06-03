@@ -27,24 +27,27 @@ const IndexPage: NextPage = () => {
                 }}
               >
                 <li>
-                  <Link href="/apollo-client/getServerSideProps-query">
-                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                      getServerSideProps
-                    </a>
+                  <Link
+                    href="/apollo-client/getServerSideProps-query"
+                    className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  >
+                    getServerSideProps
                   </Link>
                 </li>
                 <li>
-                  <Link href="/apollo-client/getStaticProps-query">
-                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                      getStaticProps
-                    </a>
+                  <Link
+                    href="/apollo-client/getStaticProps-query"
+                    className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  >
+                    getStaticProps
                   </Link>
                 </li>
                 <li>
-                  <Link href="/apollo-client/useEffect-query">
-                    <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                      useEffect
-                    </a>
+                  <Link
+                    href="/apollo-client/useEffect-query"
+                    className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  >
+                    useEffect
                   </Link>
                 </li>
               </ol>

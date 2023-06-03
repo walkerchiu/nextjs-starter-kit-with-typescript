@@ -19,10 +19,11 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/react-hook-form/react-hook-form">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  React Hook Form
-                </a>
+              <Link
+                href="/react-hook-form/react-hook-form"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                React Hook Form
               </Link>
             </li>
           </ol>

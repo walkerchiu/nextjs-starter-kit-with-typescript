@@ -19,17 +19,19 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/tailwindcss/tailwindcss">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Tailwind CSS
-                </a>
+              <Link
+                href="/tailwindcss/tailwindcss"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Tailwind CSS
               </Link>
             </li>
             <li>
-              <Link href="/tailwindcss/tailwind-styled-components">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Tailwind-Styled-Component
-                </a>
+              <Link
+                href="/tailwindcss/tailwind-styled-components"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Tailwind-Styled-Component
               </Link>
             </li>
           </ol>

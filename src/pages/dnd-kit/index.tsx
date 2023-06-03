@@ -19,24 +19,27 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/dnd-kit/dnd-kit-draggable-and-droppable">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Draggable and Droppable
-                </a>
+              <Link
+                href="/dnd-kit/dnd-kit-draggable-and-droppable"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Draggable and Droppable
               </Link>
             </li>
             <li>
-              <Link href="/dnd-kit/dnd-kit-sortable-tree">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Sortable Tree
-                </a>
+              <Link
+                href="/dnd-kit/dnd-kit-sortable-tree"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Sortable Tree
               </Link>
             </li>
             <li>
-              <Link href="/dnd-kit/dnd-kit-sortable-tree-with-overlay">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Sortable Tree with Overlay
-                </a>
+              <Link
+                href="/dnd-kit/dnd-kit-sortable-tree-with-overlay"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Sortable Tree with Overlay
               </Link>
             </li>
           </ol>

@@ -19,17 +19,19 @@ const IndexPage: NextPage = () => {
             }}
           >
             <li>
-              <Link href="/emotion/emotion-css-prop">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Emotion using CSS Prop
-                </a>
+              <Link
+                href="/emotion/emotion-css-prop"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Emotion using CSS Prop
               </Link>
             </li>
             <li>
-              <Link href="/emotion/emotion-styled">
-                <a className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200">
-                  Emotion using styled component
-                </a>
+              <Link
+                href="/emotion/emotion-styled"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Emotion using styled component
               </Link>
             </li>
           </ol>
