@@ -39,7 +39,7 @@ const ReactHookFormPage: NextPage = () => {
       .string()
       .trim()
       .required("Confirm Password is required")
-      .oneOf([yup.ref("password"), null], "Confirm Password does not match"),
+      .oneOf([yup.ref("password")], "Confirm Password does not match"),
     groupType: yup
       .number()
       .typeError("Group Type must be a number")
