@@ -1,4 +1,4 @@
-import { useEffect, useState, FC } from "react";
+import React, { useEffect, useState, FC } from "react";
 
 import styled from "@emotion/styled";
 import { computePosition, shift, flip, offset } from "@floating-ui/dom";

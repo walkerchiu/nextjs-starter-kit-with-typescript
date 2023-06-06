@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { NextPage } from "next";
 import tw from "tailwind-styled-components";
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 import type { NextPage } from "next";
 import { useForm } from "react-hook-form";

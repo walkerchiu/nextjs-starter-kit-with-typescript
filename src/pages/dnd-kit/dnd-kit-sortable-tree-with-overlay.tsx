@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useState } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 
 import {
