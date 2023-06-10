@@ -139,6 +139,14 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
+                  href="/tw-zipcode"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Taiwan ZipCode
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/xstate"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
