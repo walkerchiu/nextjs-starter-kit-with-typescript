@@ -51,6 +51,14 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
+                  href="/csrf"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  csrf
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/dnd-kit"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
@@ -87,14 +95,6 @@ const Home: NextPage = () => {
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
                   Google reCAPTCHA
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/next-csrf"
-                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
-                >
-                  next-csrf
                 </Link>
               </li>
               <li>
