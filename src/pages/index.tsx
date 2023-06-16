@@ -131,6 +131,14 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
+                  href="/react-select"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  React Select
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/tailwindcss"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
