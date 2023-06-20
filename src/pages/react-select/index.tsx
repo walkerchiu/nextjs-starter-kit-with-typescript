@@ -58,6 +58,22 @@ const IndexPage: NextPage = () => {
                 react-select (Custom Styles: Multi Select)
               </Link>
             </li>
+            <li>
+              <Link
+                href="/react-select/async-callback"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-select (Async: Callback)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/react-select/async-promises"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-select (Async: Promises)
+              </Link>
+            </li>
           </ol>
         </article>
       </main>
