@@ -82,6 +82,14 @@ const IndexPage: NextPage = () => {
                 react-select (Creatable: Single)
               </Link>
             </li>
+            <li>
+              <Link
+                href="/react-select/creatable-multi-select"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-select (Creatable: Multi Select)
+              </Link>
+            </li>
           </ol>
         </article>
       </main>
