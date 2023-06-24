@@ -98,6 +98,14 @@ const IndexPage: NextPage = () => {
                 react-select (Creatable: Multi Select with Text Input)
               </Link>
             </li>
+            <li>
+              <Link
+                href="/react-select/creatable-async"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                react-select (Creatable: Async)
+              </Link>
+            </li>
           </ol>
         </article>
       </main>
