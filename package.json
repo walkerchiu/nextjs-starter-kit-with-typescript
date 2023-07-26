@@ -34,7 +34,7 @@
     "next": "^13.4.12",
     "next-csrf": "^0.2.1",
     "next-i18next": "^11.3.0",
-    "next-seo": "^5.15.0",
+    "next-seo": "^6.1.0",
     "next-themes": "^0.2.1",
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
