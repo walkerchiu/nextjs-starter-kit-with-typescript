@@ -1,5 +1,3 @@
-import React from "react";
-
 import type { NextPage } from "next";
 
 import Footer from "../../layouts/Footer";

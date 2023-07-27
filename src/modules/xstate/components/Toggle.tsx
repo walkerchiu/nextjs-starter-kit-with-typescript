@@ -1,5 +1,3 @@
-import React from "react";
-
 type Props = {
   onToggle: () => void;
   active: boolean;

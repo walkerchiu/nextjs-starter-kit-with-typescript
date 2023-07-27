@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ApolloProvider } from "@apollo/client";
 import type { NextPage } from "next";
 

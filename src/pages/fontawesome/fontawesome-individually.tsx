@@ -1,5 +1,3 @@
-import React from "react";
-
 import { fab, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { far, faCircle, faHeart } from "@fortawesome/free-regular-svg-icons";
 import { fas, faBell, faQuestion } from "@fortawesome/free-solid-svg-icons";
