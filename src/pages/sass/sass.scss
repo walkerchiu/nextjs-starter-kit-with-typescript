@@ -1,0 +1,32 @@
+/* styles.scss */
+
+$container-color: #e0e895;
+$primary-color: #007bff;
+
+.container {
+  font-family: Arial, sans-serif;
+  font-size: large;
+  background-color: $container-color;
+  color: black;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 20%);
+  }
+}
