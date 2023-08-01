@@ -92,6 +92,18 @@ const IndexPage: NextPage = () => {
               https://github.com/sass/sass
             </a>
           </li>
+          <li>
+            What is the difference between SCSS and SASS ?:
+            <br />
+            <a
+              href="https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass
+            </a>
+          </li>
         </ol>
       </Footer>
     </div>
