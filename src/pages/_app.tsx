@@ -12,6 +12,7 @@ import { ThemeProvider } from "next-themes";
 import NProgress from "nprogress";
 
 import "../app/styles/globals.css";
+import "../app/styles/tailwindcss.css";
 import SEO from "../../next-seo.config";
 import "../app/styles/nprogress.css";
 

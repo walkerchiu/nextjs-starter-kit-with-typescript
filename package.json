@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:css": "npx tailwindcss -o src/app/styles/tailwindcss.css",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
