@@ -11,7 +11,10 @@ const IndexPage: NextPage = () => {
         title="Emotion"
         description="Emotion is a library designed for writing css styles with JavaScript. It provides powerful and predictable style composition in addition to a great developer experience with features such as source maps, labels, and testing utilities. Both string and object styles are supported."
       />
-      <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
+      <main
+        id="main"
+        className="flex w-full flex-1 flex-col pt-5 pb-10 px-10 md:px-16"
+      >
         <article>
           <ol
             style={{

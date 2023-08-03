@@ -18,7 +18,7 @@ export default function LocaleInNavigator() {
         title="Locale in Navigator"
         description="The Accept-Language HTTP header in every HTTP request from the user's browser."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             marginBottom: "20px",

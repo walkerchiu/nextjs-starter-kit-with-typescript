@@ -9,7 +9,7 @@ export default function SassPage() {
         title="Scss (Sassy CSS)"
         description="Sassy CSS (SCSS) is a syntax extension of SASS."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             marginBottom: "20px",

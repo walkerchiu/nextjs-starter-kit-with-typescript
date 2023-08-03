@@ -13,7 +13,7 @@ export default function TwZipCodePage() {
         title="use-tw-zipcode"
         description="A React hook implementation for Taiwanese zip code selection."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             marginBottom: "20px",

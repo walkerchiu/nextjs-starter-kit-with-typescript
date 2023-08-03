@@ -9,7 +9,7 @@ export default function SassPage() {
         title="Sass (Syntactically Awesome Style Sheets)"
         description="Sass is the most mature, stable, and powerful professional grade CSS extension language in the world."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             marginBottom: "20px",

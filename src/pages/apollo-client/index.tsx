@@ -11,7 +11,10 @@ const IndexPage: NextPage = () => {
         title="apollo-client"
         description="A fully-featured, production ready caching GraphQL client for every UI framework and GraphQL server."
       />
-      <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
+      <main
+        id="main"
+        className="flex w-full flex-1 flex-col pt-5 pb-10 px-10 md:px-16"
+      >
         <article>
           <ul
             style={{

@@ -11,7 +11,10 @@ const IndexPage: NextPage = () => {
         title="next-i18next"
         description="The easiest way to translate your NextJs apps."
       />
-      <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
+      <main
+        id="main"
+        className="flex w-full flex-1 flex-col pt-5 pb-10 px-10 md:px-16"
+      >
         <article>
           <ol
             style={{

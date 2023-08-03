@@ -9,7 +9,7 @@ export default function TiptapPage() {
         title="Tiptap"
         description="The headless editor framework for web artisans."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             marginBottom: "20px",

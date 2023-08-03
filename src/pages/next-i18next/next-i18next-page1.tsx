@@ -21,7 +21,7 @@ export default function LanguageSwitcherPage1() {
         title="next-i18next"
         description="The easiest way to translate your NextJs apps."
       />
-      <main className="mb-auto pt-5 px-10">
+      <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
             textAlign: "right",

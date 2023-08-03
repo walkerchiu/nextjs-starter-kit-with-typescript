@@ -11,7 +11,10 @@ const IndexPage: NextPage = () => {
         title="react-select"
         description="A flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support."
       />
-      <main id="main" className="flex w-full flex-1 flex-col pt-5 pb-10 px-16">
+      <main
+        id="main"
+        className="flex w-full flex-1 flex-col pt-5 pb-10 px-10 md:px-16"
+      >
         <article>
           <ol
             style={{
