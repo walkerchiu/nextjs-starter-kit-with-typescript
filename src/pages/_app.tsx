@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -9,12 +9,11 @@ import { useRouter } from "next/router";
 import { appWithTranslation } from "next-i18next";
 import { DefaultSeo } from "next-seo";
 import { ThemeProvider } from "next-themes";
-import NProgress from "nprogress";
+import LoadingBar from "react-top-loading-bar";
 
 import "../app/styles/globals.css";
 import "../app/styles/tailwindcss.css";
 import SEO from "../../next-seo.config";
-import "../app/styles/nprogress.css";
 
 config.autoAddCss = false;
 
@@ -28,26 +27,17 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter();
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const handleStart = (url: string) => {
-      console.log(`Loading: ${url}`);
-      NProgress.start();
-    };
-    const handleStop = () => {
-      NProgress.done();
-    };
+    router.events.on("routeChangeStart", () => {
+      setProgress(40);
+    });
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
-
-    return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleStop);
-      router.events.off("routeChangeError", handleStop);
-    };
-  }, [router]);
+    router.events.on("routeChangeComplete", () => {
+      setProgress(100);
+    });
+  }, []);
 
   const getLayout = Component.getLayout ?? ((page) => page);
 
@@ -65,6 +55,14 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         }
       />
       <ThemeProvider attribute="class">
+        <LoadingBar
+          color="rgb(180, 130, 251)"
+          progress={progress}
+          waitingTime={400}
+          onLoaderFinished={() => {
+            setProgress(0);
+          }}
+        />
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>
