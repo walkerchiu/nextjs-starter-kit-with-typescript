@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   const getLayout = Component.getLayout ?? ((page) => page);
+  const isNotSamplePage = router.pathname.includes("/loading-progress");
 
   return getLayout(
     <React.Fragment>
@@ -55,14 +56,16 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         }
       />
       <ThemeProvider attribute="class">
-        <LoadingBar
-          color="rgb(180, 130, 251)"
-          progress={progress}
-          waitingTime={400}
-          onLoaderFinished={() => {
-            setProgress(0);
-          }}
-        />
+        {!isNotSamplePage && (
+          <LoadingBar
+            color="rgb(180, 130, 251)"
+            progress={progress}
+            waitingTime={400}
+            onLoaderFinished={() => {
+              setProgress(0);
+            }}
+          />
+        )}
         <Component {...pageProps} />
       </ThemeProvider>
     </React.Fragment>

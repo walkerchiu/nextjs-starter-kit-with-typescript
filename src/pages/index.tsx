@@ -99,6 +99,14 @@ const Home: NextPage = () => {
               </li>
               <li>
                 <Link
+                  href="/loading-progress"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                >
+                  Loading Progress
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/next-i18next"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
