@@ -12,6 +12,10 @@ const IndexPage: NextPage = () => {
   const router = useRouter();
   const { query } = router;
 
+  const colorParam = query.color;
+  const color =
+    typeof colorParam === "string" ? colorParam : "rgb(180, 130, 251)";
+
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -27,7 +31,7 @@ const IndexPage: NextPage = () => {
   return (
     <>
       <LoadingBar
-        color="rgb(180, 130, 251)"
+        color={color}
         progress={progress}
         waitingTime={400}
         onLoaderFinished={() => {
@@ -75,7 +79,7 @@ const IndexPage: NextPage = () => {
             >
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page?page=1"
+                  href="/loading-progress/react-top-loading-bar/page?page=1&color=red"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
                   Page 1
@@ -83,7 +87,7 @@ const IndexPage: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page?page=2"
+                  href="/loading-progress/react-top-loading-bar/page?page=2&color=yellow"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
                   Page 2
