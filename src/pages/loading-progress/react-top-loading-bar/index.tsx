@@ -42,7 +42,7 @@ const IndexPage: NextPage = () => {
                 href="/loading-progress/react-top-loading-bar/page?page=1"
                 className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
-                Page 1
+                State (Page 1)
               </Link>
             </li>
             <li>
@@ -50,7 +50,15 @@ const IndexPage: NextPage = () => {
                 href="/loading-progress/react-top-loading-bar/page?page=2"
                 className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
-                Page 2
+                State (Page 2)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/loading-progress/react-top-loading-bar/page-with-ref"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Ref
               </Link>
             </li>
           </ol>
