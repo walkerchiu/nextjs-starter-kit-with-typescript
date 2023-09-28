@@ -40,7 +40,9 @@ const IndexPage: NextPage = () => {
       />
       <div className="flex flex-col h-screen">
         <Header
-          title={`react-top-loading-bar (Page ${query.page || ""})`}
+          title={`react-top-loading-bar (with State) (Page ${
+            query.page || ""
+          })`}
           description="A very simple, highly customisable youtube-like react loader component."
         />
         <main
@@ -79,18 +81,18 @@ const IndexPage: NextPage = () => {
             >
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page?page=1&color=red"
+                  href="/loading-progress/react-top-loading-bar/page-with-state?page=1&color=red"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
-                  Page 1
+                  State (Page 1)
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page?page=2&color=yellow"
+                  href="/loading-progress/react-top-loading-bar/page-with-state?page=2&color=yellow"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                 >
-                  Page 2
+                  State (Page 2)
                 </Link>
               </li>
             </ol>
