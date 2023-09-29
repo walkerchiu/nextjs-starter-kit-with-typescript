@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import type { NextPage } from "next";
 import Link from "next/link";
@@ -12,35 +12,19 @@ const IndexPage: NextPage = () => {
   const router = useRouter();
   const { query } = router;
 
-  const colorParam = query.color;
-  const color =
-    typeof colorParam === "string" ? colorParam : "rgb(180, 130, 251)";
-
   const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    router.events.on("routeChangeStart", () => {
-      setProgress(40);
-    });
-
-    router.events.on("routeChangeComplete", () => {
-      setProgress(100);
-    });
-  }, []);
 
   return (
     <>
       <LoadingBar
-        color={color}
+        color="rgb(180, 130, 251)"
         progress={progress}
         waitingTime={400}
-        onLoaderFinished={() => {
-          setProgress(0);
-        }}
+        onLoaderFinished={() => setProgress(0)}
       />
       <div className="flex flex-col h-screen">
         <Header
-          title={`react-top-loading-bar (with State) (Page ${
+          title={`react-top-loading-bar (with State - Manual) (Page ${
             query.page || ""
           })`}
           description="A very simple, highly customisable youtube-like react loader component."
@@ -81,18 +65,71 @@ const IndexPage: NextPage = () => {
             >
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page-with-state?page=1&color=red"
+                  href="#"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => {
+                    let progress_new = progress + 10;
+                    if (progress_new > 100) {
+                      progress_new = 100;
+                    }
+                    setProgress(progress_new);
+                  }}
                 >
-                  State (Page 1)
+                  Add 10%
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/loading-progress/react-top-loading-bar/page-with-state?page=2&color=yellow"
+                  href="#"
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => {
+                    let progress_new = progress + 20;
+                    if (progress_new > 100) {
+                      progress_new = 100;
+                    }
+                    setProgress(progress_new);
+                  }}
                 >
-                  State (Page 2)
+                  Add 20%
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => {
+                    let progress_new = progress - 10;
+                    if (progress_new <= 0) {
+                      progress_new = 1;
+                    }
+                    setProgress(progress_new);
+                  }}
+                >
+                  Decrease 10%
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => {
+                    let progress_new = progress - 20;
+                    if (progress_new <= 0) {
+                      progress_new = 1;
+                    }
+                    setProgress(progress_new);
+                  }}
+                >
+                  Decrease 20%
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => setProgress(100)}
+                >
+                  Complete
                 </Link>
               </li>
             </ol>

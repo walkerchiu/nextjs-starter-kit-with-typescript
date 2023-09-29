@@ -39,18 +39,26 @@ const IndexPage: NextPage = () => {
           >
             <li>
               <Link
-                href="/loading-progress/react-top-loading-bar/page-with-state?page=1"
+                href="/loading-progress/react-top-loading-bar/page-with-state-automatic?page=1"
                 className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
-                State (Page 1)
+                State - Automatic (Page 1)
               </Link>
             </li>
             <li>
               <Link
-                href="/loading-progress/react-top-loading-bar/page-with-state?page=2"
+                href="/loading-progress/react-top-loading-bar/page-with-state-automatic?page=2"
                 className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
-                State (Page 2)
+                State - Automatic (Page 2)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/loading-progress/react-top-loading-bar/page-with-state-manual"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                State - Manual
               </Link>
             </li>
             <li>
