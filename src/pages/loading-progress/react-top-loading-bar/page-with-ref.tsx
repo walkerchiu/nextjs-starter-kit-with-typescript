@@ -60,6 +60,23 @@ const IndexPage: NextPage = () => {
                 >
                   Start Continuous Loading Bar
                 </Link>
+                <br />
+                <ul
+                  style={{
+                    listStyleType: "disc",
+                    marginLeft: "1.5rem",
+                  }}
+                >
+                  <li>
+                    <code>continuousStart(startingValue, refreshRate)</code>
+                  </li>
+                  <li>
+                    Starts the loading indicator with a random starting value
+                    between 20-30, then repetitively after an refreshRate,
+                    increases it by a random value between 2-10. This continues
+                    until it reaches 90% of the indicator&apos;s width.
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link
@@ -69,6 +86,21 @@ const IndexPage: NextPage = () => {
                 >
                   Start Static Loading Bar
                 </Link>
+                <br />
+                <ul
+                  style={{
+                    listStyleType: "disc",
+                    marginLeft: "1.5rem",
+                  }}
+                >
+                  <li>
+                    <code>staticStart(startingValue)</code>
+                  </li>
+                  <li>
+                    Starts the loading indicator with a random starting value
+                    between 30-50.
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link
@@ -78,6 +110,21 @@ const IndexPage: NextPage = () => {
                 >
                   Complete
                 </Link>
+                <br />
+                <ul
+                  style={{
+                    listStyleType: "disc",
+                    marginLeft: "1.5rem",
+                  }}
+                >
+                  <li>
+                    <code>complete()</code>
+                  </li>
+                  <li>
+                    Makes the loading indicator reach 100% of his width and then
+                    fade.
+                  </li>
+                </ul>
               </li>
             </ol>
           </article>
