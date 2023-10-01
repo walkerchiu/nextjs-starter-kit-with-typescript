@@ -58,6 +58,48 @@ const IndexPage: NextPage = () => {
                   className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
                   onClick={() => ref.current?.continuousStart()}
                 >
+                  add(value)
+                </Link>
+                <br />
+                <ul
+                  style={{
+                    listStyleType: "disc",
+                    marginLeft: "1.5rem",
+                  }}
+                >
+                  <li>
+                    <code>add(value)</code>
+                  </li>
+                  <li>Adds a value to the loading indicator.</li>
+                </ul>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => ref.current?.continuousStart()}
+                >
+                  decrease(value)
+                </Link>
+                <br />
+                <ul
+                  style={{
+                    listStyleType: "disc",
+                    marginLeft: "1.5rem",
+                  }}
+                >
+                  <li>
+                    <code>decrease(value)</code>
+                  </li>
+                  <li>Decreases a value to the loading indicator.</li>
+                </ul>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+                  onClick={() => ref.current?.continuousStart()}
+                >
                   Start Continuous Loading Bar
                 </Link>
                 <br />
