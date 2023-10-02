@@ -1,0 +1,183 @@
+/* TextMenuEditor.module.scss */
+
+.button {
+  margin-right: 1px;
+  padding: 7px;
+  background-color: Gainsboro;
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: Black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:disabled {
+    color: Gray;
+    cursor: not-allowed;
+  }
+
+  &.is-active {
+    background-color: darken(Gainsboro, 10%);
+  }
+
+  &:hover:enabled {
+    background-color: darken(Gainsboro, 15%);
+  }
+}
+
+.MenuBar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.editorContent {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &:focus,
+  & *:focus {
+    outline: none;
+  }
+
+  * + * {
+    margin-top: 0.75em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  ul {
+    margin: 0.5rem;
+    padding: 0 1rem;
+    list-style: none;
+
+    li {
+      margin: 0;
+      padding-left: 1.25rem;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #000; /* 根據需要調整這個顏色 */
+      }
+    }
+  }
+
+  ol {
+    margin: 0.5rem;
+    padding: 0 1rem;
+    list-style: none;
+    counter-reset: orderedListCounter;
+
+    li {
+      margin: 0;
+      padding-left: 1.25rem;
+      position: relative;
+
+      &:before {
+        content: counter(orderedListCounter) ".";
+        counter-increment: orderedListCounter;
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+
+  code {
+    background-color: #f1f1f1;
+    color: #333;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+  }
+
+  pre {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    margin: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    margin: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(#0d0d0d, 0.1);
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid rgba(#0d0d0d, 0.1);
+    margin: 2rem 0;
+  }
+}

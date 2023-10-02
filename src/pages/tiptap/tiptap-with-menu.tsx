@@ -1,44 +1,22 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
+import TiptapEditor from "../../modules/tiptap/components/TextMenuEditor";
 
-const IndexPage: NextPage = () => {
+export default function TiptapPage() {
   return (
     <div className="flex flex-col h-screen">
       <Header
-        title="Tiptap"
+        title="Tiptap (with Menu)"
         description="The headless editor framework for web artisans."
       />
-      <main
-        id="main"
-        className="flex w-full flex-1 flex-col pt-5 pb-10 px-10 md:px-16"
-      >
-        <article>
-          <ol
-            style={{
-              listStyleType: "number",
-            }}
-          >
-            <li>
-              <Link
-                href="/tiptap/tiptap"
-                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
-              >
-                Tiptap
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/tiptap/tiptap-with-menu"
-                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
-              >
-                Tiptap (with Menu)
-              </Link>
-            </li>
-          </ol>
-        </article>
+      <main className="mb-auto pt-5 px-10 md:px-16">
+        <section
+          style={{
+            marginBottom: "20px",
+          }}
+        >
+          <TiptapEditor />
+        </section>
       </main>
       <Footer>
         <ol
@@ -47,18 +25,6 @@ const IndexPage: NextPage = () => {
             listStyleType: "number",
           }}
         >
-          <li>
-            Tiptap (Introduction):
-            <br />
-            <a
-              href="https://tiptap.dev/introduction"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
-            >
-              https://tiptap.dev/introduction
-            </a>
-          </li>
           <li>
             Tiptap (Next.js):
             <br />
@@ -69,6 +35,18 @@ const IndexPage: NextPage = () => {
               className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               https://tiptap.dev/installation/nextjs
+            </a>
+          </li>
+          <li>
+            Tiptap (Examples):
+            <br />
+            <a
+              href="https://tiptap.dev/examples/default"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+            >
+              https://tiptap.dev/examples/default
             </a>
           </li>
           <li>
@@ -87,6 +65,4 @@ const IndexPage: NextPage = () => {
       </Footer>
     </div>
   );
-};
-
-export default IndexPage;
+}
