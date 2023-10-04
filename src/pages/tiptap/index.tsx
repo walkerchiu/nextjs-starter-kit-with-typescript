@@ -45,6 +45,14 @@ const IndexPage: NextPage = () => {
                 Tiptap (TaskList)
               </Link>
             </li>
+            <li>
+              <Link
+                href="/tiptap/tiptap-youtube"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Tiptap (Youtube)
+              </Link>
+            </li>
           </ol>
         </article>
       </main>
