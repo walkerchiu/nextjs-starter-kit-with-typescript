@@ -11,6 +11,7 @@ import Text from "@tiptap/extension-text";
 import { EditorContent, useEditor } from "@tiptap/react";
 
 import styles from "../styles/TextMenuEditorWithTable.module.scss";
+import "../../../app/styles/TextMenuEditorWithTable.css";
 
 interface MenuBarProps {
   editor?: any;
