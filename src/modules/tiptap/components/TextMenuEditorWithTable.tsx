@@ -161,7 +161,9 @@ const TextMenuEditorWithTable: React.FC = (props) => {
         lastColumnResizable: true,
         allowTableNodeSelection: false,
       }),
-      TableRow,
+      TableRow.extend({
+        content: "(tableCell | tableHeader)*",
+      }),
       TableHeader,
       TableCell,
     ],
