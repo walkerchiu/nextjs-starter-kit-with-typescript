@@ -26,28 +26,28 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
           editor.isActive("taskList") ? styles["is-active"] : ""
         }`}
       >
-        toggleTaskList
+        Toggle Task List
       </button>
       <button
         onClick={() => editor.chain().focus().splitListItem("taskItem").run()}
         disabled={!editor.can().splitListItem("taskItem")}
         className={`${styles.button}`}
       >
-        splitListItem
+        Split List Item
       </button>
       <button
         onClick={() => editor.chain().focus().sinkListItem("taskItem").run()}
         disabled={!editor.can().sinkListItem("taskItem")}
         className={`${styles.button}`}
       >
-        sinkListItem
+        Sink List Item
       </button>
       <button
         onClick={() => editor.chain().focus().liftListItem("taskItem").run()}
         disabled={!editor.can().liftListItem("taskItem")}
         className={`${styles.button}`}
       >
-        liftListItem
+        Lift List Item
       </button>
     </>
   );

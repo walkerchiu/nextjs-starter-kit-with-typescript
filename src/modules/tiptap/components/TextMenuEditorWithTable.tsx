@@ -34,85 +34,85 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         }
         className={`${styles.button}`}
       >
-        insertTable
+        Insert Table
       </button>
       <button
         onClick={() => editor.chain().focus().addColumnBefore().run()}
         className={`${styles.button}`}
       >
-        addColumnBefore
+        Add Column Before
       </button>
       <button
         onClick={() => editor.chain().focus().addColumnAfter().run()}
         className={`${styles.button}`}
       >
-        addColumnAfter
+        Add Column After
       </button>
       <button
         onClick={() => editor.chain().focus().deleteColumn().run()}
         className={`${styles.button}`}
       >
-        deleteColumn
+        Delete Column
       </button>
       <button
         onClick={() => editor.chain().focus().addRowBefore().run()}
         className={`${styles.button}`}
       >
-        addRowBefore
+        Add Row Before
       </button>
       <button
         onClick={() => editor.chain().focus().addRowAfter().run()}
         className={`${styles.button}`}
       >
-        addRowAfter
+        Add Row After
       </button>
       <button
         onClick={() => editor.chain().focus().deleteRow().run()}
         className={`${styles.button}`}
       >
-        deleteRow
+        Delete Row
       </button>
       <button
         onClick={() => editor.chain().focus().deleteTable().run()}
         className={`${styles.button}`}
       >
-        deleteTable
+        Delete Table
       </button>
       <button
         onClick={() => editor.chain().focus().mergeCells().run()}
         className={`${styles.button}`}
       >
-        mergeCells
+        Merge Cells
       </button>
       <button
         onClick={() => editor.chain().focus().splitCell().run()}
         className={`${styles.button}`}
       >
-        splitCell
+        Split Cell
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeaderColumn().run()}
         className={`${styles.button}`}
       >
-        toggleHeaderColumn
+        Toggle Header Column
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeaderRow().run()}
         className={`${styles.button}`}
       >
-        toggleHeaderRow
+        Toggle Header Row
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeaderCell().run()}
         className={`${styles.button}`}
       >
-        toggleHeaderCell
+        Toggle Header Cell
       </button>
       <button
         onClick={() => editor.chain().focus().mergeOrSplit().run()}
         className={`${styles.button}`}
       >
-        mergeOrSplit
+        Merge or Split
       </button>
       <button
         onClick={() =>
@@ -120,25 +120,25 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         }
         className={`${styles.button}`}
       >
-        setCellAttribute
+        Set Cell Attribute
       </button>
       <button
         onClick={() => editor.chain().focus().fixTables().run()}
         className={`${styles.button}`}
       >
-        fixTables
+        Fix Tables
       </button>
       <button
         onClick={() => editor.chain().focus().goToNextCell().run()}
         className={`${styles.button}`}
       >
-        goToNextCell
+        Go to Next Cell
       </button>
       <button
         onClick={() => editor.chain().focus().goToPreviousCell().run()}
         className={`${styles.button}`}
       >
-        goToPreviousCell
+        Go to Previous Cell
       </button>
     </>
   );
