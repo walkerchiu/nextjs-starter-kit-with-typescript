@@ -2,6 +2,7 @@ import React from "react";
 
 import Document from "@tiptap/extension-document";
 import Gapcursor from "@tiptap/extension-gapcursor";
+import History from "@tiptap/extension-history";
 import Paragraph from "@tiptap/extension-paragraph";
 import Table from "@tiptap/extension-table";
 import TableCell from "@tiptap/extension-table-cell";
@@ -149,6 +150,10 @@ const TextMenuEditorWithTable: React.FC = (props) => {
     extensions: [
       Document,
       Gapcursor,
+      History.configure({
+        depth: 100,
+        newGroupDelay: 500,
+      }),
       Paragraph,
       Text,
       Table.configure({

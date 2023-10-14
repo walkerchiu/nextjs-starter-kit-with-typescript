@@ -1,6 +1,7 @@
 import React from "react";
 
 import Document from "@tiptap/extension-document";
+import History from "@tiptap/extension-history";
 import Paragraph from "@tiptap/extension-paragraph";
 import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
@@ -57,6 +58,10 @@ const TextMenuEditorWithTaskList: React.FC = (props) => {
   const editor = useEditor({
     extensions: [
       Document,
+      History.configure({
+        depth: 100,
+        newGroupDelay: 500,
+      }),
       Paragraph,
       Text,
       TaskList.configure({
