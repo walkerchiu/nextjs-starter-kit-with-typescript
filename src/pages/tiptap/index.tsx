@@ -39,6 +39,14 @@ const IndexPage: NextPage = () => {
             </li>
             <li>
               <Link
+                href="/tiptap/tiptap-color"
+                className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
+              >
+                Tiptap (Color)
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/tiptap/tiptap-placeholder"
                 className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
