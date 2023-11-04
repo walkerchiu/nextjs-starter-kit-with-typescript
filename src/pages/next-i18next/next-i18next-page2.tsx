@@ -48,14 +48,14 @@ export default function LanguageSwitcherPage2() {
           >
             Page 2
           </header>
-          {t<string, IndexProps[]>("document.items", {
-            returnObjects: true,
-          }).map(({ name, description }, index: number) => (
-            <article key={index}>
-              <header>{name}</header>
-              <p>{description}</p>
-            </article>
-          ))}
+          {Object.values(t("document.items", { returnObjects: true })).map(
+            (item, index) => (
+              <article key={index}>
+                <header>{item.name}</header>
+                <p>{item.description}</p>
+              </article>
+            )
+          )}
         </section>
         <hr
           style={{
