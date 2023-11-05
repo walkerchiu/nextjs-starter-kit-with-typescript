@@ -60,7 +60,7 @@ const ReactHookFormPage: NextPage = () => {
     reset,
     formState: { errors },
   } = useForm<UserSubmitForm>({
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(validationSchema) as any,
   });
 
   const onSubmit = (data: UserSubmitForm) => {
