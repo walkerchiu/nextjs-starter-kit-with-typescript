@@ -15,7 +15,7 @@ const useRefPage: NextPage = () => {
     setNow(Date.now());
 
     if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+      clearInterval(intervalRef.current as any);
     }
     intervalRef.current = setInterval(() => {
       setNow(Date.now());
@@ -24,7 +24,7 @@ const useRefPage: NextPage = () => {
 
   function handleStop() {
     if (intervalRef.current != null) {
-      clearInterval(intervalRef.current);
+      clearInterval(intervalRef.current as any);
       intervalRef.current = null;
     }
   }
