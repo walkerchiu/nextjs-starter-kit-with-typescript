@@ -4,8 +4,8 @@
 
 ### Prerequisites
 
-- npm >= 8.11.0
-- node >= 17.9.0
+- npm >= 10.2.0
+- node >= 20.9.0
 
 ### Setting Up the Environment for Development
 
