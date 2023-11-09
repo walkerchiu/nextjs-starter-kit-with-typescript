@@ -54,7 +54,7 @@ export default function LanguageSwitcherPage1() {
                 <header>{item.name}</header>
                 <p>{item.description}</p>
               </article>
-            )
+            ),
           )}
         </section>
         <hr

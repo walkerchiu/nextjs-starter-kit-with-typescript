@@ -80,7 +80,7 @@ const DndKitSortableTreePage: NextPage = () => {
       return arrayMove(
         items,
         items.indexOf(active.id as string),
-        items.indexOf(over?.id as string)
+        items.indexOf(over?.id as string),
       );
     });
 

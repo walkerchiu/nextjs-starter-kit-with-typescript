@@ -18,15 +18,6 @@ npx husky install
 chmod a+x .husky/commit-msg
 ```
 
-Runs Prettier on your changed files.
-
-```sh
-# pretty-quick
-npx husky-init
-npm install --save-dev prettier pretty-quick
-npx husky set .husky/pre-commit "npx pretty-quick --staged"
-```
-
 ## Building Up the Project for Development
 
 ### Install

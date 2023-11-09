@@ -59,7 +59,7 @@ function ExampleComponent2() {
     (event: { target: { value: React.SetStateAction<string> } }) => {
       setText(event.target.value);
     },
-    []
+    [],
   );
 
   useEffect(() => {

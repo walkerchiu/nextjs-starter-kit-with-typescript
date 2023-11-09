@@ -11,7 +11,7 @@ import { setup } from "../../modules/next-csrf/csrf";
 export const getServerSideProps = setup(
   async (req: NextApiRequest, res: NextApiResponse) => {
     return { props: {} };
-  }
+  },
 );
 
 const NextCsrfPage: NextPage = () => {

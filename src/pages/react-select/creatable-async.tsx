@@ -7,7 +7,7 @@ import { ColourOption, colourOptions } from "../../modules/react-select/data";
 
 const filterColors = (inputValue: string) => {
   return colourOptions.filter((i) =>
-    i.label.toLowerCase().includes(inputValue.toLowerCase())
+    i.label.toLowerCase().includes(inputValue.toLowerCase()),
   );
 };
 

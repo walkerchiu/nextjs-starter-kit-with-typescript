@@ -13,7 +13,7 @@ const Header: FC<ComponentProps> = ({ title, description }) => {
   const router: NextRouter = useRouter();
 
   const handleClick = (
-    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     event.preventDefault();
     router.back();

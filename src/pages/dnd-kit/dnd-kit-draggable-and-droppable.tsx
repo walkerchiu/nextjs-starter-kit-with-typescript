@@ -97,7 +97,7 @@ const DndKitDragAndDropPage: NextPage = () => {
   const sensors = useSensors(
     useSensor(MouseSensor),
     useSensor(TouchSensor),
-    useSensor(KeyboardSensor)
+    useSensor(KeyboardSensor),
   );
 
   function handleDragStart(event: DragStartEvent) {
@@ -117,11 +117,11 @@ const DndKitDragAndDropPage: NextPage = () => {
           event.active.id +
           '" was moved over droppable area "' +
           over.id +
-          '".'
+          '".',
       );
     else
       console.log(
-        'Item "' + event.active.id + '" is no longer over a droppable area.'
+        'Item "' + event.active.id + '" is no longer over a droppable area.',
       );
   }
 
@@ -137,7 +137,7 @@ const DndKitDragAndDropPage: NextPage = () => {
 
   function handleDragCancel(event: DragCancelEvent) {
     console.log(
-      'Dragging was cancelled. Item "' + event.active.id + '" was dropped.'
+      'Dragging was cancelled. Item "' + event.active.id + '" was dropped.',
     );
   }
 

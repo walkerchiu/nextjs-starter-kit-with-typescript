@@ -25,7 +25,7 @@ const colourStyles: StylesConfig<ColourOption> = {
   control: (styles: any) => ({ ...styles, backgroundColor: "white" }),
   option: (
     styles: { [x: string]: any },
-    { data, isDisabled, isFocused, isSelected }: any
+    { data, isDisabled, isFocused, isSelected }: any,
   ) => {
     const color = chroma(data.color);
     return {

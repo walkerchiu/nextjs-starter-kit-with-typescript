@@ -42,7 +42,7 @@ export function verifyCSRFToken(req: NextApiRequest, res: NextApiResponse) {
 
 function setCSRFTokenCookie(
   res: NextApiResponse | ServerResponse,
-  Token: string
+  Token: string,
 ) {
   const cookie = getCSRFTokenCookie(Token);
   res.setHeader("Set-Cookie", [cookie]);
@@ -62,8 +62,8 @@ function getCSRFTokenCookie(Token: string) {
 
 export default function setCSRFTokenCookieGetServerSideProps(
   getServerSideProps: (
-    context: GetServerSidePropsContext
-  ) => Promise<GetServerSidePropsResult<any>> | GetServerSidePropsResult<any>
+    context: GetServerSidePropsContext,
+  ) => Promise<GetServerSidePropsResult<any>> | GetServerSidePropsResult<any>,
 ) {
   return async (context: GetServerSidePropsContext) => {
     const { res } = context;

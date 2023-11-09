@@ -29,12 +29,12 @@ const orderOptions = (values: readonly ColourOption[]) => {
 
 const ReactSelectPage: NextPage = () => {
   const [value, setValue] = useState<readonly ColourOption[]>(
-    orderOptions([colourOptions[0], colourOptions[1], colourOptions[3]])
+    orderOptions([colourOptions[0], colourOptions[1], colourOptions[3]]),
   );
 
   const onChange = (
     newValue: OnChangeValue<ColourOption, true>,
-    actionMeta: ActionMeta<ColourOption>
+    actionMeta: ActionMeta<ColourOption>,
   ) => {
     switch (actionMeta.action) {
       case "remove-value":

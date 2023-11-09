@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pretty-quick": "pretty-quick"
+    "pretty-quick": "pretty-quick",
+    "pretty-check": "prettier --check .",
+    "pretty-write": "prettier --write ."
   },
   "dependencies": {
     "@apollo/client": "^3.8.7",

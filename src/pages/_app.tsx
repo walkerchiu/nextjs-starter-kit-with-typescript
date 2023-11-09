@@ -68,7 +68,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         )}
         <Component {...pageProps} />
       </ThemeProvider>
-    </React.Fragment>
+    </React.Fragment>,
   );
 }
 

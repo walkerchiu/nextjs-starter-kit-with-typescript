@@ -7,13 +7,13 @@ import { ColourOption, colourOptions } from "../../modules/react-select/data";
 
 const filterColors = (inputValue: string) => {
   return colourOptions.filter((i) =>
-    i.label.toLowerCase().includes(inputValue.toLowerCase())
+    i.label.toLowerCase().includes(inputValue.toLowerCase()),
   );
 };
 
 const loadOptions = (
   inputValue: string,
-  callback: (options: ColourOption[]) => void
+  callback: (options: ColourOption[]) => void,
 ) => {
   setTimeout(() => {
     callback(filterColors(inputValue));

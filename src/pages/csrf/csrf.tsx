@@ -9,7 +9,7 @@ export const getServerSideProps = setCSRFTokenCookieGetServerSideProps(
     return {
       props: {},
     };
-  }
+  },
 );
 
 const CSRFPage: NextPage = () => {
