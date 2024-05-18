@@ -1,6 +1,8 @@
 {
+  // On explicit save, run fixAll source action. On auto save (window or focus change), run organizeImports source action.
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit",
+    "source.organizeImports": "always"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
