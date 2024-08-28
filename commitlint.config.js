@@ -21,6 +21,7 @@ module.exports = {
         "Build",
         "Chore",
         "CI",
+        "Deprecate",
         "Docs",
         "Feat",
         "Fix",
@@ -45,6 +46,7 @@ module.exports = {
         "Infra",
         "Lang",
         "Module",
+        "Project",
         "Theme",
         "Vendor",
         "Views",
@@ -72,6 +74,11 @@ module.exports = {
               "Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
             title: "Continuous Integrations",
             emoji: "⚙️",
+          },
+          Deprecate: {
+            description: "Deprecating code or features",
+            title: "Deprecations",
+            emoji: "🗑",
           },
           Docs: {
             description: "Documentation only changes",
