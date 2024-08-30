@@ -80,8 +80,8 @@ function Droppable({ id, children }: DroppableProps) {
             ? "2px solid gray"
             : "1px solid white"
           : isOver
-          ? "2px solid gray"
-          : "1px solid black",
+            ? "2px solid gray"
+            : "1px solid black",
         margin: 20,
       }}
     >
