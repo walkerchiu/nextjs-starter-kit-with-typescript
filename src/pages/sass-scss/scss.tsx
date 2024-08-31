@@ -1,6 +1,6 @@
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import "./scss.scss";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import './scss.scss';
 
 export default function SassPage() {
   return (
@@ -12,7 +12,7 @@ export default function SassPage() {
       <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div className="container">
@@ -26,7 +26,7 @@ export default function SassPage() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

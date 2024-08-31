@@ -1,19 +1,19 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 function ExampleComponent() {
   const [count, setCount] = useState(0);
 
   const memoizedCallback = useCallback(() => {
-    console.log("Callback function invoked");
+    console.log('Callback function invoked');
   }, []);
 
   useEffect(() => {
-    console.log("Component re-rendered");
+    console.log('Component re-rendered');
   });
 
   return (
@@ -54,7 +54,7 @@ const useCallbackPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

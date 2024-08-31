@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 export default function LocaleInNavigator() {
-  const [language, setLanguage] = useState("");
+  const [language, setLanguage] = useState('');
   const [languages, setLanguages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -21,14 +21,14 @@ export default function LocaleInNavigator() {
       <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <p>
               The <code>Navigator.languages</code> read-only property returns an
               array of strings representing the user&apos;s preferred languages.
-              The language is described using language tags according to{" "}
+              The language is described using language tags according to{' '}
               <a
                 href="https://datatracker.ietf.org/doc/html/rfc5646"
                 target="_blank"
@@ -44,7 +44,7 @@ export default function LocaleInNavigator() {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -56,13 +56,13 @@ export default function LocaleInNavigator() {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <p>
               When its value changes, as the user&apos;s preferred languages are
-              changed a{" "}
+              changed a{' '}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/API/Window/languagechange_event"
                 target="_blank"
@@ -70,8 +70,8 @@ export default function LocaleInNavigator() {
                 className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
                 languagechange
-              </a>{" "}
-              event is fired on the{" "}
+              </a>{' '}
+              event is fired on the{' '}
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/API/Window"
                 target="_blank"
@@ -79,22 +79,22 @@ export default function LocaleInNavigator() {
                 className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
                 Window
-              </a>{" "}
+              </a>{' '}
               object.
             </p>
           </div>
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <p>
               The <code>Accept-Language</code> HTTP header in every HTTP request
-              from the user&apos;s browser uses the same value for the{" "}
-              <code>navigator.languages</code> property except for the extra{" "}
-              <code>qvalues</code> (quality values) field (e.g.{" "}
+              from the user&apos;s browser uses the same value for the{' '}
+              <code>navigator.languages</code> property except for the extra{' '}
+              <code>qvalues</code> (quality values) field (e.g.{' '}
               <code>en-US;q=0.8</code>).
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function LocaleInNavigator() {
               <strong>language:</strong> {language}
             </p>
             <p>
-              <strong>languages:</strong> {languages.join(", ")}
+              <strong>languages:</strong> {languages.join(', ')}
             </p>
           </div>
         </section>
@@ -114,7 +114,7 @@ export default function LocaleInNavigator() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

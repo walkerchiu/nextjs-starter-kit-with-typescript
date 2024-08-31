@@ -1,10 +1,10 @@
-import React, { KeyboardEventHandler } from "react";
+import React, { KeyboardEventHandler } from 'react';
 
-import type { NextPage } from "next";
-import CreatableSelect from "react-select/creatable";
+import type { NextPage } from 'next';
+import CreatableSelect from 'react-select/creatable';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const components = {
   DropdownIndicator: null,
@@ -21,16 +21,16 @@ const createOption = (label: string) => ({
 });
 
 const ReactSelectPage: NextPage = () => {
-  const [inputValue, setInputValue] = React.useState("");
+  const [inputValue, setInputValue] = React.useState('');
   const [value, setValue] = React.useState<readonly Option[]>([]);
 
   const handleKeyDown: KeyboardEventHandler = (event) => {
     if (!inputValue) return;
     switch (event.key) {
-      case "Enter":
-      case "Tab":
+      case 'Enter':
+      case 'Tab':
         setValue((prev) => [...prev, createOption(inputValue)]);
-        setInputValue("");
+        setInputValue('');
         event.preventDefault();
     }
   };
@@ -47,7 +47,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -70,7 +70,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -45,7 +45,7 @@
     outline: none;
   }
 
-  ul[data-type="taskList"] {
+  ul[data-type='taskList'] {
     list-style: none;
     padding: 0;
 
@@ -71,7 +71,7 @@
         display: list-item;
       }
 
-      ul[data-type="taskList"] > li {
+      ul[data-type='taskList'] > li {
         display: flex;
       }
     }

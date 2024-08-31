@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import AsyncSelect from "react-select/async";
+import type { NextPage } from 'next';
+import AsyncSelect from 'react-select/async';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { ColourOption, colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { ColourOption, colourOptions } from '../../modules/react-select/data';
 
 const filterColors = (inputValue: string) => {
   return colourOptions.filter((i) =>
@@ -31,7 +31,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -44,7 +44,7 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -56,7 +56,7 @@ const ReactSelectPage: NextPage = () => {
               import AsyncSelect from &apos;react-select/async&apos;;
             </code>
             <p>
-              You can see a full explanation of how to do this on the{" "}
+              You can see a full explanation of how to do this on the{' '}
               <a
                 href="https://react-select.com/async"
                 target="_blank"
@@ -64,7 +64,7 @@ const ReactSelectPage: NextPage = () => {
                 className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
                 async
-              </a>{" "}
+              </a>{' '}
               page.
             </p>
           </div>
@@ -74,7 +74,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

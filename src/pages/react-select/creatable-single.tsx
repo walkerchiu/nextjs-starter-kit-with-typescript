@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import type { NextPage } from "next";
-import CreatableSelect from "react-select/creatable";
+import type { NextPage } from 'next';
+import CreatableSelect from 'react-select/creatable';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface Option {
   readonly label: string;
@@ -13,13 +13,13 @@ interface Option {
 
 const createOption = (label: string) => ({
   label,
-  value: label.toLowerCase().replace(/\W/g, ""),
+  value: label.toLowerCase().replace(/\W/g, ''),
 });
 
 const defaultOptions = [
-  createOption("One"),
-  createOption("Two"),
-  createOption("Three"),
+  createOption('One'),
+  createOption('Two'),
+  createOption('Three'),
 ];
 
 const ReactSelectPage: NextPage = () => {
@@ -49,7 +49,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -66,7 +66,7 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -78,7 +78,7 @@ const ReactSelectPage: NextPage = () => {
               import Creatable from &apos;react-select/creatable&apos;;
             </code>
             <p>
-              You can see a full explanation of how to do this on the{" "}
+              You can see a full explanation of how to do this on the{' '}
               <a
                 href="https://react-select.com/creatable"
                 target="_blank"
@@ -86,7 +86,7 @@ const ReactSelectPage: NextPage = () => {
                 className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
                 creatable
-              </a>{" "}
+              </a>{' '}
               page.
             </p>
           </div>
@@ -96,7 +96,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

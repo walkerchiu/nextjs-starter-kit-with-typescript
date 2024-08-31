@@ -1,9 +1,9 @@
-import { gql } from "@apollo/client";
-import type { NextPage } from "next";
+import { gql } from '@apollo/client';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import client from "../../modules/apollo-client/apollo-client";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import client from '../../modules/apollo-client/apollo-client';
 
 export const COUNTRY_INFO_FIELDS = gql`
   fragment CountryInfoFields on Country {
@@ -78,7 +78,7 @@ const ApolloClientPage: NextPage<Props> = ({ countries }) => {
           <ol
             className="pl-6"
             style={{
-              listStyleType: "number",
+              listStyleType: 'number',
             }}
           >
             {countries.map((country: Country, index) => (
@@ -110,7 +110,7 @@ const ApolloClientPage: NextPage<Props> = ({ countries }) => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

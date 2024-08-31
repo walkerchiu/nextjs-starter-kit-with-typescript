@@ -1,11 +1,11 @@
-import { fab, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { far, faCircle, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { fas, faBell, faQuestion } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { NextPage } from "next";
+import { fab, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { far, faCircle, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { fas, faBell, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const FontAwesomeIndividuallyPage: NextPage = () => {
   return (
@@ -54,7 +54,7 @@ const FontAwesomeIndividuallyPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

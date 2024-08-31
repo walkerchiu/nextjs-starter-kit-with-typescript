@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
-import styles from "../app/styles/Home.module.css";
+import styles from '../app/styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
             <header>Indexes</header>
             <ol
               style={{
-                listStyleType: "number",
+                listStyleType: 'number',
               }}
             >
               <li>

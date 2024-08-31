@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import Youtube from "@tiptap/extension-youtube";
-import { EditorContent, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
-import Modal from "react-modal";
+import Youtube from '@tiptap/extension-youtube';
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Modal from 'react-modal';
 
-import styles from "../styles/TextMenuEditorWithYoutube.module.scss";
+import styles from '../styles/TextMenuEditorWithYoutube.module.scss';
 
 interface MenuBarProps {
   editor?: any;
@@ -13,7 +13,7 @@ interface MenuBarProps {
 
 const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState('');
   const [width, setWidth] = useState(640);
   const [height, setHeight] = useState(480);
 
@@ -26,7 +26,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
   };
 
   const handleReset = () => {
-    setUrl("");
+    setUrl('');
     setWidth(640);
     setHeight(480);
   };
@@ -131,7 +131,7 @@ const TextMenuEditorWithYoutube: React.FC = (props) => {
       `,
     editorProps: {
       attributes: {
-        spellcheck: "false",
+        spellcheck: 'false',
       },
     },
   });

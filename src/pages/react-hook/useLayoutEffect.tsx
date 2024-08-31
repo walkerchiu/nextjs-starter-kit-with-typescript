@@ -1,9 +1,9 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useLayoutEffectPage: NextPage = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -14,9 +14,9 @@ const useLayoutEffectPage: NextPage = () => {
 
   // If you use the useEffect hook, because it runs after the element is rendered, we cannot guarantee that the my-element element is already available.
   useLayoutEffect(() => {
-    const el = document.getElementById("my-element");
+    const el = document.getElementById('my-element');
     if (el) {
-      el.style.visibility = isVisible ? "visible" : "hidden";
+      el.style.visibility = isVisible ? 'visible' : 'hidden';
     }
   }, [isVisible]);
 
@@ -45,7 +45,7 @@ const useLayoutEffectPage: NextPage = () => {
           </p>
           <p className="mb-5">
             Therefore, if you need to style an element immediately during the
-            current render phase, it is better to use{" "}
+            current render phase, it is better to use{' '}
             <code>useLayoutEffect</code> instead of
             <code>useEffect</code>. <code>useLayoutEffect</code> is executed
             synchronously before the DOM is updated, so it is guaranteed to set
@@ -53,7 +53,7 @@ const useLayoutEffectPage: NextPage = () => {
             phase.
           </p>
           <p>
-            In general, both <code>useEffect</code> and{" "}
+            In general, both <code>useEffect</code> and{' '}
             <code>useLayoutEffect</code> can be used to update an element&apos;s
             style, but in some cases, using <code>useLayoutEffect</code> may be
             more reliable.
@@ -75,7 +75,7 @@ const useLayoutEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import tw from "tailwind-styled-components";
+import type { NextPage } from 'next';
+import tw from 'tailwind-styled-components';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import ThemeSwitch from "../../modules/themes/providers/ThemeSwitch";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import ThemeSwitch from '../../modules/themes/providers/ThemeSwitch';
 
 interface ButtonProps {
   $primary: boolean;
@@ -30,8 +30,8 @@ const Button = tw.button<ButtonProps>`
   focus:shadow-outline
   ${(p: { $primary: boolean }) =>
     p.$primary
-      ? "text-blue-100 bg-blue-400 hover:bg-blue-600 active:bg-blue-800"
-      : "text-pink-100 bg-pink-400 hover:bg-pink-600 active:bg-pink-800"}
+      ? 'text-blue-100 bg-blue-400 hover:bg-blue-600 active:bg-blue-800'
+      : 'text-pink-100 bg-pink-400 hover:bg-pink-600 active:bg-pink-800'}
 `;
 
 const LinkButton = tw.button`
@@ -74,7 +74,7 @@ const TailwindStyledComponentPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,13 +1,13 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import type { NextPage } from "next";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import NProgress from "nprogress";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import NProgress from 'nprogress';
 
-import Footer from "../../../layouts/Footer";
-import Header from "../../../layouts/Header";
-import "../../../app/styles/nprogress.css";
+import Footer from '../../../layouts/Footer';
+import Header from '../../../layouts/Header';
+import '../../../app/styles/nprogress.css';
 
 const IndexPage: NextPage = () => {
   const router = useRouter();
@@ -22,21 +22,21 @@ const IndexPage: NextPage = () => {
       NProgress.done();
     };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleStop);
+    router.events.on('routeChangeError', handleStop);
 
     return () => {
-      router.events.off("routeChangeStart", handleStart);
-      router.events.off("routeChangeComplete", handleStop);
-      router.events.off("routeChangeError", handleStop);
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleStop);
+      router.events.off('routeChangeError', handleStop);
     };
   }, [router]);
 
   return (
     <div className="flex flex-col h-screen">
       <Header
-        title={`NProgress.js (Page ${query.page || ""})`}
+        title={`NProgress.js (Page ${query.page || ''})`}
         description="A nanoscopic progress bar. Featuring realistic trickle animations to convince your users that something is happening!"
       />
       <main
@@ -46,7 +46,7 @@ const IndexPage: NextPage = () => {
         <article>
           <ol
             style={{
-              listStyleType: "disc",
+              listStyleType: 'disc',
             }}
           >
             <li>
@@ -62,7 +62,7 @@ const IndexPage: NextPage = () => {
         <article className="mt-5">
           <ol
             style={{
-              listStyleType: "number",
+              listStyleType: 'number',
             }}
           >
             <li>
@@ -88,7 +88,7 @@ const IndexPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

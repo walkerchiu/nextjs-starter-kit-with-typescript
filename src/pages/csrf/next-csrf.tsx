@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const NextCsrfPage: NextPage = () => {
   return (
@@ -13,7 +13,7 @@ const NextCsrfPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -29,15 +29,15 @@ const NextCsrfPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <code className="block whitespace-pre overflow-x-scroll text-left">
               curl -X POST http://localhost:3000/api/protected
               <br />
-              &gt;&gt; {"{"}&quot;message&quot;: &quot;Invalid CSRF token&quot;
-              {"}"}
+              &gt;&gt; {'{'}&quot;message&quot;: &quot;Invalid CSRF token&quot;
+              {'}'}
             </code>
           </div>
         </section>
@@ -46,7 +46,7 @@ const NextCsrfPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -2,12 +2,12 @@ import {
   solid,
   regular,
   brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { NextPage } from "next";
+} from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const FontAwesomeDynamicallyPage: NextPage = () => {
   return (
@@ -32,20 +32,20 @@ const FontAwesomeDynamicallyPage: NextPage = () => {
           </section>
         </div>
         <p>
-          <FontAwesomeIcon icon={solid("user-secret")} />
+          <FontAwesomeIcon icon={solid('user-secret')} />
         </p>
         <p>
-          <FontAwesomeIcon icon={regular("message")} />
+          <FontAwesomeIcon icon={regular('message')} />
         </p>
         <p>
-          <FontAwesomeIcon icon={brands("twitter")} />
+          <FontAwesomeIcon icon={brands('twitter')} />
         </p>
       </main>
       <Footer>
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

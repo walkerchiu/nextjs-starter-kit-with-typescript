@@ -1,4 +1,4 @@
-import { nextCsrf } from "next-csrf";
+import { nextCsrf } from 'next-csrf';
 
 const { csrf, setup } = nextCsrf({
   // eslint-disable-next-line no-undef

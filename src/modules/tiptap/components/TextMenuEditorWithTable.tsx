@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 
-import Document from "@tiptap/extension-document";
-import Gapcursor from "@tiptap/extension-gapcursor";
-import History from "@tiptap/extension-history";
-import Paragraph from "@tiptap/extension-paragraph";
-import Table from "@tiptap/extension-table";
-import TableCell from "@tiptap/extension-table-cell";
-import TableHeader from "@tiptap/extension-table-header";
-import TableRow from "@tiptap/extension-table-row";
-import Text from "@tiptap/extension-text";
-import { EditorContent, useEditor } from "@tiptap/react";
+import Document from '@tiptap/extension-document';
+import Gapcursor from '@tiptap/extension-gapcursor';
+import History from '@tiptap/extension-history';
+import Paragraph from '@tiptap/extension-paragraph';
+import Table from '@tiptap/extension-table';
+import TableCell from '@tiptap/extension-table-cell';
+import TableHeader from '@tiptap/extension-table-header';
+import TableRow from '@tiptap/extension-table-row';
+import Text from '@tiptap/extension-text';
+import { EditorContent, useEditor } from '@tiptap/react';
 
-import styles from "../styles/TextMenuEditorWithTable.module.scss";
-import "../../../app/styles/TextMenuEditorWithTable.css";
+import styles from '../styles/TextMenuEditorWithTable.module.scss';
+import '../../../app/styles/TextMenuEditorWithTable.css';
 
 interface MenuBarProps {
   editor?: any;
@@ -117,7 +117,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       </button>
       <button
         onClick={() =>
-          editor.chain().focus().setCellAttribute("colspan", 2).run()
+          editor.chain().focus().setCellAttribute('colspan', 2).run()
         }
         className={`${styles.button}`}
       >
@@ -158,7 +158,7 @@ const TextMenuEditorWithTable: React.FC = (props) => {
       Text,
       Table.configure({
         HTMLAttributes: {
-          class: "my-custom-class",
+          class: 'my-custom-class',
         },
         resizable: true,
         handleWidth: 5,
@@ -167,7 +167,7 @@ const TextMenuEditorWithTable: React.FC = (props) => {
         allowTableNodeSelection: false,
       }),
       TableRow.extend({
-        content: "(tableCell | tableHeader)*",
+        content: '(tableCell | tableHeader)*',
       }),
       TableHeader,
       TableCell,

@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { useForm } from "react-hook-form";
-import * as yup from "yup";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 type TestSubmitForm = {
   email: string;
@@ -11,20 +11,20 @@ type TestSubmitForm = {
 };
 
 const GoogleReCaptchaForm = () => {
-  const [notification, setNotification] = useState("");
+  const [notification, setNotification] = useState('');
 
   const validationSchema = yup.object().shape({
     email: yup
       .string()
       .trim()
-      .required("Email is required")
-      .email("Email is invalid"),
+      .required('Email is required')
+      .email('Email is invalid'),
     password: yup
       .string()
       .trim()
-      .required("Password is required")
-      .min(6, "Password must be at least 6 characters")
-      .max(40, "Password must not exceed 40 characters"),
+      .required('Password is required')
+      .min(6, 'Password must be at least 6 characters')
+      .max(40, 'Password must not exceed 40 characters'),
   });
   const {
     register,
@@ -39,22 +39,22 @@ const GoogleReCaptchaForm = () => {
 
   const onSubmit = (data: TestSubmitForm) => {
     if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available!");
+      console.log('Execute recaptcha not yet available!');
       return;
     }
-    executeRecaptcha("auth").then((gReCaptchaToken) => {
-      console.log("gReCaptchaToken: ", gReCaptchaToken);
+    executeRecaptcha('auth').then((gReCaptchaToken) => {
+      console.log('gReCaptchaToken: ', gReCaptchaToken);
       submitForm(gReCaptchaToken, data);
     });
   };
 
   const submitForm = (gReCaptchaToken: string, data: TestSubmitForm) => {
-    fetch("http://api-dev.localhost:8000/auth/graphql", {
-      method: "POST",
+    fetch('http://api-dev.localhost:8000/auth/graphql', {
+      method: 'POST',
       headers: {
-        Accept: "*/*",
-        "Content-Type": "application/json",
-        "x-tenant": "demo.localhost",
+        Accept: '*/*',
+        'Content-Type': 'application/json',
+        'x-tenant': 'demo.localhost',
       },
       body: JSON.stringify({
         query: `
@@ -76,11 +76,11 @@ const GoogleReCaptchaForm = () => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log("response: ", res);
+        console.log('response: ', res);
         if (res?.errors) {
-          setNotification("Fail!");
+          setNotification('Fail!');
         } else {
-          setNotification("Success!");
+          setNotification('Success!');
         }
       })
       .catch((rejected) => {
@@ -104,11 +104,11 @@ const GoogleReCaptchaForm = () => {
           <input
             type="text"
             id="email"
-            {...register("email")}
+            {...register('email')}
             className={`border rounded-lg block w-full p-2.5 ${
               errors.email
-                ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                : ""
+                ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                : ''
             }`}
           />
           <div className="mt-2 text-red-600 dark:text-red-500">
@@ -124,11 +124,11 @@ const GoogleReCaptchaForm = () => {
           <input
             type="password"
             id="password"
-            {...register("password")}
+            {...register('password')}
             className={`border rounded-lg block w-full p-2.5 ${
               errors.password
-                ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                : ""
+                ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                : ''
             }`}
           />
           <div className="mt-2 text-red-600 dark:text-red-500">

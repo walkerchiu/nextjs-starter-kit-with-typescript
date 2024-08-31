@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { Color } from "@tiptap/extension-color";
-import ListItem from "@tiptap/extension-list-item";
-import TextStyle from "@tiptap/extension-text-style";
-import { Underline } from "@tiptap/extension-underline";
-import { EditorContent, useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
+import { Color } from '@tiptap/extension-color';
+import ListItem from '@tiptap/extension-list-item';
+import TextStyle from '@tiptap/extension-text-style';
+import { Underline } from '@tiptap/extension-underline';
+import { EditorContent, useEditor } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
 
-import styles from "../styles/TextMenuEditor.module.scss";
+import styles from '../styles/TextMenuEditor.module.scss';
 
 interface MenuBarProps {
   editor?: any;
@@ -23,7 +23,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().setParagraph().run()}
         className={`${styles.button} ${
-          editor.isActive("paragraph") ? styles["is-active"] : ""
+          editor.isActive('paragraph') ? styles['is-active'] : ''
         }`}
       >
         paragraph
@@ -32,7 +32,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleBold().run()}
         disabled={!editor.can().chain().focus().toggleBold().run()}
         className={`${styles.button} ${
-          editor.isActive("bold") ? styles["is-active"] : ""
+          editor.isActive('bold') ? styles['is-active'] : ''
         }`}
       >
         bold
@@ -41,7 +41,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleItalic().run()}
         disabled={!editor.can().chain().focus().toggleItalic().run()}
         className={`${styles.button} ${
-          editor.isActive("italic") ? styles["is-active"] : ""
+          editor.isActive('italic') ? styles['is-active'] : ''
         }`}
       >
         italic
@@ -50,7 +50,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleStrike().run()}
         disabled={!editor.can().chain().focus().toggleStrike().run()}
         className={`${styles.button} ${
-          editor.isActive("strike") ? styles["is-active"] : ""
+          editor.isActive('strike') ? styles['is-active'] : ''
         }`}
       >
         strike
@@ -59,7 +59,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleUnderline().run()}
         disabled={!editor.can().chain().focus().toggleUnderline().run()}
         className={`${styles.button} ${
-          editor.isActive("underline") ? styles["is-active"] : ""
+          editor.isActive('underline') ? styles['is-active'] : ''
         }`}
       >
         underline
@@ -68,7 +68,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         onClick={() => editor.chain().focus().toggleCode().run()}
         disabled={!editor.can().chain().focus().toggleCode().run()}
         className={`${styles.button} ${
-          editor.isActive("code") ? styles["is-active"] : ""
+          editor.isActive('code') ? styles['is-active'] : ''
         }`}
       >
         code
@@ -76,7 +76,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 1 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 1 }) ? styles['is-active'] : ''
         }`}
       >
         h1
@@ -84,7 +84,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 2 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 2 }) ? styles['is-active'] : ''
         }`}
       >
         h2
@@ -92,7 +92,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 3 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 3 }) ? styles['is-active'] : ''
         }`}
       >
         h3
@@ -100,7 +100,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 4 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 4 }) ? styles['is-active'] : ''
         }`}
       >
         h4
@@ -108,7 +108,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 5 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 5 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 5 }) ? styles['is-active'] : ''
         }`}
       >
         h5
@@ -116,7 +116,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 6 }).run()}
         className={`${styles.button} ${
-          editor.isActive("heading", { level: 6 }) ? styles["is-active"] : ""
+          editor.isActive('heading', { level: 6 }) ? styles['is-active'] : ''
         }`}
       >
         h6
@@ -124,7 +124,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleBulletList().run()}
         className={`${styles.button} ${
-          editor.isActive("bulletList") ? styles["is-active"] : ""
+          editor.isActive('bulletList') ? styles['is-active'] : ''
         }`}
       >
         bullet list
@@ -132,7 +132,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleOrderedList().run()}
         className={`${styles.button} ${
-          editor.isActive("orderedList") ? styles["is-active"] : ""
+          editor.isActive('orderedList') ? styles['is-active'] : ''
         }`}
       >
         ordered list
@@ -140,7 +140,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleCodeBlock().run()}
         className={`${styles.button} ${
-          editor.isActive("codeBlock") ? styles["is-active"] : ""
+          editor.isActive('codeBlock') ? styles['is-active'] : ''
         }`}
       >
         code block
@@ -148,7 +148,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
       <button
         onClick={() => editor.chain().focus().toggleBlockquote().run()}
         className={`${styles.button} ${
-          editor.isActive("blockquote") ? styles["is-active"] : ""
+          editor.isActive('blockquote') ? styles['is-active'] : ''
         }`}
       >
         blockquote
@@ -192,11 +192,11 @@ const MenuBar: React.FC<MenuBarProps> = ({ editor }) => {
         redo
       </button>
       <button
-        onClick={() => editor.chain().focus().setColor("#958DF1").run()}
+        onClick={() => editor.chain().focus().setColor('#958DF1').run()}
         className={`${styles.button} ${
-          editor.isActive("textStyle", { color: "#958DF1" })
-            ? styles["is-active"]
-            : ""
+          editor.isActive('textStyle', { color: '#958DF1' })
+            ? styles['is-active']
+            : ''
         }`}
       >
         purple color
@@ -212,7 +212,7 @@ const TextEditor: React.FC = (props) => {
       StarterKit.configure({
         blockquote: {
           HTMLAttributes: {
-            class: "blockquote",
+            class: 'blockquote',
           },
         },
         bulletList: {

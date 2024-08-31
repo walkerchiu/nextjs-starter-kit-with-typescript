@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
-import Link from "next/link";
+import type { NextPage } from 'next';
+import Link from 'next/link';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const IndexPage: NextPage = () => {
   return (
@@ -18,15 +18,15 @@ const IndexPage: NextPage = () => {
         <article>
           <ul
             style={{
-              listStyleType: "disc",
+              listStyleType: 'disc',
             }}
           >
             <li>
               Query
               <ol
                 style={{
-                  listStyleType: "number",
-                  marginLeft: "20px",
+                  listStyleType: 'number',
+                  marginLeft: '20px',
                 }}
               >
                 <li>
@@ -62,7 +62,7 @@ const IndexPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

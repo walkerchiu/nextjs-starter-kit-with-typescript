@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 import {
   DndContext,
@@ -15,17 +15,17 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
-} from "@dnd-kit/core";
-import { CSS } from "@dnd-kit/utilities";
-import type { NextPage } from "next";
-import { useTheme } from "next-themes";
+} from '@dnd-kit/core';
+import { CSS } from '@dnd-kit/utilities';
+import type { NextPage } from 'next';
+import { useTheme } from 'next-themes';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 function Draggable() {
   const { isDragging, listeners, setNodeRef, transform } = useDraggable({
-    id: "draggable-item",
+    id: 'draggable-item',
   });
 
   return (
@@ -33,12 +33,12 @@ function Draggable() {
       ref={setNodeRef}
       style={{
         transform: CSS.Translate.toString(transform),
-        color: "black",
-        backgroundColor: "white",
-        borderBottom: isDragging ? "" : "1px solid red",
-        fontWeight: "bold",
-        padding: "10px",
-        cursor: "grab",
+        color: 'black',
+        backgroundColor: 'white',
+        borderBottom: isDragging ? '' : '1px solid red',
+        fontWeight: 'bold',
+        padding: '10px',
+        cursor: 'grab',
       }}
       {...listeners}
     >
@@ -56,7 +56,7 @@ function Droppable({ id, children }: DroppableProps) {
   const { isOver, setNodeRef } = useDroppable({ id });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme == "dark";
+  const isDarkMode = resolvedTheme == 'dark';
 
   useEffect(() => {
     setMounted(true);
@@ -70,18 +70,18 @@ function Droppable({ id, children }: DroppableProps) {
     <div
       ref={setNodeRef}
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         width: 150,
         height: 150,
         border: isDarkMode
           ? isOver
-            ? "2px solid gray"
-            : "1px solid white"
+            ? '2px solid gray'
+            : '1px solid white'
           : isOver
-            ? "2px solid gray"
-            : "1px solid black",
+            ? '2px solid gray'
+            : '1px solid black',
         margin: 20,
       }}
     >
@@ -91,7 +91,7 @@ function Droppable({ id, children }: DroppableProps) {
 }
 
 const DndKitDragAndDropPage: NextPage = () => {
-  const containers = ["A", "B", "C"];
+  const containers = ['A', 'B', 'C'];
   const [parent, setParent] = useState<UniqueIdentifier | null>(null);
 
   const sensors = useSensors(
@@ -156,11 +156,11 @@ const DndKitDragAndDropPage: NextPage = () => {
           onDragCancel={handleDragCancel}
           sensors={sensors}
         >
-          <div style={{ padding: "10px", minHeight: "60px" }}>
+          <div style={{ padding: '10px', minHeight: '60px' }}>
             {parent === null ? <Draggable /> : null}
           </div>
 
-          <div style={{ color: "gray", display: "flex" }}>
+          <div style={{ color: 'gray', display: 'flex' }}>
             {containers.map((id) => (
               <Droppable key={id} id={id}>
                 {parent === id ? <Draggable /> : id}
@@ -173,7 +173,7 @@ const DndKitDragAndDropPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import styled from "@emotion/styled";
-import type { NextPage } from "next";
+import styled from '@emotion/styled';
+import type { NextPage } from 'next';
 
-import useIsomorphicLayoutEffect from "./usehooks-ts";
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import useIsomorphicLayoutEffect from './usehooks-ts';
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface StyledDivProps {
   color: string;
@@ -18,14 +18,14 @@ const StyledDiv = styled.div<StyledDivProps>`
 `;
 
 const useLayoutEffectPage: NextPage = () => {
-  const [color, setColor] = useState("red");
-  const [fontSize, setFontSize] = useState("24px");
+  const [color, setColor] = useState('red');
+  const [fontSize, setFontSize] = useState('24px');
   const [show, setShow] = useState(false);
 
   useIsomorphicLayoutEffect(() => {
     setShow(true);
-    const style = document.createElement("style");
-    style.setAttribute("type", "text/css");
+    const style = document.createElement('style');
+    style.setAttribute('type', 'text/css');
     style.innerHTML = `.styled-div {color: ${color}; font-size: ${fontSize};}`;
     document.head.appendChild(style);
 
@@ -35,8 +35,8 @@ const useLayoutEffectPage: NextPage = () => {
   }, [color, fontSize]);
 
   const handleResetStyle = () => {
-    setColor("red");
-    setFontSize("24px");
+    setColor('red');
+    setFontSize('24px');
     setShow(false);
   };
 
@@ -51,18 +51,18 @@ const useLayoutEffectPage: NextPage = () => {
         className="flex w-full flex-1 flex-col items-center justify-center p-5 text-center"
       >
         <StyledDiv color={color} fontSize={fontSize}>
-          {show ? "This is some content." : ""}
+          {show ? 'This is some content.' : ''}
         </StyledDiv>
         <div className="flex justify-center mt-8">
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
-            onClick={() => setColor("blue")}
+            onClick={() => setColor('blue')}
           >
             Change color
           </button>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => setFontSize("32px")}
+            onClick={() => setFontSize('32px')}
           >
             Change font size
           </button>
@@ -78,7 +78,7 @@ const useLayoutEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

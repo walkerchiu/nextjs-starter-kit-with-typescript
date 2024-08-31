@@ -1,14 +1,14 @@
-import { useMachine } from "@xstate/react";
-import type { NextPage } from "next";
+import { useMachine } from '@xstate/react';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { Counter, Toggle, TrafficLight } from "../../modules/xstate/components";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { Counter, Toggle, TrafficLight } from '../../modules/xstate/components';
 import {
   counterMachine,
   nextTrafficLightMachine,
   toggleMachine,
-} from "../../modules/xstate/machines";
+} from '../../modules/xstate/machines';
 
 const XStatePage: NextPage = () => {
   const [toggleCurrent, toggleSend] = useMachine(toggleMachine);
@@ -27,27 +27,27 @@ const XStatePage: NextPage = () => {
         <Counter
           counter={{
             count: counterCurrent.context.count,
-            increment: () => counterSend("INC"),
-            decrement: () => counterSend("DEC"),
-            reset: () => counterSend("RESET"),
+            increment: () => counterSend('INC'),
+            decrement: () => counterSend('DEC'),
+            reset: () => counterSend('RESET'),
           }}
         />
         <hr
           style={{
-            margin: "20px 0",
+            margin: '20px 0',
           }}
         />
         <Toggle
-          onToggle={() => toggleSend("TOGGLE")}
-          active={toggleCurrent.matches("active")}
+          onToggle={() => toggleSend('TOGGLE')}
+          active={toggleCurrent.matches('active')}
         />
         <hr
           style={{
-            margin: "20px 0",
+            margin: '20px 0',
           }}
         />
         <TrafficLight
-          onNext={() => nextSend("NEXT")}
+          onNext={() => nextSend('NEXT')}
           status={nextCurrent.value}
         />
       </main>
@@ -55,7 +55,7 @@ const XStatePage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

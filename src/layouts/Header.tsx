@@ -1,7 +1,7 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 
-import Link from "next/link";
-import { NextRouter, useRouter } from "next/router";
+import Link from 'next/link';
+import { NextRouter, useRouter } from 'next/router';
 
 interface ComponentProps {
   className?: string;

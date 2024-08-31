@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useRefPage: NextPage = () => {
   const [startTime, setStartTime] = useState<number | null>(null);
@@ -64,7 +64,7 @@ const useRefPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

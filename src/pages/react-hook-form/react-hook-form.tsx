@@ -1,10 +1,10 @@
-import { yupResolver } from "@hookform/resolvers/yup";
-import type { NextPage } from "next";
-import { useForm } from "react-hook-form";
-import * as yup from "yup";
+import { yupResolver } from '@hookform/resolvers/yup';
+import type { NextPage } from 'next';
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 type UserSubmitForm = {
   username: string;
@@ -21,38 +21,38 @@ const ReactHookFormPage: NextPage = () => {
     username: yup
       .string()
       .trim()
-      .required("Username is required")
-      .min(6, "Username must be at least 6 characters")
-      .max(20, "Username must not exceed 20 characters"),
+      .required('Username is required')
+      .min(6, 'Username must be at least 6 characters')
+      .max(20, 'Username must not exceed 20 characters'),
     email: yup
       .string()
       .trim()
-      .required("Email is required")
-      .email("Email is invalid"),
+      .required('Email is required')
+      .email('Email is invalid'),
     password: yup
       .string()
       .trim()
-      .required("Password is required")
-      .min(6, "Password must be at least 6 characters")
-      .max(40, "Password must not exceed 40 characters"),
+      .required('Password is required')
+      .min(6, 'Password must be at least 6 characters')
+      .max(40, 'Password must not exceed 40 characters'),
     passwordConfirm: yup
       .string()
       .trim()
-      .required("Confirm Password is required")
-      .oneOf([yup.ref("password")], "Confirm Password does not match"),
+      .required('Confirm Password is required')
+      .oneOf([yup.ref('password')], 'Confirm Password does not match'),
     groupType: yup
       .number()
-      .typeError("Group Type must be a number")
-      .integer("Group Type must be an integer")
-      .positive("Group Type must be a positive number")
-      .required("Group Type is required")
-      .oneOf([1, 2, 3], "Group Type is invalid"),
+      .typeError('Group Type must be a number')
+      .integer('Group Type must be an integer')
+      .positive('Group Type must be a positive number')
+      .required('Group Type is required')
+      .oneOf([1, 2, 3], 'Group Type is invalid'),
     note: yup
       .string()
       .trim()
-      .required("Note is required")
-      .max(255, "Note must not exceed 255 characters"),
-    acceptTerms: yup.bool().oneOf([true], "Accept Terms is required"),
+      .required('Note is required')
+      .max(255, 'Note must not exceed 255 characters'),
+    acceptTerms: yup.bool().oneOf([true], 'Accept Terms is required'),
   });
   const {
     register,
@@ -83,11 +83,11 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="text"
               id="username"
-              {...register("username")}
+              {...register('username')}
               className={`border rounded-lg block w-full p-2.5 ${
                 errors.username
-                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                  : ""
+                  ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                  : ''
               }`}
             />
             <div className="mt-2 text-red-600 dark:text-red-500">
@@ -101,11 +101,11 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="text"
               id="email"
-              {...register("email")}
+              {...register('email')}
               className={`border rounded-lg block w-full p-2.5 ${
                 errors.email
-                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                  : ""
+                  ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                  : ''
               }`}
             />
             <div className="mt-2 text-red-600 dark:text-red-500">
@@ -119,11 +119,11 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="password"
               id="password"
-              {...register("password")}
+              {...register('password')}
               className={`border rounded-lg block w-full p-2.5 ${
                 errors.password
-                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                  : ""
+                  ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                  : ''
               }`}
             />
             <div className="mt-2 text-red-600 dark:text-red-500">
@@ -137,11 +137,11 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="password"
               id="passwordConfirm"
-              {...register("passwordConfirm")}
+              {...register('passwordConfirm')}
               className={`border rounded-lg block w-full p-2.5 ${
                 errors.passwordConfirm
-                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                  : ""
+                  ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                  : ''
               }`}
             />
             <div className="mt-2 text-red-600 dark:text-red-500">
@@ -153,12 +153,12 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="radio"
               id="groupType-1"
-              {...register("groupType")}
+              {...register('groupType')}
               value="1"
             />
             <label
               className={`ml-2 mr-4 text-gray-900 dark:text-gray-300 ${
-                errors.groupType ? "bg-red-50" : ""
+                errors.groupType ? 'bg-red-50' : ''
               }`}
               htmlFor="groupType-1"
             >
@@ -167,12 +167,12 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="radio"
               id="groupType-2"
-              {...register("groupType")}
+              {...register('groupType')}
               value="2"
             />
             <label
               className={`ml-2 text-gray-900 dark:text-gray-300 ${
-                errors.groupType ? "bg-red-50" : ""
+                errors.groupType ? 'bg-red-50' : ''
               }`}
               htmlFor="groupType-2"
             >
@@ -188,7 +188,7 @@ const ReactHookFormPage: NextPage = () => {
             </label>
             <textarea
               id="note"
-              {...register("note")}
+              {...register('note')}
               className={`
                 block
                 w-full
@@ -206,8 +206,8 @@ const ReactHookFormPage: NextPage = () => {
                 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
                 ${
                   errors.note
-                    ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                    : ""
+                    ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                    : ''
                 }
               `}
               rows={3}
@@ -221,11 +221,11 @@ const ReactHookFormPage: NextPage = () => {
             <input
               type="checkbox"
               id="acceptTerms"
-              {...register("acceptTerms")}
+              {...register('acceptTerms')}
               className={`w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ${
                 errors.acceptTerms
-                  ? "bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500"
-                  : ""
+                  ? 'bg-red-50 border-red-500 text-red-900 placeholder-red-700 focus:ring-red-500 focus:border-red-500'
+                  : ''
               }`}
             />
             <label
@@ -268,7 +268,7 @@ const ReactHookFormPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

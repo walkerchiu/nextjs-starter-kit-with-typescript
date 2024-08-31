@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useRefPage: NextPage = () => {
   // useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue).
@@ -48,7 +48,7 @@ const useRefPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

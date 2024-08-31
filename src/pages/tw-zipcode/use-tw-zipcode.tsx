@@ -1,7 +1,7 @@
-import { cities, districts, useTwZipCode } from "use-tw-zipcode";
+import { cities, districts, useTwZipCode } from 'use-tw-zipcode';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 export default function TwZipCodePage() {
   const { city, district, zipCode, handleCityChange, handleDistrictChange } =
@@ -16,7 +16,7 @@ export default function TwZipCodePage() {
       <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <select
@@ -77,7 +77,7 @@ export default function TwZipCodePage() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

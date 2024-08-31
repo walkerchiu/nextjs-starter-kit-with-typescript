@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { useQuery, gql } from "@apollo/client";
+import { useQuery, gql } from '@apollo/client';
 
 export const COUNTRY_INFO_FIELDS = gql`
   fragment CountryInfoFields on Country {
@@ -53,7 +53,7 @@ export default function Countries() {
     <ol
       className="pl-6"
       style={{
-        listStyleType: "number",
+        listStyleType: 'number',
       }}
     >
       {countries.map((country: Country, index: number) => (

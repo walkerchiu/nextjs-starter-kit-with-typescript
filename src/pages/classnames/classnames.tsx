@@ -1,11 +1,11 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import classNames from "classnames";
-import type { NextPage } from "next";
+import classNames from 'classnames';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import styles from "../../modules/classnames/tip.module.css";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import styles from '../../modules/classnames/tip.module.css';
 
 interface TipProps {
   content: string;
@@ -16,9 +16,9 @@ export const Tip: FC<TipProps> = ({ content, type }) => {
   return (
     <div
       className={classNames([styles.tip], {
-        [styles.success]: type === "success",
-        [styles.warning]: type === "warning",
-        [styles.error]: type === "error",
+        [styles.success]: type === 'success',
+        [styles.warning]: type === 'warning',
+        [styles.error]: type === 'error',
       })}
     >
       {content}
@@ -45,7 +45,7 @@ const ClassnamesPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

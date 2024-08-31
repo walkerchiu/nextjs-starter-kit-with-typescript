@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);

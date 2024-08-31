@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import type { NextPage } from "next";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useEffectPage: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,9 +12,9 @@ const useEffectPage: NextPage = () => {
   const timerRef = useRef<null | ReturnType<typeof setTimeout>>(null);
 
   const images = [
-    "https://via.placeholder.com/500x300/ff0000/ffffff",
-    "https://via.placeholder.com/500x300/00ff00/ffffff",
-    "https://via.placeholder.com/500x300/0000ff/ffffff",
+    'https://via.placeholder.com/500x300/ff0000/ffffff',
+    'https://via.placeholder.com/500x300/00ff00/ffffff',
+    'https://via.placeholder.com/500x300/0000ff/ffffff',
   ];
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const useEffectPage: NextPage = () => {
             <code>useEffect</code>: Carousel
           </p>
           <p className="mb-5">
-            This code does not need to be changed to{" "}
+            This code does not need to be changed to{' '}
             <code>useLayoutEffect</code>, because the operation here does not
             affect the layout of the browser, that is, it will not affect the
             rendering of the DOM, so <code>useEffect</code> is fine.
@@ -99,7 +99,7 @@ const useEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

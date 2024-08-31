@@ -1,13 +1,13 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 function ExampleComponent() {
   const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
   const handleButtonClick = () => {
     setCount(count + 1);
@@ -20,7 +20,7 @@ function ExampleComponent() {
   };
 
   useEffect(() => {
-    console.log("Component re-rendered");
+    console.log('Component re-rendered');
   }, [handleButtonClick]);
 
   return (
@@ -49,7 +49,7 @@ function ExampleComponent() {
 
 function ExampleComponent2() {
   const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
   const handleButtonClick = useCallback(() => {
     setCount(count + 1);
@@ -63,7 +63,7 @@ function ExampleComponent2() {
   );
 
   useEffect(() => {
-    console.log("Component re-rendered");
+    console.log('Component re-rendered');
   }, [handleButtonClick]);
 
   return (
@@ -120,7 +120,7 @@ const useCallbackPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

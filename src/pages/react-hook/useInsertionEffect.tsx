@@ -4,33 +4,33 @@ import {
   useLayoutEffect,
   useRef,
   useState,
-} from "react";
+} from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useInsertionEffectPage: NextPage = () => {
   const [showContent, setShowContent] = useState(false);
   const [count, setCount] = useState(0);
-  const [color, setColor] = useState("red");
+  const [color, setColor] = useState('red');
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log("useEffect triggered. Count has been updated.", count);
+    console.log('useEffect triggered. Count has been updated.', count);
   }, [count]);
 
   // useInsertionEffect is a version of useEffect that fires before any DOM mutations.
   useInsertionEffect(() => {
-    console.log("useInsertionEffect triggered", contentRef.current);
+    console.log('useInsertionEffect triggered', contentRef.current);
     // useInsertionEffect is aimed at CSS-in-JS library authors.
     // Unless you are working on a CSS-in-JS library and need a place to inject the styles, you probably want useEffect or useLayoutEffect instead.
   });
 
   // useLayoutEffect is a version of useEffect that fires before the browser repaints the screen.
   useLayoutEffect(() => {
-    console.log("useLayoutEffect triggered", contentRef.current);
+    console.log('useLayoutEffect triggered', contentRef.current);
     // useLayoutEffect can hurt performance. Prefer useEffect when possible.
   });
 
@@ -43,7 +43,7 @@ const useInsertionEffectPage: NextPage = () => {
   };
 
   const handleColorClick = () => {
-    setColor((prevColor) => (prevColor === "red" ? "blue" : "red"));
+    setColor((prevColor) => (prevColor === 'red' ? 'blue' : 'red'));
   };
 
   return (
@@ -58,7 +58,7 @@ const useInsertionEffectPage: NextPage = () => {
       >
         <p className="mb-2 text-left">
           Because <code>useInsertionEffect</code> fires before the DOM
-          mutations, you can see in the console that the initial value of{" "}
+          mutations, you can see in the console that the initial value of{' '}
           <code>contentRef.current</code> is null.
         </p>
         <div className="text-left">
@@ -66,7 +66,7 @@ const useInsertionEffectPage: NextPage = () => {
             className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-2"
             onClick={handleButtonClick}
           >
-            {showContent ? "Hide Content" : "Show Content"}
+            {showContent ? 'Hide Content' : 'Show Content'}
           </button>
           <button
             className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mr-2"
@@ -81,7 +81,7 @@ const useInsertionEffectPage: NextPage = () => {
             Update Font Color
           </button>
           <div
-            className={showContent ? "block" : "hidden"}
+            className={showContent ? 'block' : 'hidden'}
             style={{ color: color }}
             ref={contentRef}
           >
@@ -94,7 +94,7 @@ const useInsertionEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

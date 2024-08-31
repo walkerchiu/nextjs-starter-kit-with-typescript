@@ -1,11 +1,11 @@
-import { createMachine, assign } from "xstate";
+import { createMachine, assign } from 'xstate';
 
 const increment = (context: { count: number }) => context.count + 1;
 const decrement = (context: { count: number }) => context.count - 1;
 
 export const counterMachine = createMachine({
-  id: "changeCount",
-  initial: "active",
+  id: 'changeCount',
+  initial: 'active',
   context: {
     count: 0,
   },

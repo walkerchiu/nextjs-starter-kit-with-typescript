@@ -1,10 +1,10 @@
-import type { NextPage } from "next";
-import Select from "react-select";
-import makeAnimated from "react-select/animated";
+import type { NextPage } from 'next';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { colourOptions } from '../../modules/react-select/data';
 
 const animatedComponents = makeAnimated();
 
@@ -21,7 +21,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -36,7 +36,7 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -52,13 +52,13 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <p>Remove following line from source code to see them in action:</p>
             <code className="block whitespace-pre overflow-x-scroll text-left pt-5 pl-5">
-              components={"{"}animatedComponents{"}"}
+              components={'{'}animatedComponents{'}'}
             </code>
           </div>
         </section>
@@ -67,7 +67,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

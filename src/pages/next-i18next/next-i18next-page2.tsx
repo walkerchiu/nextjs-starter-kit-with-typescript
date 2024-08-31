@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface IndexProps {
   name: string;
@@ -13,7 +13,7 @@ interface IndexProps {
 
 export default function LanguageSwitcherPage2() {
   const router = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
 
   return (
     <div className="flex flex-col h-screen">
@@ -24,31 +24,31 @@ export default function LanguageSwitcherPage2() {
       <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
-            textAlign: "right",
-            marginRight: "20px",
+            textAlign: 'right',
+            marginRight: '20px',
           }}
         >
           <Link
             href={router.pathname}
-            locale={router.locale === "en-US" ? "zh-TW" : "en-US"}
+            locale={router.locale === 'en-US' ? 'zh-TW' : 'en-US'}
           >
-            Switch to <strong>{t("lang.title")}</strong>
+            Switch to <strong>{t('lang.title')}</strong>
           </Link>
         </section>
         <hr
           style={{
-            margin: "20px 0",
+            margin: '20px 0',
           }}
         />
         <section>
           <header
             style={{
-              textAlign: "center",
+              textAlign: 'center',
             }}
           >
             Page 2
           </header>
-          {Object.values(t("document.items", { returnObjects: true })).map(
+          {Object.values(t('document.items', { returnObjects: true })).map(
             (item, index) => (
               <article key={index}>
                 <header>{item.name}</header>
@@ -59,16 +59,16 @@ export default function LanguageSwitcherPage2() {
         </section>
         <hr
           style={{
-            margin: "20px 0",
+            margin: '20px 0',
           }}
         />
         <section
           style={{
-            textAlign: "center",
+            textAlign: 'center',
           }}
         >
           Pagination: <Link href="/next-i18next/next-i18next-page1">1</Link>
-          {", "}
+          {', '}
           <Link href="/next-i18next/next-i18next-page2">2</Link>
         </section>
       </main>
@@ -76,7 +76,7 @@ export default function LanguageSwitcherPage2() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>
@@ -123,6 +123,6 @@ export default function LanguageSwitcherPage2() {
 
 export const getStaticProps = async ({ locale }: { locale: string }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
+    ...(await serverSideTranslations(locale, ['common'])),
   },
 });

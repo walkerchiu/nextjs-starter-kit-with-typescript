@@ -1,11 +1,11 @@
-import { ApolloProvider } from "@apollo/client";
-import type { NextPage } from "next";
+import { ApolloProvider } from '@apollo/client';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import client from "../../modules/apollo-client/apollo-client";
-import ClientOnly from "../../modules/apollo-client/components/ClientOnly";
-import Countries from "../../modules/apollo-client/components/Countries";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import client from '../../modules/apollo-client/apollo-client';
+import ClientOnly from '../../modules/apollo-client/components/ClientOnly';
+import Countries from '../../modules/apollo-client/components/Countries';
 
 const ApolloClientPage: NextPage = () => {
   return (
@@ -45,7 +45,7 @@ const ApolloClientPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

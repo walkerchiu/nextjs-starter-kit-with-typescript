@@ -1,34 +1,34 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from 'react';
 
-import type { NextPage } from "next";
-import Select from "react-select";
+import type { NextPage } from 'next';
+import Select from 'react-select';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 import {
   ColourOption,
   colourOptions,
   FlavourOption,
   GroupedOption,
   groupedOptions,
-} from "../../modules/react-select/data";
+} from '../../modules/react-select/data';
 
 const groupStyles = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'space-between',
 };
 const groupBadgeStyles: CSSProperties = {
-  backgroundColor: "#EBECF0",
-  borderRadius: "2em",
-  color: "#172B4D",
-  display: "inline-block",
+  backgroundColor: '#EBECF0',
+  borderRadius: '2em',
+  color: '#172B4D',
+  display: 'inline-block',
   fontSize: 12,
-  fontWeight: "normal",
-  lineHeight: "1",
+  fontWeight: 'normal',
+  lineHeight: '1',
   minWidth: 1,
-  padding: "0.125em 0.5em",
-  textAlign: "center",
+  padding: '0.125em 0.5em',
+  textAlign: 'center',
 };
 
 const formatGroupLabel = (data: GroupedOption) => (
@@ -51,7 +51,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -67,7 +67,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

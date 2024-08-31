@@ -1,13 +1,13 @@
-import { useCallback } from "react";
+import { useCallback } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
-} from "react-google-recaptcha-v3";
+} from 'react-google-recaptcha-v3';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const YourReCaptchaComponent = () => {
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -15,17 +15,17 @@ const YourReCaptchaComponent = () => {
   // Create an event handler so you can call the verification on button click event or form submit
   const handleReCaptchaVerify = useCallback(async () => {
     if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
+      console.log('Execute recaptcha not yet available');
       return;
     }
 
     try {
-      const token = executeRecaptcha("auth").then((gReCaptchaToken) => {
-        console.log("gReCaptchaToken: ", gReCaptchaToken);
+      const token = executeRecaptcha('auth').then((gReCaptchaToken) => {
+        console.log('gReCaptchaToken: ', gReCaptchaToken);
       });
     } catch (error) {
       // TypeError: Failed to fetch
-      console.log("There was an error", error);
+      console.log('There was an error', error);
     }
     // Do whatever you want with the token
   }, [executeRecaptcha]);
@@ -49,7 +49,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
           scriptProps={{
             async: false,
             defer: false,
-            appendTo: "head",
+            appendTo: 'head',
             nonce: undefined,
           }}
         >
@@ -59,7 +59,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               You are allowed to hide the badge as long as you include the reCAPTCHA branding visibly in the user flow. Please include the following text
               Reference: https://developers.google.com/recaptcha/docs/faq?ref=morioh.com&utm_source=morioh.com#id-like-to-hide-the-recaptcha-badge.-what-is-allowed
             */}
-            This site is protected by reCAPTCHA and the Google{" "}
+            This site is protected by reCAPTCHA and the Google{' '}
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -67,8 +67,8 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               Privacy Policy
-            </a>{" "}
-            and{" "}
+            </a>{' '}
+            and{' '}
             <a
               href="https://policies.google.com/terms"
               target="_blank"
@@ -76,7 +76,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               Terms of Service
-            </a>{" "}
+            </a>{' '}
             apply.
           </div>
         </GoogleReCaptchaProvider>
@@ -84,7 +84,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
       <Footer>
         <ol
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
           className="pl-6"
         >

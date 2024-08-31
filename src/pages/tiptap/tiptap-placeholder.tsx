@@ -1,6 +1,6 @@
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import TextMenuEditorWithPlaceholder from "../../modules/tiptap/components/TextMenuEditorWithPlaceholder";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import TextMenuEditorWithPlaceholder from '../../modules/tiptap/components/TextMenuEditorWithPlaceholder';
 
 export default function TiptapPage() {
   return (
@@ -12,7 +12,7 @@ export default function TiptapPage() {
       <main className="mb-auto pt-5 px-10 md:px-16">
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <TextMenuEditorWithPlaceholder />
@@ -22,7 +22,7 @@ export default function TiptapPage() {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -11,7 +11,7 @@ const Toggle = ({ onToggle, active }: Props) => {
       </header>
       <article>
         <p>
-          Current status: <span>{active ? "ON" : "OFF"}</span>
+          Current status: <span>{active ? 'ON' : 'OFF'}</span>
         </p>
         <ul>
           <li>

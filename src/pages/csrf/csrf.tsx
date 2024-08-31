@@ -1,8 +1,8 @@
-import type { GetServerSidePropsContext, NextPage } from "next";
+import type { GetServerSidePropsContext, NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import setCSRFTokenCookieGetServerSideProps from "../../modules/csrf/csrf";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import setCSRFTokenCookieGetServerSideProps from '../../modules/csrf/csrf';
 
 export const getServerSideProps = setCSRFTokenCookieGetServerSideProps(
   async (context: GetServerSidePropsContext) => {
@@ -25,7 +25,7 @@ const CSRFPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -40,15 +40,15 @@ const CSRFPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <code className="block whitespace-pre overflow-x-scroll text-left">
               curl -X POST http://localhost:3000/api/csrf/protected
               <br />
-              &gt;&gt; {"{"}&quot;message&quot;: &quot;Invalid CSRF token&quot;
-              {"}"}
+              &gt;&gt; {'{'}&quot;message&quot;: &quot;Invalid CSRF token&quot;
+              {'}'}
             </code>
           </div>
         </section>
@@ -57,7 +57,7 @@ const CSRFPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

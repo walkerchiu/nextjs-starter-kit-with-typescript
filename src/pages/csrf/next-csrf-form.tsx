@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { NextApiRequest, NextApiResponse } from "next";
-import type { NextPage } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { setup } from "../../modules/next-csrf/csrf";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { setup } from '../../modules/next-csrf/csrf';
 
 // Here's the important part. `setup` saves the necesary secret and token.
 export const getServerSideProps = setup(
@@ -22,14 +22,14 @@ const NextCsrfPage: NextPage = () => {
     const formData = new FormData(form) as unknown as FormData;
 
     const csrfRequest = {
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(formData),
     };
 
-    fetch("/api/protected", csrfRequest)
+    fetch('/api/protected', csrfRequest)
       .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => console.log("Success:", response));
+      .catch((error) => console.error('Error:', error))
+      .then((response) => console.log('Success:', response));
   };
 
   return (
@@ -70,7 +70,7 @@ const NextCsrfPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

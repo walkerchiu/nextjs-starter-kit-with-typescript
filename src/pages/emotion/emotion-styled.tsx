@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC } from 'react';
 
-import styled from "@emotion/styled";
-import type { NextPage } from "next";
+import styled from '@emotion/styled';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface ComponentProps {
   className?: string;
@@ -21,18 +21,18 @@ interface StyledComponentProps {
 
 const StyledComponent0 = styled(Component)<StyledComponentProps>`
   color: white;
-  background: ${(props) => (props.label ? props.bgColor : "white")};
+  background: ${(props) => (props.label ? props.bgColor : 'white')};
   cursor: pointer;
   &:hover {
     font-size: large;
   }
 `;
 const StyledComponent1 = styled(Component)<StyledComponentProps>((props) => ({
-  color: "white",
-  background: props.label ? props.bgColor : "white",
-  cursor: "pointer",
-  "&:hover": {
-    fontSize: "large",
+  color: 'white',
+  background: props.label ? props.bgColor : 'white',
+  cursor: 'pointer',
+  '&:hover': {
+    fontSize: 'large',
   },
 }));
 
@@ -51,7 +51,7 @@ const EmotionStyledComponent: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

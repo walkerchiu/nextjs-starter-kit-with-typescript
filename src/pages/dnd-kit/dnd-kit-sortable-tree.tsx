@@ -1,5 +1,5 @@
-import { FC, useEffect, useState } from "react";
-import type { CSSProperties } from "react";
+import { FC, useEffect, useState } from 'react';
+import type { CSSProperties } from 'react';
 
 import {
   DndContext,
@@ -10,14 +10,14 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
-} from "@dnd-kit/core";
-import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import type { NextPage } from "next";
-import { useTheme } from "next-themes";
+} from '@dnd-kit/core';
+import { arrayMove, SortableContext, useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import type { NextPage } from 'next';
+import { useTheme } from 'next-themes';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface SortableItemProps {
   id: string;
@@ -30,17 +30,17 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_active }) => {
   });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme == "dark";
+  const isDarkMode = resolvedTheme == 'dark';
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    backgroundColor: isDarkMode ? "black" : "white",
-    border: isDarkMode ? "1px solid white" : "1px solid black",
-    marginTop: "10px",
-    padding: "10px",
-    cursor: "grab",
-    position: "relative",
+    backgroundColor: isDarkMode ? 'black' : 'white',
+    border: isDarkMode ? '1px solid white' : '1px solid black',
+    marginTop: '10px',
+    padding: '10px',
+    cursor: 'grab',
+    position: 'relative',
     zIndex: is_active ? 2 : 1,
   };
 
@@ -61,7 +61,7 @@ const SortableItem: FC<SortableItemProps> = ({ id, is_active }) => {
 
 const DndKitSortableTreePage: NextPage = () => {
   const [dragActiveId, setDragActiveId] = useState<string | null>(null);
-  const [items, setItems] = useState(["A", "B", "C"]);
+  const [items, setItems] = useState(['A', 'B', 'C']);
 
   const mouseSensor = useSensor(MouseSensor);
   const touchSensor = useSensor(TouchSensor);
@@ -110,7 +110,7 @@ const DndKitSortableTreePage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

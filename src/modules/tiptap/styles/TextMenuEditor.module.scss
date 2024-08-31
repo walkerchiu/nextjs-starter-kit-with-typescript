@@ -108,7 +108,7 @@
       position: relative;
 
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         top: 0.5rem;
@@ -132,7 +132,7 @@
       position: relative;
 
       &:before {
-        content: counter(orderedListCounter) ".";
+        content: counter(orderedListCounter) '.';
         counter-increment: orderedListCounter;
         position: absolute;
         left: 0;
@@ -151,7 +151,7 @@
   pre {
     background: #0d0d0d;
     color: #fff;
-    font-family: "JetBrainsMono", monospace;
+    font-family: 'JetBrainsMono', monospace;
     margin: 0.5rem;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;

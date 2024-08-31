@@ -1,9 +1,9 @@
-import { Component } from "react";
+import { Component } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 type Friend = {
   id: number;
@@ -70,7 +70,7 @@ class ExampleComponent extends Component<MyProps, MyState> {
     //   return "Loading...";
     // }
     // return this.state.isOnline ? "Online" : "Offline";
-    return "Please check the source code and console output.";
+    return 'Please check the source code and console output.';
   }
 }
 
@@ -91,7 +91,7 @@ const useEffectClassComponent2Page: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

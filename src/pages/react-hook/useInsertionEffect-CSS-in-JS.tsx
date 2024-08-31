@@ -1,10 +1,10 @@
-import React, { useInsertionEffect } from "react";
+import React, { useInsertionEffect } from 'react';
 
-import styled from "@emotion/styled";
-import type { NextPage } from "next";
+import styled from '@emotion/styled';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface StyledDivProps {
   color: string;
@@ -17,13 +17,13 @@ const StyledDiv = styled.div<StyledDivProps>`
 `;
 
 const useInsertionEffectPage: NextPage = () => {
-  const color = "red";
-  const fontSize = "24px";
+  const color = 'red';
+  const fontSize = '24px';
 
   useInsertionEffect(() => {
-    const style = document.createElement("style");
-    style.setAttribute("type", "text/css");
-    style.appendChild(document.createTextNode(""));
+    const style = document.createElement('style');
+    style.setAttribute('type', 'text/css');
+    style.appendChild(document.createTextNode(''));
     document.head.appendChild(style);
     const sheet = style.sheet as CSSStyleSheet;
     const rules = `.css-${StyledDiv.displayName} {color: ${color}; font-size: ${fontSize};}`;
@@ -48,7 +48,7 @@ const useInsertionEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import CreatableSelect from "react-select/creatable";
+import type { NextPage } from 'next';
+import CreatableSelect from 'react-select/creatable';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { colourOptions } from '../../modules/react-select/data';
 
 const ReactSelectPage: NextPage = () => {
   return (
@@ -18,7 +18,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -30,7 +30,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

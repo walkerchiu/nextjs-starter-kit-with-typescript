@@ -1,8 +1,8 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import ThemeSwitch from "../../modules/themes/providers/ThemeSwitch";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import ThemeSwitch from '../../modules/themes/providers/ThemeSwitch';
 
 const TailwindCSSPage: NextPage = () => {
   return (
@@ -78,7 +78,7 @@ const TailwindCSSPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

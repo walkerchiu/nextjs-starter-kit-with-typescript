@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
+import type { NextPage } from 'next';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import GoogleReCaptchaForm from "../../modules/google-recaptcha/react-google-recaptcha-v3/GoogleReCaptchaForm";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import GoogleReCaptchaForm from '../../modules/google-recaptcha/react-google-recaptcha-v3/GoogleReCaptchaForm';
 
 const ReactGoogleRecaptchaV3Page: NextPage = () => {
   return (
@@ -21,7 +21,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
           scriptProps={{
             async: false,
             defer: false,
-            appendTo: "head",
+            appendTo: 'head',
             nonce: undefined,
           }}
         >
@@ -31,7 +31,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               You are allowed to hide the badge as long as you include the reCAPTCHA branding visibly in the user flow. Please include the following text
               Reference: https://developers.google.com/recaptcha/docs/faq?ref=morioh.com&utm_source=morioh.com#id-like-to-hide-the-recaptcha-badge.-what-is-allowed
             */}
-            This site is protected by reCAPTCHA and the Google{" "}
+            This site is protected by reCAPTCHA and the Google{' '}
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -39,8 +39,8 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               Privacy Policy
-            </a>{" "}
-            and{" "}
+            </a>{' '}
+            and{' '}
             <a
               href="https://policies.google.com/terms"
               target="_blank"
@@ -48,7 +48,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
               className="text-blue-700 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
             >
               Terms of Service
-            </a>{" "}
+            </a>{' '}
             apply.
           </div>
         </GoogleReCaptchaProvider>
@@ -56,7 +56,7 @@ const ReactGoogleRecaptchaV3Page: NextPage = () => {
       <Footer>
         <ol
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
           className="pl-6"
         >

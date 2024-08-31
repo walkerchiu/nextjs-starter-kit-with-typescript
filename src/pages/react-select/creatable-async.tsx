@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
-import AsyncCreatableSelect from "react-select/async-creatable";
+import type { NextPage } from 'next';
+import AsyncCreatableSelect from 'react-select/async-creatable';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { ColourOption, colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { ColourOption, colourOptions } from '../../modules/react-select/data';
 
 const filterColors = (inputValue: string) => {
   return colourOptions.filter((i) =>
@@ -31,7 +31,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -44,7 +44,7 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -59,7 +59,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

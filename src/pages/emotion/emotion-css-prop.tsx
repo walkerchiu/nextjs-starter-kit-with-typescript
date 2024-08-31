@@ -1,13 +1,13 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 
-import { jsx, css } from "@emotion/react";
-import type { NextPage } from "next";
+import { jsx, css } from '@emotion/react';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
-const color = "white";
+const color = 'white';
 
 const style1 = css`
   background-color: hotpink;
@@ -20,11 +20,11 @@ const style1 = css`
 `;
 
 const style2 = css({
-  backgroundColor: "hotpink",
-  padding: "32px",
-  cursor: "pointer",
-  "&:hover": {
-    fontWeight: "bold",
+  backgroundColor: 'hotpink',
+  padding: '32px',
+  cursor: 'pointer',
+  '&:hover': {
+    fontWeight: 'bold',
     color: color,
   },
 });
@@ -54,11 +54,11 @@ const EmotionReact: NextPage = () => {
         </div>
         <div
           css={{
-            backgroundColor: "hotpink",
-            padding: "32px",
-            cursor: "pointer",
-            "&:hover": {
-              fontWeight: "bold",
+            backgroundColor: 'hotpink',
+            padding: '32px',
+            cursor: 'pointer',
+            '&:hover': {
+              fontWeight: 'bold',
               color: color,
             },
           }}
@@ -70,7 +70,7 @@ const EmotionReact: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,5 +1,5 @@
-import { FC, useEffect, useMemo, useState } from "react";
-import type { CSSProperties } from "react";
+import { FC, useEffect, useMemo, useState } from 'react';
+import type { CSSProperties } from 'react';
 
 import {
   DndContext,
@@ -11,14 +11,14 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
-} from "@dnd-kit/core";
-import { arrayMove, SortableContext, useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import type { NextPage } from "next";
-import { useTheme } from "next-themes";
+} from '@dnd-kit/core';
+import { arrayMove, SortableContext, useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import type { NextPage } from 'next';
+import { useTheme } from 'next-themes';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 type Item = {
   id: string;
@@ -41,25 +41,25 @@ const SortableItem: FC<SortableItemProps> = ({ item, is_overlay }) => {
   });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme == "dark";
+  const isDarkMode = resolvedTheme == 'dark';
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    color: isDarkMode ? "white" : "black",
-    backgroundColor: isDarkMode ? "black" : "white",
-    border: isDarkMode ? "1px solid white" : "1px solid black",
-    marginTop: "10px",
-    padding: "10px",
-    cursor: "grab",
+    color: isDarkMode ? 'white' : 'black',
+    backgroundColor: isDarkMode ? 'black' : 'white',
+    border: isDarkMode ? '1px solid white' : '1px solid black',
+    marginTop: '10px',
+    padding: '10px',
+    cursor: 'grab',
   };
 
   const styles_overlay: CSSProperties = {
-    color: "gray",
-    backgroundColor: isDarkMode ? "black" : "white",
-    border: "1px solid gray",
-    marginTop: "10px",
-    padding: "10px",
+    color: 'gray',
+    backgroundColor: isDarkMode ? 'black' : 'white',
+    border: '1px solid gray',
+    marginTop: '10px',
+    padding: '10px',
   };
 
   useEffect(() => {
@@ -84,22 +84,22 @@ const SortableItem: FC<SortableItemProps> = ({ item, is_overlay }) => {
 
 const ActiveItem: FC<ActiveItemProps> = ({ item }) => {
   const { setNodeRef, listeners, transform, transition } = useSortable({
-    id: item ? item.id : "",
+    id: item ? item.id : '',
   });
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
-  const isDarkMode = resolvedTheme == "dark";
+  const isDarkMode = resolvedTheme == 'dark';
 
   const styles: CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
-    color: isDarkMode ? "yellow" : "red",
-    fontWeight: "bold",
-    backgroundColor: isDarkMode ? "black" : "white",
-    border: isDarkMode ? "2px solid yellow" : "2px solid red",
-    marginTop: "10px",
-    padding: "10px",
-    cursor: "grabbing",
+    color: isDarkMode ? 'yellow' : 'red',
+    fontWeight: 'bold',
+    backgroundColor: isDarkMode ? 'black' : 'white',
+    border: isDarkMode ? '2px solid yellow' : '2px solid red',
+    marginTop: '10px',
+    padding: '10px',
+    cursor: 'grabbing',
   };
 
   useEffect(() => {
@@ -123,22 +123,22 @@ const ActiveItem: FC<ActiveItemProps> = ({ item }) => {
 };
 
 const DndKitSortableTreePage: NextPage = () => {
-  const [dragActiveId, setDragActiveId] = useState<string>("");
+  const [dragActiveId, setDragActiveId] = useState<string>('');
   const [items, setItems] = useState([
     {
-      id: "1",
-      name: "Apple",
-      description: "An Apple",
+      id: '1',
+      name: 'Apple',
+      description: 'An Apple',
     },
     {
-      id: "2",
-      name: "Banana",
-      description: "A banana",
+      id: '2',
+      name: 'Banana',
+      description: 'A banana',
     },
     {
-      id: "3",
-      name: "Cake",
-      description: "A cake",
+      id: '3',
+      name: 'Cake',
+      description: 'A cake',
     },
   ]);
   const itemIds = useMemo(() => items.map((item) => item.id), [items]);
@@ -162,7 +162,7 @@ const DndKitSortableTreePage: NextPage = () => {
       return arrayMove([...items], activeIndex, overIndex);
     });
 
-    setDragActiveId("");
+    setDragActiveId('');
   }
 
   return (
@@ -188,7 +188,7 @@ const DndKitSortableTreePage: NextPage = () => {
             <DragOverlay
               dropAnimation={{
                 duration: 300,
-                easing: "cubic-bezier(0.18, 0.67, 0.6, 1.22)",
+                easing: 'cubic-bezier(0.18, 0.67, 0.6, 1.22)',
               }}
             >
               <ActiveItem
@@ -203,7 +203,7 @@ const DndKitSortableTreePage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

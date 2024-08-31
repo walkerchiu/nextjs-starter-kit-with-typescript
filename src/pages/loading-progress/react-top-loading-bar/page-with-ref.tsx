@@ -1,11 +1,11 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
-import type { NextPage } from "next";
-import Link from "next/link";
-import LoadingBar, { LoadingBarRef } from "react-top-loading-bar";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar';
 
-import Footer from "../../../layouts/Footer";
-import Header from "../../../layouts/Header";
+import Footer from '../../../layouts/Footer';
+import Header from '../../../layouts/Header';
 
 const IndexPage: NextPage = () => {
   const ref = useRef<LoadingBarRef | null>(null);
@@ -25,7 +25,7 @@ const IndexPage: NextPage = () => {
           <article>
             <ol
               style={{
-                listStyleType: "disc",
+                listStyleType: 'disc',
               }}
             >
               <li>
@@ -49,7 +49,7 @@ const IndexPage: NextPage = () => {
           <article className="mt-5">
             <ol
               style={{
-                listStyleType: "number",
+                listStyleType: 'number',
               }}
             >
               <li>
@@ -63,8 +63,8 @@ const IndexPage: NextPage = () => {
                 <br />
                 <ul
                   style={{
-                    listStyleType: "disc",
-                    marginLeft: "1.5rem",
+                    listStyleType: 'disc',
+                    marginLeft: '1.5rem',
                   }}
                 >
                   <li>
@@ -84,8 +84,8 @@ const IndexPage: NextPage = () => {
                 <br />
                 <ul
                   style={{
-                    listStyleType: "disc",
-                    marginLeft: "1.5rem",
+                    listStyleType: 'disc',
+                    marginLeft: '1.5rem',
                   }}
                 >
                   <li>
@@ -105,8 +105,8 @@ const IndexPage: NextPage = () => {
                 <br />
                 <ul
                   style={{
-                    listStyleType: "disc",
-                    marginLeft: "1.5rem",
+                    listStyleType: 'disc',
+                    marginLeft: '1.5rem',
                   }}
                 >
                   <li>
@@ -131,8 +131,8 @@ const IndexPage: NextPage = () => {
                 <br />
                 <ul
                   style={{
-                    listStyleType: "disc",
-                    marginLeft: "1.5rem",
+                    listStyleType: 'disc',
+                    marginLeft: '1.5rem',
                   }}
                 >
                   <li>
@@ -155,8 +155,8 @@ const IndexPage: NextPage = () => {
                 <br />
                 <ul
                   style={{
-                    listStyleType: "disc",
-                    marginLeft: "1.5rem",
+                    listStyleType: 'disc',
+                    marginLeft: '1.5rem',
                   }}
                 >
                   <li>
@@ -175,7 +175,7 @@ const IndexPage: NextPage = () => {
           <ol
             className="pl-6"
             style={{
-              listStyleType: "number",
+              listStyleType: 'number',
             }}
           >
             <li>

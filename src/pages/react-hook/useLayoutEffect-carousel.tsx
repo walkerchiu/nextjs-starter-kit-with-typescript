@@ -1,11 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
-import type { NextPage } from "next";
-import Image from "next/image";
+import type { NextPage } from 'next';
+import Image from 'next/image';
 
-import useIsomorphicLayoutEffect from "./usehooks-ts";
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import useIsomorphicLayoutEffect from './usehooks-ts';
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useLayoutEffectPage: NextPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,9 +13,9 @@ const useLayoutEffectPage: NextPage = () => {
   const timerRef = useRef<null | ReturnType<typeof setTimeout>>(null);
 
   const images = [
-    "https://via.placeholder.com/500x300/ff0000/ffffff",
-    "https://via.placeholder.com/500x300/00ff00/ffffff",
-    "https://via.placeholder.com/500x300/0000ff/ffffff",
+    'https://via.placeholder.com/500x300/ff0000/ffffff',
+    'https://via.placeholder.com/500x300/00ff00/ffffff',
+    'https://via.placeholder.com/500x300/0000ff/ffffff',
   ];
 
   useIsomorphicLayoutEffect(() => {
@@ -89,7 +89,7 @@ const useLayoutEffectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

@@ -1,13 +1,13 @@
-import chroma from "chroma-js";
-import type { NextPage } from "next";
-import Select, { StylesConfig } from "react-select";
+import chroma from 'chroma-js';
+import type { NextPage } from 'next';
+import Select, { StylesConfig } from 'react-select';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { ColourOption, colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { ColourOption, colourOptions } from '../../modules/react-select/data';
 
 const colourStyles: StylesConfig<ColourOption, true> = {
-  control: (styles) => ({ ...styles, backgroundColor: "white" }),
+  control: (styles) => ({ ...styles, backgroundColor: 'white' }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = chroma(data.color);
     return {
@@ -20,16 +20,16 @@ const colourStyles: StylesConfig<ColourOption, true> = {
             ? color.alpha(0.1).css()
             : undefined,
       color: isDisabled
-        ? "#ccc"
+        ? '#ccc'
         : isSelected
-          ? chroma.contrast(color, "white") > 2
-            ? "white"
-            : "black"
+          ? chroma.contrast(color, 'white') > 2
+            ? 'white'
+            : 'black'
           : data.color,
-      cursor: isDisabled ? "not-allowed" : "default",
+      cursor: isDisabled ? 'not-allowed' : 'default',
 
-      ":active": {
-        ...styles[":active"],
+      ':active': {
+        ...styles[':active'],
         backgroundColor: !isDisabled
           ? isSelected
             ? data.color
@@ -52,9 +52,9 @@ const colourStyles: StylesConfig<ColourOption, true> = {
   multiValueRemove: (styles, { data }) => ({
     ...styles,
     color: data.color,
-    ":hover": {
+    ':hover': {
       backgroundColor: data.color,
-      color: "white",
+      color: 'white',
     },
   }),
 };
@@ -72,7 +72,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -87,16 +87,16 @@ const ReactSelectPage: NextPage = () => {
         </section>
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
             <p>
-              Style individual components with custom css using the{" "}
+              Style individual components with custom css using the{' '}
               <code>styles</code> prop.
             </p>
             <p>
-              You can see a full explanation of how to do this on the{" "}
+              You can see a full explanation of how to do this on the{' '}
               <a
                 href="https://react-select.com/styles"
                 target="_blank"
@@ -104,7 +104,7 @@ const ReactSelectPage: NextPage = () => {
                 className="text-blue-600 dark:text-blue-300 hover:underline hover:text-blue-600 focus:text-blue-600 dark:hover:text-yellow-200 dark:focus:text-yellow-200"
               >
                 styles
-              </a>{" "}
+              </a>{' '}
               page.
             </p>
           </div>
@@ -114,7 +114,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

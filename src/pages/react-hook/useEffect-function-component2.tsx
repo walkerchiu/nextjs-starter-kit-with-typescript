@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 type Friend = {
   id: number;
@@ -33,7 +33,7 @@ const ExampleComponent = (props: MyProps) => {
   // This tells React that your effect doesn't depend on any values from props or state, so it never needs to re-run.
   useEffect(() => {
     console.log(
-      "If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) as a second argument.",
+      'If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([]) as a second argument.',
     );
   }, []); // If you pass an empty array ([]), the props and state inside the effect will always have their initial values.
 
@@ -43,12 +43,12 @@ const ExampleComponent = (props: MyProps) => {
     }
 
     // ChatAPI.subscribeToFriendStatus(props.friend?.id, handleStatusChange);
-    console.log("subscribeToFriendStatus");
+    console.log('subscribeToFriendStatus');
 
     // Specify how to clean up after this effect:
     return function cleanup() {
       // ChatAPI.unsubscribeFromFriendStatus(props.friend?.id, handleStatusChange);
-      console.log("unsubscribeFromFriendStatus");
+      console.log('unsubscribeFromFriendStatus');
     };
   }, [props.friend?.id]); // Only re-subscribe if props.friend.id changes
 
@@ -77,7 +77,7 @@ const useEffectFunctionComponentPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

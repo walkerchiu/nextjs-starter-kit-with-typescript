@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import type { NextPage } from "next";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import LoadingBar from "react-top-loading-bar";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import LoadingBar from 'react-top-loading-bar';
 
-import Footer from "../../../layouts/Footer";
-import Header from "../../../layouts/Header";
+import Footer from '../../../layouts/Footer';
+import Header from '../../../layouts/Header';
 
 const IndexPage: NextPage = () => {
   const router = useRouter();
@@ -14,16 +14,16 @@ const IndexPage: NextPage = () => {
 
   const colorParam = query.color;
   const color =
-    typeof colorParam === "string" ? colorParam : "rgb(180, 130, 251)";
+    typeof colorParam === 'string' ? colorParam : 'rgb(180, 130, 251)';
 
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => {
+    router.events.on('routeChangeStart', () => {
       setProgress(40);
     });
 
-    router.events.on("routeChangeComplete", () => {
+    router.events.on('routeChangeComplete', () => {
       setProgress(100);
     });
   }, []);
@@ -41,7 +41,7 @@ const IndexPage: NextPage = () => {
       <div className="flex flex-col h-screen">
         <Header
           title={`react-top-loading-bar (with State - Automatic) (Page ${
-            query.page || ""
+            query.page || ''
           })`}
           description="A very simple, highly customisable youtube-like react loader component."
         />
@@ -52,7 +52,7 @@ const IndexPage: NextPage = () => {
           <article>
             <ol
               style={{
-                listStyleType: "disc",
+                listStyleType: 'disc',
               }}
             >
               <li>
@@ -76,7 +76,7 @@ const IndexPage: NextPage = () => {
           <article className="mt-5">
             <ol
               style={{
-                listStyleType: "number",
+                listStyleType: 'number',
               }}
             >
               <li>
@@ -102,7 +102,7 @@ const IndexPage: NextPage = () => {
           <ol
             className="pl-6"
             style={{
-              listStyleType: "number",
+              listStyleType: 'number',
             }}
           >
             <li>

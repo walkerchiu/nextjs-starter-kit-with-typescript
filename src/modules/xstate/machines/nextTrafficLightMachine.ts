@@ -1,28 +1,28 @@
-import { createMachine } from "xstate";
+import { createMachine } from 'xstate';
 
-type TrafficLightEvent = { type: "NEXT" };
+type TrafficLightEvent = { type: 'NEXT' };
 
 type TraffiLightState =
-  | { value: "green"; context: undefined }
-  | { value: "yellow"; context: undefined }
-  | { value: "red"; context: undefined };
+  | { value: 'green'; context: undefined }
+  | { value: 'yellow'; context: undefined }
+  | { value: 'red'; context: undefined };
 
 export const nextTrafficLightMachine = createMachine<
   undefined, // We don’t have context, so we type it as undefined
   TrafficLightEvent,
   TraffiLightState
 >({
-  id: "trafficLight",
-  initial: "red",
+  id: 'trafficLight',
+  initial: 'red',
   states: {
     green: {
-      on: { NEXT: "yellow" },
+      on: { NEXT: 'yellow' },
     },
     yellow: {
-      on: { NEXT: "red" },
+      on: { NEXT: 'red' },
     },
     red: {
-      on: { NEXT: "green" },
+      on: { NEXT: 'green' },
     },
   },
 });

@@ -1,12 +1,12 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 function expensiveOperation(n: number) {
-  console.log("Executing expensiveOperation");
+  console.log('Executing expensiveOperation');
 
   let result = 0;
   for (let i = 0; i < n; i++) {
@@ -123,7 +123,7 @@ const useMemoPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

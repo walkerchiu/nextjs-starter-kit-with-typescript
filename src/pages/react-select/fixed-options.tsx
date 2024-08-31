@@ -1,23 +1,23 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import type { NextPage } from "next";
-import Select, { ActionMeta, OnChangeValue, StylesConfig } from "react-select";
+import type { NextPage } from 'next';
+import Select, { ActionMeta, OnChangeValue, StylesConfig } from 'react-select';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
-import { ColourOption, colourOptions } from "../../modules/react-select/data";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
+import { ColourOption, colourOptions } from '../../modules/react-select/data';
 
 const styles: StylesConfig<ColourOption, true> = {
   multiValue: (base, state) => {
-    return state.data.isFixed ? { ...base, backgroundColor: "gray" } : base;
+    return state.data.isFixed ? { ...base, backgroundColor: 'gray' } : base;
   },
   multiValueLabel: (base, state) => {
     return state.data.isFixed
-      ? { ...base, fontWeight: "bold", color: "white", paddingRight: 6 }
+      ? { ...base, fontWeight: 'bold', color: 'white', paddingRight: 6 }
       : base;
   },
   multiValueRemove: (base, state) => {
-    return state.data.isFixed ? { ...base, display: "none" } : base;
+    return state.data.isFixed ? { ...base, display: 'none' } : base;
   },
 };
 
@@ -37,13 +37,13 @@ const ReactSelectPage: NextPage = () => {
     actionMeta: ActionMeta<ColourOption>,
   ) => {
     switch (actionMeta.action) {
-      case "remove-value":
-      case "pop-value":
+      case 'remove-value':
+      case 'pop-value':
         if (actionMeta.removedValue.isFixed) {
           return;
         }
         break;
-      case "clear":
+      case 'clear':
         newValue = colourOptions.filter((v) => v.isFixed);
         break;
     }
@@ -63,7 +63,7 @@ const ReactSelectPage: NextPage = () => {
       >
         <section
           style={{
-            marginBottom: "20px",
+            marginBottom: '20px',
           }}
         >
           <div>
@@ -85,7 +85,7 @@ const ReactSelectPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

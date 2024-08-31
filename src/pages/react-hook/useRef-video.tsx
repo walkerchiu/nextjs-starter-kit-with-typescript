@@ -1,9 +1,9 @@
-import { useRef, useState } from "react";
+import { useRef, useState } from 'react';
 
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 const useRefPage: NextPage = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -35,7 +35,7 @@ const useRefPage: NextPage = () => {
             <code>useRef</code>: Playing and pausing a video
           </p>
           <p>
-            This example uses a ref to call <code>play()</code> and{" "}
+            This example uses a ref to call <code>play()</code> and{' '}
             <code>pause()</code> on a <code>&lt;video&gt;</code> DOM node.
           </p>
         </div>
@@ -51,14 +51,14 @@ const useRefPage: NextPage = () => {
               type="video/mp4"
             />
           </video>
-          <button onClick={handleClick}>{isPlaying ? "Pause" : "Play"}</button>
+          <button onClick={handleClick}>{isPlaying ? 'Pause' : 'Play'}</button>
         </div>
       </main>
       <Footer>
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>

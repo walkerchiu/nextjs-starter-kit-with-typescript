@@ -1,11 +1,11 @@
-import { useEffect, useState, FC } from "react";
+import { useEffect, useState, FC } from 'react';
 
-import styled from "@emotion/styled";
-import { computePosition, shift, flip, offset } from "@floating-ui/dom";
-import type { NextPage } from "next";
+import styled from '@emotion/styled';
+import { computePosition, shift, flip, offset } from '@floating-ui/dom';
+import type { NextPage } from 'next';
 
-import Footer from "../../layouts/Footer";
-import Header from "../../layouts/Header";
+import Footer from '../../layouts/Footer';
+import Header from '../../layouts/Header';
 
 interface ComponentProps {
   id: string;
@@ -23,11 +23,11 @@ const Component: FC<ComponentProps> = ({ id, className, content }) => {
 
 const Tip = styled(Component)<StyledComponentProps>`
   position: absolute;
-  background: ${(props) => (props.bgColor ? props.bgColor : "")};
+  background: ${(props) => (props.bgColor ? props.bgColor : '')};
   padding: 0.5rem;
   border: dashed gray;
   box-sizing: border-box;
-  display: ${(props) => (props.active ? props.active : "none")};
+  display: ${(props) => (props.active ? props.active : 'none')};
 `;
 
 interface StyledComponentProps {
@@ -39,10 +39,10 @@ const FloatingUITooltipPage: NextPage = () => {
   const [active, setActive] = useState<boolean>(false);
 
   useEffect(() => {
-    const main = document.getElementById("main");
-    const floating = document.getElementById("floating");
+    const main = document.getElementById('main');
+    const floating = document.getElementById('floating');
 
-    main?.addEventListener("mousemove", ({ clientX, clientY }) => {
+    main?.addEventListener('mousemove', ({ clientX, clientY }) => {
       const virtualEl = {
         getBoundingClientRect() {
           return {
@@ -60,7 +60,7 @@ const FloatingUITooltipPage: NextPage = () => {
 
       if (floating) {
         computePosition(virtualEl, floating, {
-          placement: "right-start",
+          placement: 'right-start',
           middleware: [offset(5), flip(), shift()],
         }).then(({ x, y }) => {
           setActive(true);
@@ -73,7 +73,7 @@ const FloatingUITooltipPage: NextPage = () => {
       }
     });
 
-    main?.addEventListener("mouseleave", (e) => {
+    main?.addEventListener('mouseleave', (e) => {
       const from = e.relatedTarget;
       if (!from) {
         setActive(false);
@@ -102,7 +102,7 @@ const FloatingUITooltipPage: NextPage = () => {
         <ol
           className="pl-6"
           style={{
-            listStyleType: "number",
+            listStyleType: 'number',
           }}
         >
           <li>
