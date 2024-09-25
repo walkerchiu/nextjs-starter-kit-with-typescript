@@ -62,7 +62,7 @@ This is a starter kit for building modern React applications using Next.js, Type
    npm run lint
    ```
 
-## Pre-commit Hook
+## Pre-commit Hooks
 
 This project uses `lint-staged` to run linters on staged files before committing. It ensures that your code meets the project's linting and formatting standards.
 
@@ -70,6 +70,21 @@ To manually run `lint-staged`, use the following command:
 
 ```bash
 npx lint-staged
+```
+
+The pre-commit hooks configuration is defined in the `.pre-commit-config.yaml` file.
+
+To set up pre-commit hooks, run the following command:
+
+```bash
+# Install pre-commit to manage git hooks
+brew install pre-commit
+
+# Install the git hook scripts.
+pre-commit install
+
+# Run against all the files.
+pre-commit run --all-files
 ```
 
 ## Learn More
