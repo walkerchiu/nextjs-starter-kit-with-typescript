@@ -7,7 +7,7 @@ import Footer from '../../layouts/Footer';
 import Header from '../../layouts/Header';
 import { setup } from '../../modules/next-csrf/csrf';
 
-// Here's the important part. `setup` saves the necesary secret and token.
+// Here's the important part. `setup` saves the necessary secret and token.
 export const getServerSideProps = setup(
   async (req: NextApiRequest, res: NextApiResponse) => {
     return { props: {} };

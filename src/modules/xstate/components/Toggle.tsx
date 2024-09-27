@@ -7,7 +7,7 @@ const Toggle = ({ onToggle, active }: Props) => {
   return (
     <section>
       <header>
-        <strong>Toogle Status</strong>
+        <strong>Toggle Status</strong>
       </header>
       <article>
         <p>

@@ -13,6 +13,10 @@ repos:
           - --line-length=88
           - --target-version=py311
           - --fix
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.24.6
+    hooks:
+      - id: typos
   - repo: https://github.com/lyz-code/yamlfix
     rev: 1.17.0
     hooks:
