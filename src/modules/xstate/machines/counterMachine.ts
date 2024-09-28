@@ -1,7 +1,4 @@
-import { createMachine, assign } from 'xstate';
-
-const increment = (context: { count: number }) => context.count + 1;
-const decrement = (context: { count: number }) => context.count - 1;
+import { assign, createMachine } from 'xstate';
 
 export const counterMachine = createMachine({
   id: 'changeCount',
@@ -12,8 +9,16 @@ export const counterMachine = createMachine({
   states: {
     active: {
       on: {
-        INC: { actions: assign({ count: increment }) },
-        DEC: { actions: assign({ count: decrement }) },
+        INC: {
+          actions: assign({
+            count: ({ context }) => context.count + 1,
+          }),
+        },
+        DEC: {
+          actions: assign({
+            count: ({ context }) => context.count - 1,
+          }),
+        },
         RESET: { actions: assign({ count: 0 }) },
       },
     },

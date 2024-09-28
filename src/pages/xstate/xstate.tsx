@@ -27,9 +27,9 @@ const XStatePage: NextPage = () => {
         <Counter
           counter={{
             count: counterCurrent.context.count,
-            increment: () => counterSend('INC'),
-            decrement: () => counterSend('DEC'),
-            reset: () => counterSend('RESET'),
+            increment: () => counterSend({ type: 'INC' }),
+            decrement: () => counterSend({ type: 'DEC' }),
+            reset: () => counterSend({ type: 'RESET' }),
           }}
         />
         <hr
@@ -38,7 +38,7 @@ const XStatePage: NextPage = () => {
           }}
         />
         <Toggle
-          onToggle={() => toggleSend('TOGGLE')}
+          onToggle={() => toggleSend({ type: 'TOGGLE' })}
           active={toggleCurrent.matches('active')}
         />
         <hr
@@ -47,7 +47,7 @@ const XStatePage: NextPage = () => {
           }}
         />
         <TrafficLight
-          onNext={() => nextSend('NEXT')}
+          onNext={() => nextSend({ type: 'NEXT' })}
           status={nextCurrent.value}
         />
       </main>
