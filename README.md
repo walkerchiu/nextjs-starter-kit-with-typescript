@@ -4,7 +4,7 @@ This is a starter kit for building modern React applications using Next.js, Type
 
 ## Prerequisites
 
-- node (>= 20.9.0)
+- node (>= 22.7.4)
 - npm (>= 10.8.2)
 
 ## Installation
