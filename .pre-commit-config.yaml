@@ -17,6 +17,10 @@ repos:
     rev: v1.24.6
     hooks:
       - id: typos
+        args:
+          [
+            --config=.typos.toml,
+          ]
   - repo: https://github.com/lyz-code/yamlfix
     rev: 1.17.0
     hooks:

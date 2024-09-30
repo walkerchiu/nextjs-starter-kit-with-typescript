@@ -1,0 +1,4 @@
+[[files]]
+path = "src/modules/react-select/data.ts"
+    [[files.ignore]]
+    word = "ND"
