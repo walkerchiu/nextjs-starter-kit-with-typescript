@@ -12,8 +12,8 @@ This is a starter kit for building modern React applications using Next.js, Type
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:walkerchiu/nextjs-ts-tailwindcss-kit.git
-   cd nextjs-ts-tailwindcss-kit
+   git clone git@github.com:walkerchiu/nextjs-tailwindcss-kit.git
+   cd nextjs-tailwindcss-kit
    ```
 
 2. Install dependencies:
